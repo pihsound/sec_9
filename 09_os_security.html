@@ -16,32 +16,32 @@
   --ch:#0369a1;--chl:#e0f2fe;
   --bd:#dde3ec;--bg:#fff;--tx:#1c2331;--tm:#5a6478;
   --g0:#f8f9fa;--g1:#f0f2f5;
-  --sans:'Noto Sans KR',sans-serif;--serif:'Noto Serif KR',serif;--mono:'JetBrains Mono',monospace;
+  --sans:"Noto Sans KR",sans-serif;--serif:"Noto Serif KR",serif;--mono:"JetBrains Mono",monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:var(--sans);background:#e8eef8;color:var(--tx);font-size:14px;line-height:1.8;}
 .wrap{max-width:960px;margin:0 auto;padding:28px 14px 70px;}
 .hdr{background:linear-gradient(135deg,#050b1a 0%,#0d1a35 55%,#050b10 100%);border-radius:14px 14px 0 0;padding:30px 42px 26px;position:relative;overflow:hidden;}
-.hdr::before{content:'💻';position:absolute;right:28px;top:8px;font-size:120px;opacity:.06;}
+.hdr::before{content:"💻";position:absolute;right:28px;top:8px;font-size:120px;opacity:.06;}
 .mbr{display:flex;gap:7px;margin-bottom:12px;flex-wrap:wrap;}
 .bdg{font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;}
 .bdg-ch{background:rgba(255,255,255,.13);color:rgba(255,255,255,.9);}
 .bdg-hot{background:#c0392b;color:white;}
 .bdg-ok{background:#0369a1;color:white;}
-.ht{font-family:var(--serif);font-size:27px;font-weight:600;color:white;letter-spacing:-.02em;margin-bottom:3px;}
+.ht{font-family:var(--serif);font-size:26px;font-weight:600;color:white;letter-spacing:-.02em;margin-bottom:3px;}
 .hs{color:rgba(255,255,255,.55);font-size:12px;font-weight:300;}
-.hst{display:flex;gap:22px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap;}
-.hn{font-size:17px;font-weight:700;color:#7dd3fc;}
-.hl{font-size:9.5px;color:rgba(255,255,255,.5);margin-top:1px;}
-.tab-bar{display:flex;background:var(--p);padding:0 42px;gap:2px;flex-wrap:wrap;border-bottom:2px solid rgba(255,255,255,.08);}
-.tab-btn{padding:11px 12px;font-size:11.5px;font-weight:600;color:rgba(255,255,255,.5);cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;transition:all .18s;white-space:nowrap;}
+.hst{display:flex;gap:20px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap;}
+.hn{font-size:16px;font-weight:700;color:#7dd3fc;}
+.hl{font-size:9px;color:rgba(255,255,255,.5);margin-top:1px;}
+.tab-bar{display:flex;background:var(--p);padding:0 20px;gap:1px;flex-wrap:wrap;border-bottom:2px solid rgba(255,255,255,.08);}
+.tab-btn{padding:10px 11px;font-size:11px;font-weight:600;color:rgba(255,255,255,.5);cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;transition:all .18s;white-space:nowrap;}
 .tab-btn:hover{color:rgba(255,255,255,.8);}
 .tab-btn.active{color:#7dd3fc;border-bottom-color:#0369a1;}
-.cc{background:var(--bg);border-radius:0 0 14px 14px;padding:36px 42px;border:1px solid var(--bd);border-top:none;}
+.cc{background:var(--bg);border-radius:0 0 14px 14px;padding:32px 38px;border:1px solid var(--bd);border-top:none;}
 .tab-pane{display:none;}.tab-pane.active{display:block;}
-.sh{display:flex;align-items:center;gap:9px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--g1);margin-top:6px;}
-.sn2{width:30px;height:30px;background:var(--p);color:white;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
-.st{font-size:17px;font-weight:700;color:var(--p);}
+.sh{display:flex;align-items:center;gap:9px;margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--g1);margin-top:8px;}
+.sn2{width:28px;height:28px;background:var(--p);color:white;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;}
+.st{font-size:16px;font-weight:700;color:var(--p);}
 .slb{font-size:9.5px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;}
 .le{background:var(--rl);color:var(--r);}
 .ld{background:var(--al);color:var(--a);}
@@ -50,129 +50,139 @@ body{font-family:var(--sans);background:#e8eef8;color:var(--tx);font-size:14px;l
 .lg{background:var(--gl);color:var(--g);}
 .lt{background:var(--tl);color:var(--t);}
 .lch{background:var(--chl);color:var(--ch);}
-.sb{font-size:13.5px;line-height:2.1;color:var(--tx);}
-.sb p{margin-bottom:14px;}
+.sb{font-size:13.5px;line-height:2.0;color:var(--tx);}
+.sb p{margin-bottom:13px;}
 .sb strong{color:var(--p);}
-.dfb{background:var(--p);color:white;border-radius:11px;padding:16px 21px;margin-bottom:14px;}
-.dfl{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7dd3fc;margin-bottom:6px;}
-.dfb p{font-size:13.5px;line-height:1.95;color:rgba(255,255,255,.9);}
+.dfb{background:var(--p);color:white;border-radius:11px;padding:14px 19px;margin-bottom:13px;}
+.dfl{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7dd3fc;margin-bottom:5px;}
+.dfb p{font-size:13px;line-height:1.9;color:rgba(255,255,255,.9);}
 .dfb strong{color:#7dd3fc;}
-.dfb code{font-family:var(--mono);font-size:11.5px;background:rgba(125,211,252,.15);color:#7dd3fc;padding:2px 7px;border-radius:4px;}
-.tw{overflow-x:auto;margin:12px 0;border-radius:9px;border:1px solid var(--bd);}
+.dfb code{font-family:var(--mono);font-size:11px;background:rgba(125,211,252,.15);color:#7dd3fc;padding:1px 6px;border-radius:3px;}
+.tw{overflow-x:auto;margin:10px 0;border-radius:9px;border:1px solid var(--bd);}
 table{width:100%;border-collapse:collapse;font-size:12.5px;}
 thead tr{background:var(--p);color:white;}
-thead th{padding:10px 13px;text-align:left;font-weight:600;font-size:11.5px;}
+thead th{padding:9px 12px;text-align:left;font-weight:600;font-size:11px;}
 tbody tr{border-bottom:1px solid var(--g1);}
 tbody tr:last-child{border-bottom:none;}
 tbody tr:hover{background:#f0f7ff;}
-tbody td{padding:9px 13px;color:var(--tx);vertical-align:top;line-height:1.7;}
+tbody td{padding:8px 12px;color:var(--tx);vertical-align:top;line-height:1.65;}
 tbody td:first-child{font-weight:600;color:var(--p);}
 .tc-r{background:#fdf0ef!important;}
 .tc-g{background:#edf7f2!important;}
 .tc-b{background:#e8eeff!important;}
 .tc-v{background:#ede9fe!important;}
 .tc-w{background:#fffbeb!important;}
-/* 구성요소 카드 */
-.comp-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:12px 0;}
-.comp{border-radius:10px;overflow:hidden;border:1px solid var(--bd);}
-.comph{padding:11px 15px;font-size:13px;font-weight:700;color:white;text-align:center;}
-.compb{padding:13px 15px;background:var(--bg);}
-.compr{font-size:13px;color:var(--tx);padding:5px 0;border-bottom:1px solid var(--g1);line-height:1.7;}
-.compr:last-child{border-bottom:none;}
-.compr strong{color:var(--p);}
-/* 권한 표시 */
-.perm-demo{background:var(--p);border-radius:10px;padding:16px 20px;margin:12px 0;font-family:var(--mono);}
-.perm-row{display:flex;align-items:center;gap:6px;margin-bottom:10px;flex-wrap:wrap;}
+.tc-ch{background:#e0f2fe!important;}
+.mono{font-family:var(--mono);font-size:11.5px;}
+/* 접근 통제 3종 */
+.ac-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px;margin:12px 0;}
+.acc{border-radius:10px;overflow:hidden;border:1px solid var(--bd);}
+.acch{padding:10px 14px;font-size:13px;font-weight:700;color:white;text-align:center;}
+.accb{padding:12px 14px;background:var(--bg);}
+.accr{font-size:12.5px;color:var(--tx);padding:5px 0;border-bottom:1px solid var(--g1);line-height:1.65;}
+.accr:last-child{border-bottom:none;}
+.accr strong{color:var(--p);}
+/* 부팅 순서 */
+.boot-flow{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0;align-items:center;}
+.bf{background:var(--p);color:white;border-radius:8px;padding:8px 13px;font-size:12.5px;font-weight:700;text-align:center;flex:1;min-width:90px;}
+.bf small{display:block;font-size:9.5px;color:rgba(255,255,255,.6);font-weight:400;margin-top:2px;}
+.bf-arrow{color:var(--tm);font-size:16px;flex-shrink:0;}
+/* 권한 시각화 */
+.perm-demo{background:var(--p);border-radius:10px;padding:14px 18px;margin:12px 0;font-family:var(--mono);}
+.perm-row{display:flex;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap;}
 .perm-row:last-child{margin-bottom:0;}
-.pch{font-size:10px;color:#7dd3fc;font-weight:700;min-width:80px;}
-.pc{font-size:13px;color:white;letter-spacing:.05em;}
-.pb{display:inline-flex;gap:2px;align-items:center;}
-.px{display:inline-block;width:22px;height:22px;border-radius:4px;text-align:center;line-height:22px;font-size:11px;font-weight:700;font-family:var(--mono);}
+.pch{font-size:10px;color:#7dd3fc;font-weight:700;min-width:75px;}
+.px{display:inline-block;width:21px;height:21px;border-radius:4px;text-align:center;line-height:21px;font-size:10.5px;font-weight:700;}
 .pr{background:#c0392b;color:white;}
 .pw{background:#1a7a4a;color:white;}
 .pe{background:#0369a1;color:white;}
 .p0{background:#374151;color:rgba(255,255,255,.3);}
-.pdash{color:rgba(255,255,255,.3);font-size:10px;}
+/* umask */
+.umask-box{background:var(--g0);border-radius:9px;padding:13px 15px;margin:11px 0;border:1px solid var(--bd);}
+.urow{display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid var(--g1);font-size:13px;}
+.urow:last-child{border-bottom:none;}
+.uk{font-family:var(--mono);font-weight:700;color:var(--p);min-width:120px;}
+.ueq{color:var(--tm);}
+.uv{font-family:var(--mono);color:var(--g);font-weight:700;}
+.ud{color:var(--tm);font-size:12px;}
+/* iptables */
+.ipt-box{background:#0d1117;border-radius:9px;padding:14px 16px;margin:11px 0;font-family:var(--mono);font-size:12px;overflow-x:auto;}
+.ipt-box .cmd{color:#f0e68c;}
+.ipt-box .cmt{color:#6b7280;font-size:11px;}
+.ipt-box .opt{color:#7dd3fc;}
 /* 로그 파일 */
-.log-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;}
-.lc{border-radius:9px;padding:12px 14px;border:1px solid var(--bd);background:var(--g0);}
-.lct{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--ch);margin-bottom:6px;}
-.lcb{font-size:13px;color:var(--tx);line-height:1.75;}
+.log-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:11px 0;}
+.lc{border-radius:9px;padding:11px 13px;border:1px solid var(--bd);background:var(--g0);}
+.lct{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--ch);margin-bottom:5px;}
+.lcb{font-size:12.5px;color:var(--tx);line-height:1.7;}
 .lcb strong{color:var(--p);}
-.lcb .fmt{font-size:11px;font-family:var(--mono);color:var(--v);margin-top:3px;}
-/* 설계 원리 */
-.design-list{display:flex;flex-direction:column;gap:0;border-radius:11px;overflow:hidden;border:1px solid var(--bd);margin:12px 0;}
-.dp{display:flex;gap:12px;padding:12px 15px;border-bottom:1px solid var(--g1);}
-.dp:last-child{border-bottom:none;}
-.dp:nth-child(even){background:var(--g0);}
-.dn{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;color:white;flex-shrink:0;margin-top:2px;background:var(--p);}
-.dc{flex:1;}
-.dt2{font-size:13.5px;font-weight:700;color:var(--p);margin-bottom:4px;}
-.dd{font-size:13px;color:var(--tm);line-height:1.8;}
-/* SID */
-.sid-demo{background:#f1f5f9;border-radius:10px;padding:14px 18px;margin:12px 0;font-family:var(--mono);font-size:12.5px;}
-.sid-full{color:var(--p);font-weight:700;margin-bottom:10px;font-size:13px;}
-.sid-parts{display:flex;flex-direction:column;gap:5px;}
-.sid-part{display:flex;align-items:center;gap:10px;}
-.sid-key{font-size:10px;font-weight:700;color:var(--a);min-width:90px;}
-.sid-val{color:var(--tx);}
-/* umask 표 */
-.umask-calc{background:var(--g0);border-radius:10px;padding:14px 16px;margin:12px 0;border:1px solid var(--bd);}
-.umask-row{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--g1);font-size:13px;}
-.umask-row:last-child{border-bottom:none;}
-.umask-k{font-family:var(--mono);font-weight:700;color:var(--p);min-width:110px;}
-.umask-eq{color:var(--tm);}
-.umask-v{font-family:var(--mono);color:var(--g);font-weight:700;}
-.umask-desc{color:var(--tm);font-size:12px;}
+.lcb .fmt{font-size:10.5px;font-family:var(--mono);color:var(--v);margin-top:3px;}
 /* 함정 박스 */
-.trap{border-radius:11px;margin:16px 0;overflow:hidden;}
-.th{display:flex;align-items:center;gap:8px;padding:11px 16px;background:var(--r);color:white;}
+.trap{border-radius:11px;margin:14px 0;overflow:hidden;}
+.th{display:flex;align-items:center;gap:8px;padding:10px 15px;background:var(--r);color:white;}
 .tht{font-size:12.5px;font-weight:700;}
-.tb{background:var(--rl);padding:14px 18px;border:1px solid #f5c6c2;border-top:none;border-radius:0 0 11px 11px;}
-.tb p{font-size:13px;color:#7a1c1c;line-height:1.9;margin-bottom:8px;}
+.tb{background:var(--rl);padding:13px 17px;border:1px solid #f5c6c2;border-top:none;border-radius:0 0 11px 11px;}
+.tb p{font-size:13px;color:#7a1c1c;line-height:1.85;margin-bottom:7px;}
 .tb p:last-child{margin-bottom:0;}
-.tq{background:white;border-left:3px solid var(--r);padding:9px 13px;border-radius:0 7px 7px 0;margin:9px 0;font-size:13px;color:var(--tx);line-height:1.75;}
-.vw{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--r);color:white;}
-.vr{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--g);color:white;}
-.inf-b{background:var(--chl);border:1px solid #bae6fd;border-radius:9px;padding:12px 16px;margin:12px 0;font-size:13px;color:#0c4a6e;line-height:1.85;}
+.tq{background:white;border-left:3px solid var(--r);padding:8px 12px;border-radius:0 7px 7px 0;margin:8px 0;font-size:12.5px;color:var(--tx);line-height:1.7;}
+.vw{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:20px;background:var(--r);color:white;}
+.vr{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:20px;background:var(--g);color:white;}
+.inf-b{background:var(--chl);border:1px solid #bae6fd;border-radius:9px;padding:11px 15px;margin:11px 0;font-size:13px;color:#0c4a6e;line-height:1.8;}
 .inf-b strong{color:var(--p);}
-.inf-v{background:var(--vl);border:1px solid #c4b5fd;border-radius:9px;padding:12px 16px;margin:12px 0;font-size:13px;color:#3b0764;line-height:1.85;}
+.inf-g{background:var(--gl);border:1px solid #a3dbc0;border-radius:9px;padding:11px 15px;margin:11px 0;font-size:13px;color:#0d3321;line-height:1.8;}
+.inf-g strong{color:var(--p);}
+.inf-v{background:var(--vl);border:1px solid #c4b5fd;border-radius:9px;padding:11px 15px;margin:11px 0;font-size:13px;color:#3b0764;line-height:1.8;}
 .inf-v strong{color:var(--p);}
 /* 기출 */
-.ec{border:1px solid var(--bd);border-radius:11px;margin:11px 0;overflow:hidden;}
-.eh{display:flex;align-items:center;justify-content:space-between;padding:9px 15px;background:var(--g0);border-bottom:1px solid var(--bd);}
-.ey{font-size:11.5px;font-weight:700;color:var(--p);}
-.es{color:#e8b000;font-size:12px;letter-spacing:2px;}
-.eb{padding:14px 16px;}
-.eq{font-size:13.5px;font-weight:600;color:var(--tx);margin-bottom:11px;line-height:1.75;}
-.eo{display:flex;flex-direction:column;gap:5px;}
-.op{font-size:13px;padding:7px 11px;border-radius:6px;border:1px solid transparent;line-height:1.6;}
+.ec{border:1px solid var(--bd);border-radius:11px;margin:10px 0;overflow:hidden;}
+.eh{display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:var(--g0);border-bottom:1px solid var(--bd);}
+.ey{font-size:11px;font-weight:700;color:var(--p);}
+.es{color:#e8b000;font-size:11px;letter-spacing:2px;}
+.eb{padding:13px 15px;}
+.eq{font-size:13px;font-weight:600;color:var(--tx);margin-bottom:10px;line-height:1.7;}
+.eo{display:flex;flex-direction:column;gap:4px;}
+.op{font-size:12.5px;padding:6px 10px;border-radius:6px;border:1px solid transparent;line-height:1.55;}
 .ow{background:#fdf0ef;border-color:#f5c6c2;color:#7a1c1c;text-decoration:line-through;opacity:.8;}
-.ow::before{content:'✗ ';}
+.ow::before{content:"✗ ";}
 .or{background:var(--gl);border-color:#a3dbc0;color:#0d4a2a;font-weight:600;}
-.or::before{content:'✓ ';}
+.or::before{content:"✓ ";}
 .on{background:var(--g0);border-color:var(--bd);color:var(--tx);}
-.ex{margin-top:11px;padding:12px 14px;background:var(--g0);border-radius:7px;font-size:13px;color:var(--tm);line-height:1.9;border-left:3px solid var(--ch);}
-/* 암기 카드 */
-.mem{background:linear-gradient(135deg,#050b1a 0%,#0d1a35 100%);border-radius:13px;padding:22px 25px;color:white;margin:14px 0;position:relative;overflow:hidden;}
-.mem::before{content:'💻';position:absolute;right:14px;top:8px;font-size:52px;opacity:.08;}
-.mt{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7dd3fc;margin-bottom:12px;}
-.mi{display:flex;flex-direction:column;gap:9px;}
-.mr{display:flex;gap:10px;align-items:flex-start;}
-.mk{font-family:var(--mono);font-size:10.5px;font-weight:600;background:rgba(125,211,252,.18);color:#7dd3fc;padding:2px 8px;border-radius:5px;white-space:nowrap;flex-shrink:0;}
-.mv{font-size:13px;color:rgba(255,255,255,.85);line-height:1.75;}
+.ex{margin-top:10px;padding:11px 13px;background:var(--g0);border-radius:7px;font-size:12.5px;color:var(--tm);line-height:1.85;border-left:3px solid var(--ch);}
+/* 암기 */
+.mem{background:linear-gradient(135deg,#050b1a 0%,#0d1a35 100%);border-radius:13px;padding:20px 24px;color:white;margin:13px 0;position:relative;overflow:hidden;}
+.mem::before{content:"💻";position:absolute;right:12px;top:6px;font-size:48px;opacity:.08;}
+.mt{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7dd3fc;margin-bottom:11px;}
+.mi{display:flex;flex-direction:column;gap:8px;}
+.mr{display:flex;gap:9px;align-items:flex-start;}
+.mk{font-family:var(--mono);font-size:10px;font-weight:600;background:rgba(125,211,252,.18);color:#7dd3fc;padding:2px 7px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.mv{font-size:13px;color:rgba(255,255,255,.85);line-height:1.7;}
 .mv strong{color:#7dd3fc;}
-.cl{list-style:none;margin:12px 0;display:flex;flex-direction:column;gap:5px;}
-.cl li{display:flex;align-items:flex-start;gap:8px;font-size:13px;padding:8px 13px;border-radius:7px;border:1px solid var(--bd);background:var(--bg);line-height:1.65;}
+.cl{list-style:none;margin:11px 0;display:flex;flex-direction:column;gap:4px;}
+.cl li{display:flex;align-items:flex-start;gap:7px;font-size:12.5px;padding:7px 12px;border-radius:7px;border:1px solid var(--bd);background:var(--bg);line-height:1.6;}
 .clw{background:#fdf0ef;border-color:#f5c6c2;}
-.clw::before{content:'⚠';color:var(--r)!important;font-size:12px;flex-shrink:0;margin-top:2px;}
+.clw::before{content:"⚠";color:var(--r)!important;font-size:11px;flex-shrink:0;margin-top:2px;}
 .clr{background:var(--gl);border-color:#a3dbc0;}
-.clr::before{content:'✓';color:var(--g)!important;font-size:12px;flex-shrink:0;margin-top:2px;}
-.dv{height:1px;background:var(--g1);margin:26px 0;}
-.dw{background:var(--g0);border:1px solid var(--bd);border-radius:12px;padding:18px;margin:14px 0;overflow-x:auto;}
-.dt2{font-size:11px;font-weight:700;color:var(--p);margin-bottom:12px;}
-.ft{display:flex;justify-content:space-between;margin-top:28px;padding-top:13px;border-top:1px solid var(--bd);font-size:10.5px;color:var(--tm);}
-@media(max-width:640px){.cc,.hdr{padding:22px 16px;}.tab-bar{padding:0 16px;}.comp-grid{grid-template-columns:1fr;}.log-grid{grid-template-columns:1fr;}}
+.clr::before{content:"✓";color:var(--g)!important;font-size:11px;flex-shrink:0;margin-top:2px;}
+.dv{height:1px;background:var(--g1);margin:22px 0;}
+.dw{background:var(--g0);border:1px solid var(--bd);border-radius:11px;padding:15px;margin:12px 0;overflow-x:auto;}
+.dw-t{font-size:11px;font-weight:700;color:var(--p);margin-bottom:10px;}
+.ft{display:flex;justify-content:space-between;margin-top:26px;padding-top:12px;border-top:1px solid var(--bd);font-size:10px;color:var(--tm);}
+/* 설계원리 리스트 */
+.dp-list{display:flex;flex-direction:column;gap:0;border-radius:10px;overflow:hidden;border:1px solid var(--bd);margin:11px 0;}
+.dp{display:flex;gap:11px;padding:11px 14px;border-bottom:1px solid var(--g1);}
+.dp:last-child{border-bottom:none;}
+.dp:nth-child(even){background:var(--g0);}
+.dn{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:white;flex-shrink:0;margin-top:2px;background:var(--p);}
+.dc{flex:1;}
+.dt2{font-size:13px;font-weight:700;color:var(--p);margin-bottom:3px;}
+.dd{font-size:12.5px;color:var(--tm);line-height:1.75;}
+/* SID */
+.sid-box{background:#f1f5f9;border-radius:9px;padding:12px 16px;margin:11px 0;font-family:var(--mono);}
+.sid-full{color:var(--p);font-weight:700;margin-bottom:9px;font-size:13px;}
+.sid-parts{display:flex;flex-direction:column;gap:5px;}
+.sid-part{display:flex;align-items:flex-start;gap:10px;font-size:12.5px;}
+.sid-key{font-weight:700;color:var(--a);min-width:85px;flex-shrink:0;}
+@media(max-width:640px){.cc,.hdr{padding:20px 14px;}.tab-bar{padding:0 10px;}.ac-grid{grid-template-columns:1fr;}.log-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -180,622 +190,695 @@ tbody td:first-child{font-weight:600;color:var(--p);}
 
 <div class="hdr">
   <div class="mbr">
-    <span class="bdg bdg-ch">Chapter 09 · 운영체제보안</span>
-    <span class="bdg bdg-hot">최빈출</span>
+    <span class="bdg bdg-ch">Chapter 09 · 운영체제 보안</span>
+    <span class="bdg bdg-hot">PDF 전체 반영</span>
     <span class="bdg bdg-ok">기출 8문제 수록</span>
   </div>
-  <div class="ht">운영체제 보안 완전 교재</div>
-  <div class="hs">보안 OS·참조 모니터·TCB · 보안 설계 7원리 · 윈도우(LSA·SAM·SRM·SID) · 유닉스/리눅스 파일권한·특수권한·계정파일·로그</div>
+  <div class="ht">운영체제 보안 완전 교재 v2</div>
+  <div class="hs">OS 개요·접근통제 3종 · 보안 OS·참조모니터·TCB · 윈도우(커널·부팅·LSA·SAM·SRM·레지스트리·이벤트로그·백업) · 유닉스(커널·셸·디렉터리·파일구조·부팅) · 계정파일·권한·umask·특수권한·iptables·TCP Wrapper · 로그 13종</div>
   <div class="hst">
-    <div><div class="hn">참조 모니터</div><div class="hl">격리·완전성·검증 3특성</div></div>
-    <div><div class="hn">LSA·SAM·SRM</div><div class="hl">SRM=SID 부여·감사 ★★★</div></div>
-    <div><div class="hn">특수 권한 3종</div><div class="hl">SetUID·SetGID·Sticky bit</div></div>
-    <div><div class="hn">8문제</div><div class="hl">국가직·경찰·군무원 기출</div></div>
+    <div><div class="hn">7탭</div><div class="hl">PDF 순서대로 전체 반영</div></div>
+    <div><div class="hn">DAC·MAC·RBAC</div><div class="hl">접근 통제 3종 비교</div></div>
+    <div><div class="hn">윈도우 부팅 6단계</div><div class="hl">POST→ntoskrnl</div></div>
+    <div><div class="hn">로그 13종</div><div class="hl">messages~loginlog</div></div>
   </div>
 </div>
 
 <div class="tab-bar">
-  <button class="tab-btn active" onclick="sw('secure_os')">🛡 보안 OS·설계원리</button>
+  <button class="tab-btn active" onclick="sw('os_intro')">🖥 OS 개요·접근통제</button>
+  <button class="tab-btn" onclick="sw('secure_os')">🛡 보안OS·설계원리</button>
   <button class="tab-btn" onclick="sw('windows')">🪟 윈도우 보안</button>
-  <button class="tab-btn" onclick="sw('unix_perm')">🐧 유닉스 파일권한</button>
-  <button class="tab-btn" onclick="sw('unix_special')">⚙ 특수권한·umask</button>
-  <button class="tab-btn" onclick="sw('unix_files')">📁 계정파일·로그</button>
+  <button class="tab-btn" onclick="sw('unix_struct')">🐧 유닉스 구조</button>
+  <button class="tab-btn" onclick="sw('unix_perm')">🔐 계정·권한·특수권한</button>
+  <button class="tab-btn" onclick="sw('unix_log')">📋 로그 파일 13종</button>
   <button class="tab-btn" onclick="sw('exam')">📝 기출 8선</button>
 </div>
 
 <div class="cc">
 
-<!-- ════ 보안 OS · 설계원리 ════ -->
-<div class="tab-pane active" id="tab-secure_os">
+<!-- ════ TAB1: OS 개요·접근통제 ════ -->
+<div class="tab-pane active" id="tab-os_intro">
 
-<div class="sh"><div class="sn2">1</div><div class="st">보안 운영체제 (Secure OS) 개요</div><span class="slb le">★★★ 2022 국가직 출제</span></div>
-
+<div class="sh"><div class="sn2">1</div><div class="st">운영체제 개요 및 보안 기능</div><span class="slb lg">★★</span></div>
 <div class="dfb">
-  <div class="dfl">보안 운영체제 정의</div>
+  <div class="dfl">운영체제 정의</div>
+  <p>운영체제(Operating System)는 <strong>메모리·파일·입출력 장치·프로세서 등과 같은 모든 시스템 자원을 관리</strong>하고, 다양한 응용 프로그램 실행을 지원하는 기반 소프트웨어. 운영체제 보안이란 <strong>시스템에 대한 위협이나 침입을 방지하는 것</strong>을 의미함.</p>
+</div>
+
+<div class="sb"><p>운영체제가 제공하는 <strong>3대 보안 기능</strong>: ① <strong>메모리 보호</strong>(메모리·공유 가능한 입출력 장치·공유 프로그램 보호), ② <strong>접근 통제</strong>(서비스·시스템 자원에 대한 접근 제어), ③ <strong>사용자 인증</strong>(식별 및 인증). 이 세 가지가 운영체제 보안의 핵심 기능이에요.</p></div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">2</div><div class="st">접근 통제 3종 — DAC · MAC · RBAC</div><span class="slb le">★★★ 매년 출제</span></div>
+
+<div class="ac-grid">
+  <div class="acc">
+    <div class="acch" style="background:#2d5be3;">DAC<br><small style="font-size:9px;opacity:.8;">임의적 접근 통제</small></div>
+    <div class="accb">
+      <div class="accr"><strong>Discretionary Access Control</strong></div>
+      <div class="accr">시스템 자원에 대한 <strong>사용자·개인 또는 그룹을 기반으로</strong> 하는 접근 제어 방법.</div>
+      <div class="accr">주체(사용자)가 어떤 접근 권한을 갖는 다른 사용자에게 <strong>권한을 양도할 수 있다</strong>는 의미.</div>
+      <div class="accr"><strong>대표: ACL(Access Control List)</strong>. 유닉스 기본 권한 체계.</div>
+      <div class="accr">장점: 유연함. 단점: 권한 전파 통제 어려움.</div>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acch" style="background:#c0392b;">MAC<br><small style="font-size:9px;opacity:.8;">강제적 접근 통제</small></div>
+    <div class="accb">
+      <div class="accr"><strong>Mandatory Access Control</strong></div>
+      <div class="accr">어떤 주체가 특정 객체에 접근하려 할 때 <strong>보안 등급(레이블)을 비교</strong>하여 높은 보안 수준이 낮은 수준으로 흐르는 것을 통제하는 방법.</div>
+      <div class="accr">모든 객체를 분류하고, 접근하고자 하는 사용자의 <strong>허가(Clearance)를 결정</strong>하여 제어.</div>
+      <div class="accr"><strong>군사·정부 환경</strong>에 주로 사용. Bell-LaPadula 모델.</div>
+      <div class="accr">장점: 강력한 통제. 단점: 운영 유연성 낮음.</div>
+    </div>
+  </div>
+  <div class="acc">
+    <div class="acch" style="background:#1a7a4a;">RBAC<br><small style="font-size:9px;opacity:.8;">역할 기반 접근 통제</small></div>
+    <div class="accb">
+      <div class="accr"><strong>Role Based Access Control</strong></div>
+      <div class="accr"><strong>역할(Role)에 의해 접근이 제어</strong>되는 방식. 업무에 따라 역할이 구성되고, 접근 권한은 역할에 따라 부여됨.</div>
+      <div class="accr">역할에 필요한 <strong>최소 자원만 접근</strong>. 업무 변경 시 접근 권한 변경 없이도 역할만 변경하면 됨.</div>
+      <div class="accr"><strong>기업 환경</strong>에 적합. 관리 편의성 높음.</div>
+      <div class="accr">장점: 관리 용이. 단점: 역할 설계 복잡.</div>
+    </div>
+  </div>
+</div>
+
+<div class="tw"><table>
+  <thead><tr><th>구분</th><th>DAC (임의적)</th><th>MAC (강제적)</th><th>RBAC (역할 기반)</th></tr></thead>
+  <tbody>
+    <tr><td>접근 기준</td><td>주체 신분(개인·그룹)</td><td>보안 등급(레이블) 비교</td><td>역할(Role)</td></tr>
+    <tr><td>권한 양도</td><td class="tc-g"><strong>가능</strong></td><td class="tc-r"><strong>불가</strong></td><td>역할 단위로 가능</td></tr>
+    <tr><td>주 사용처</td><td>일반 유닉스 시스템</td><td>군사·정부 기밀 시스템</td><td>기업·조직 환경</td></tr>
+    <tr><td>대표 모델</td><td>ACL</td><td>Bell-LaPadula</td><td>NIST RBAC</td></tr>
+    <tr><td>특징</td><td>유연, 권한 전파 위험</td><td>강력, 운영 경직</td><td>관리 편의, 역할 설계 필요</td></tr>
+  </tbody>
+</table></div>
+
+<div class="trap">
+  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — MAC vs RBAC 혼동 (경찰간부·군무원 출제)</span></div>
+  <div class="tb">
+    <div class="tq">"유닉스 운영체제의 기본 접근제어 방식은 MAC" → <span class="vw">✗</span> 유닉스 기본 = <strong>DAC</strong>(임의적 접근 통제, ACL 기반)</div>
+    <div class="tq">"부여된 역할에 기반하여 접근이 제어되므로 주로 군사용으로 사용된다" → <span class="vw">✗</span> 역할 기반 = <strong>RBAC</strong>. 군사용 = <strong>MAC</strong>.</div>
+    <div class="tq">"MAC의 대표적인 구현 형태는 ACL" → <span class="vw">✗</span> ACL = <strong>DAC</strong>의 구현 형태.</div>
+  </div>
+</div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">3</div><div class="st">사용자 인증 기법 3종</div><span class="slb ld">★★</span></div>
+<div class="tw"><table>
+  <thead><tr><th>유형</th><th>방식</th><th>예시</th></tr></thead>
+  <tbody>
+    <tr><td><strong>지식 기반</strong> (Something You Know)</td><td>사용자가 알고 있는 것</td><td>패스워드, 패스프레이즈, PIN(Personal Identification Number)</td></tr>
+    <tr><td><strong>소지 기반</strong> (Something You Have)</td><td>사용자가 가진 것</td><td>스마트카드, OTP(One-Time Password), IC카드, 보안토큰</td></tr>
+    <tr><td><strong>생체 기반</strong> (Something You Are)</td><td>개체에 의한 인증</td><td>지문, 음성, 망막 측정, 서명 동작, 홍채 인식</td></tr>
+  </tbody>
+</table></div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">4</div><div class="st">시스템 콜 (System Call)</div><span class="slb lw">★★ 2016 국가직 출제</span></div>
+<div class="dfb">
+  <div class="dfl">시스템 콜 정의</div>
+  <p>운영체제는 <strong>이중 모드(Dual Mode)</strong>로 되어 있는데, 이는 <strong>사용자 모드(User Mode)</strong>와 <strong>커널 모드(Kernel Mode, 또는 운영체제 실행 모드)</strong>로 구분됨. 사용자는 특권 명령을 사용할 수 없으며, 이러한 사용자가 운영체제에게 작업을 수행하게 되는데, 이를 <strong>시스템 콜(System Call)</strong>이라 한다. 즉, 시스템 콜은 실행 중인 운영체제에 요청하는 것이다. <strong>입출력 제어를 운영체제(OS)에게 요청하여 사용자로부터 분리되는 운영체제의 기본 명령</strong>이다.</p>
+</div>
+
+</div><!-- /tab-os_intro -->
+
+<!-- ════ TAB2: 보안OS·설계원리 ════ -->
+<div class="tab-pane" id="tab-secure_os">
+
+<div class="sh"><div class="sn2">1</div><div class="st">보안 운영체제 (Secure OS)</div><span class="slb le">★★★ 2022 국가직</span></div>
+<div class="dfb">
+  <div class="dfl">보안 OS 정의</div>
   <p>보안 운영체제(Secure OS)는 <strong>기존 운영체제에 내재된 보안상의 결함으로 인한 각종 침해로부터 시스템을 보호하기 위하여, 운영체제 내에 보안 기능을 통합시킨 보안 커널(Security Kernel)을 추가적으로 이식한 운영체제</strong>. 보안 커널을 통하여 사용자의 모든 접근 행위가 안전하게 통제됨.</p>
 </div>
 
 <div class="dv"></div>
-
-<div class="sh"><div class="sn2">2</div><div class="st">참조 모니터 (Reference Monitor)</div><span class="slb le">★★★ 2024 국가직 출제</span></div>
-
-<div class="dfb">
-  <div class="dfl">참조 모니터 정의</div>
-  <p>참조 모니터(Reference Monitor)는 <strong>주체(Subject)와 객체(Object) 사이의 모든 접근을 통제하는 추상적인 기계(Abstract Machine)</strong>. 불법적인 접근이나 자료를 막기 위하여 주체가 객체에 접근하기 위한 장치. 특정 주체가 특정 객체에 접근할 수 있는지 확인하는 기능을 하는 <strong>안전한 운영체제의 핵심 보안 모듈</strong>.</p>
-</div>
-
-<div class="design-list">
-  <div class="dp">
-    <div class="dn" style="background:#c0392b;">1</div>
-    <div class="dc">
-      <div class="dt2">격리성 (Isolation) — 주체와 객체의 부정 조작 불가</div>
-      <div class="dd">참조 모니터에 대한 부정 조작이 없어야 한다. 참조 모니터가 무결하게 동작할 수 있도록 <strong>격리(완전히 보호)</strong>되어야 한다.</div>
-    </div>
-  </div>
-  <div class="dp">
-    <div class="dn" style="background:#2d5be3;">2</div>
-    <div class="dc">
-      <div class="dt2">완전성 (Completeness) — 항상 호출</div>
-      <div class="dd">참조 모니터는 <strong>항상 호출되어야</strong> 한다. 모든 접근 시도에 대해 시행되어야 하고 <strong>회피하는 것이 불가능</strong>해야 한다.</div>
-    </div>
-  </div>
-  <div class="dp">
-    <div class="dn" style="background:#1a7a4a;">3</div>
-    <div class="dc">
-      <div class="dt2">검증 가능성 (Verifiability) — 소규모·분석 용이</div>
-      <div class="dd">참조 모니터는 검증이 용이하도록 <strong>충분히 소규모(Small Enough)</strong>이어야 한다. 충분한 분석, 시험, 증명이 가능해야 한다.</div>
-    </div>
-  </div>
-</div>
-
-<div class="trap">
-  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — 참조 모니터 특성 오답 (2024 국가직 문8)</span></div>
-  <div class="tb">
-    <div class="tq">"참조 모니터는 모든 주체 간 상호 접근통제를 담당하는 추상적인 기계이다." → <span class="vw">✗ 오답</span></div>
-    <p>참조 모니터는 <strong>주체↔객체</strong> 간 접근통제를 담당. "주체 간(주체↔주체)" 접근통제는 틀린 설명. 주체가 객체에 접근하는 것을 통제하는 역할.</p>
-    <div class="tq">"보안 매개변수 설정 등과 같은 다른 보안 메커니즘과 데이터를 교환하면서 상호 작용을 한다" → <span class="vw">✗ 오답</span></div>
-    <p>참조 모니터는 다른 보안 메커니즘과 데이터 교환을 하지 않음. 독립적으로 격리(Isolation)되어 동작하는 것이 핵심 특성.</p>
-  </div>
+<div class="sh"><div class="sn2">2</div><div class="st">보안 시스템 설계 7원리</div><span class="slb ld">★★</span></div>
+<div class="dp-list">
+  <div class="dp"><div class="dn">1</div><div class="dc"><div class="dt2">소규모화 (Economy of Mechanism)</div><div class="dd">보안 메커니즘은 가능한 소규모로, 단순하며 간결하여야 한다. 충분한 분석·시험·증명이 가능해야 한다.</div></div></div>
+  <div class="dp"><div class="dn">2</div><div class="dc"><div class="dt2">Fail-safe Defaults (보안 경제성)</div><div class="dd">접근에 대한 기본 결정은 <strong>접근 거부(Denial)</strong>이어야 한다. 허가가 있어야만 접근 허용.</div></div></div>
+  <div class="dp"><div class="dn">3</div><div class="dc"><div class="dt2">개방형 설계 (Open Design)</div><div class="dd">보안 메커니즘은 비밀로 유지하는 것에 의존하지 말고 공개적으로 설계. 많은 검토를 통해 보안 공개적 검증 가능.</div></div></div>
+  <div class="dp"><div class="dn">4</div><div class="dc"><div class="dt2">완전한 조정 (Complete Mediation)</div><div class="dd">모든 접근은 완전히 통제되어야 한다. 직접 접근이나 접근 통제를 교묘히 우회하려는 접근 모두 통제.</div></div></div>
+  <div class="dp"><div class="dn">5</div><div class="dc"><div class="dt2">최소 권한 (Least Privilege)</div><div class="dd">접근에 대한 기본 허용은 <strong>최소 허용</strong>. 작업에 필요한 최소한의 권한만 부여.</div></div></div>
+  <div class="dp"><div class="dn">6</div><div class="dc"><div class="dt2">권한 분리 (Separation of Privilege)</div><div class="dd">접근에 대한 권한은 2개 이상의 조건을 충족해야 한다. 물리적·시간적·논리적 분리 포함.</div></div></div>
+  <div class="dp"><div class="dn">7</div><div class="dc"><div class="dt2">최소 공통 메커니즘 (Least Common Mechanism)</div><div class="dd">공유되거나 공통적인 접근 경로를 최소화. 사용 용이성을 위해 보안 희생 금지.</div></div></div>
 </div>
 
 <div class="dv"></div>
+<div class="sh"><div class="sn2">3</div><div class="st">참조 모니터 · 보안 커널 · TCB</div><span class="slb le">★★★ 2024 국가직</span></div>
+<div class="tw"><table>
+  <thead><tr><th>개념</th><th>정의</th><th>핵심 특성</th></tr></thead>
+  <tbody>
+    <tr class="tc-r">
+      <td><strong>참조 모니터<br>(Reference Monitor)</strong></td>
+      <td>주체(Subject)와 객체(Object) 사이의 <strong>모든 접근을 통제하는 추상적인 기계(Abstract Machine)</strong>. 안전한 운영체제의 핵심 보안 모듈.</td>
+      <td>① <strong>격리성</strong>(부정 조작 불가) ② <strong>완전성</strong>(항상 호출·회피 불가) ③ <strong>검증 가능성</strong>(소규모·분석 용이)</td>
+    </tr>
+    <tr class="tc-b">
+      <td><strong>보안 커널<br>(Security Kernel)</strong></td>
+      <td>참조 모니터를 <strong>구현</strong>한 것. 일반 운영체제에 포함되어 있는 보안 기능을 향상시키기 위해 사용되는 것으로 참조 모니터를 수행함.</td>
+      <td>모든 접근 요청에 대해 검사하여야 하며, 변경으로부터 보호되고 검증 가능해야 함. 통합 커널·마이크로 커널 방식 존재.</td>
+    </tr>
+    <tr class="tc-g">
+      <td><strong>TCB<br>(Trusted Computing Base)</strong></td>
+      <td>컴퓨터 시스템(HW·FW·SW) 내의 <strong>모든 보호 메커니즘의 총체</strong>. 보안 커널을 포함한 시스템 전체 보안 메커니즘.</td>
+      <td>운영 TCB = 기본적인 보호 환경 구축 + 신뢰성 있는 시스템 부가 서비스 제공. 보안 정책 적용 능력은 오직 TCB 내의 메커니즘에 의존.</td>
+    </tr>
+  </tbody>
+</table></div>
 
-<div class="sh"><div class="sn2">3</div><div class="st">TCB (Trusted Computing Base) — 신뢰 컴퓨팅 기반</div><span class="slb lv">★★★ 2022 군무원 출제</span></div>
-
-<div class="dfb">
-  <div class="dfl">TCB 정의</div>
-  <p>TCB(Trusted Computing Base)는 <strong>컴퓨터 시스템(하드웨어, 펌웨어, 소프트웨어) 내의 모든 보호 메커니즘의 총체</strong>. 신뢰성 있는 컴퓨팅을 위한 기본 환경 제공. 보안 커널은 TCB의 핵심 구성 요소. <strong>운영 TCB</strong>는 기본적인 보호 환경을 구축하고 신뢰성 있는 시스템에 필요한 부가적인 사용자 서비스를 제공.</p>
-</div>
-
-<div class="sb">
-<p>TCB와 참조 모니터, 보안 커널의 관계: 참조 모니터는 <strong>개념(Concept)</strong>, 보안 커널은 참조 모니터를 <strong>구현한 것</strong>, TCB는 보안 커널을 포함한 <strong>시스템 전체의 보안 메커니즘</strong>이에요.</p>
-<p>보안 커널 = 참조 모니터 개념을 구현한 TCB의 하드웨어·펌웨어·소프트웨어 요소. 보안 커널은 모든 접근 요청에 대해 검사하여야 하며, 변경으로부터 보호되고 검증 가능하여야 한다.</p>
-</div>
-
-<div class="inf-b">
-  <strong>TPM (Trusted Platform Module):</strong> 신뢰 컴퓨팅 그룹(TCG)에 의해 산업체가 개발한 개념. 신뢰를 위한 하드웨어·펌웨어에서 동작하는 하드웨어 모듈. 개인용 컴퓨터 메인 보드, 스마트 카드 등에 내장. 인증된 부팅(Authenticated Boot), 증명(Attestation), 봉인(Sealing) 기능 제공.
-</div>
+<div class="inf-b"><strong>보안 커널 설계 방식 2종:</strong> ① <strong>통합 커널(Monolithic Kernel)</strong> — 시스템 콜(Function Call) 통하여 하드웨어 자원 이용. 보안 기능이 크고 복잡해질 수 있음. ② <strong>마이크로 커널(Micro-kernel)</strong> — 크기를 줄이고 최소 기능만 갖는 방법. 프로세스 관리 서버·파일 관리 서버·메모리 관리 서버가 상호 간에 메시지 전달로 통신. 소규모에서 더 편한 보안을 위해 개발됨.</div>
 
 <div class="dv"></div>
-
-<div class="sh"><div class="sn2">4</div><div class="st">보안 시스템 설계 7원리</div><span class="slb ld">★★</span></div>
-
-<div class="design-list">
-  <div class="dp"><div class="dn">1</div><div class="dc"><div class="dt2">소규모화 (Economy of Mechanism)</div><div class="dd">보안 메커니즘은 가능한 소규모로, 단순하며 간결하여야 한다. 보안 메커니즘에 대한 충분한 분석, 시험, 증명이 가능해야 한다.</div></div></div>
-  <div class="dp"><div class="dn">2</div><div class="dc"><div class="dt2">보안 경제성 (Fail-safe Defaults)</div><div class="dd">접근에 대한 기본 결정은 <strong>접근 거부(Denial)</strong>이어야 한다. 허가가 있어야만 접근을 허용해야 한다.</div></div></div>
-  <div class="dp"><div class="dn">3</div><div class="dc"><div class="dt2">개방형 설계 (Open Design)</div><div class="dd">보안 메커니즘은 <strong>비밀로 유지하는 것에 의존하지 말고</strong>, 공개적으로 설계하여야 한다. 개방형 보안에 대한 많은 검토가 가능하도록 하여 보안에 대한 공개적 검증 가능.</div></div></div>
-  <div class="dp"><div class="dn">4</div><div class="dc"><div class="dt2">완전한 조정 (Complete Mediation)</div><div class="dd">모든 접근은 완전히 통제되어야 한다. 직접적인 접근이나 접근 통제를 교묘히 우회하려는 접근 모두 통제되어야 한다.</div></div></div>
-  <div class="dp"><div class="dn">5</div><div class="dc"><div class="dt2">최소 권한 (Least Privilege)</div><div class="dd">접근에 대한 기본 허용은 <strong>최소 허용</strong>이어야 한다. 작업에 필요한 최소한의 권한만 부여하여야 한다.</div></div></div>
-  <div class="dp"><div class="dn">6</div><div class="dc"><div class="dt2">권한 분리 (Separation of Privilege)</div><div class="dd">접근에 대한 권한은 2개 이상의 조건을 충족하여야 한다. 단일 보안 완전 통제가 되지 않도록 한다. 물리적·시간적·논리적 분리 포함.</div></div></div>
-  <div class="dp"><div class="dn">7</div><div class="dc"><div class="dt2">최소 공통 메커니즘 (Least Common Mechanism)</div><div class="dd">공유되거나 공통적인 접근 경로를 최소화한다. 사용 용이성을 위해 보안을 희생하면 안 됨.</div></div></div>
-</div>
+<div class="sh"><div class="sn2">4</div><div class="st">TPM · HSM</div><span class="slb lv">★★</span></div>
+<div class="tw"><table>
+  <thead><tr><th>구분</th><th>TPM (Trusted Platform Module)</th><th>HSM (Hardware Security Module)</th></tr></thead>
+  <tbody>
+    <tr><td><strong>정의</strong></td><td>신뢰 컴퓨팅 그룹(TCG)에 의해 산업체가 개발한 개념. 신뢰를 위한 하드웨어/펌웨어에서 동작하는 하드웨어 모듈.</td><td>전자 서명 생성 비밀을 안전하게 저장·보관하고 기기 내에서 암호 연산이 가능한 하드웨어 장치.</td></tr>
+    <tr><td><strong>탑재 위치</strong></td><td>개인용 컴퓨터 메인보드, 스마트 카드 등에 내장. TPM이 탑재되도록 인증된 하드웨어/소프트웨어와 함께 동작.</td><td>스마트카드, USB 토큰 등 다양한 형태로 제작.</td></tr>
+    <tr><td><strong>제공 기능</strong></td><td>① 인증된 부팅(Authenticated Boot) ② 증명(Attestation) ③ 봉인(Sealing)</td><td>기기 내부 저장된 전자 서명 생성 비밀은 장치 복사 또는 재생성이 되지 않음. 서명 생성·전자 서명 생성·검증 가능.</td></tr>
+  </tbody>
+</table></div>
 
 </div><!-- /tab-secure_os -->
 
-<!-- ════ 윈도우 보안 ════ -->
+<!-- ════ TAB3: 윈도우 보안 ════ -->
 <div class="tab-pane" id="tab-windows">
 
-<div class="sh"><div class="sn2">1</div><div class="st">Windows 인증 구조 — LSA · SAM · SRM</div><span class="slb le">★★★ 매년 출제</span></div>
-
-<div class="dfb">
-  <div class="dfl">Windows NT 인증 구조 핵심</div>
-  <p>Windows NT 운영체제의 인증 과정에서 가장 중요한 구성요소는 <strong>LSA(Local Security Authority) · SAM(Security Accounts Manager) · SRM(Security Reference Monitor)</strong>. Winlogon → LSA → SAM → SRM 순서로 인증이 이루어짐.</p>
-</div>
-
-<div class="comp-grid">
-  <div class="comp">
-    <div class="comph" style="background:#c0392b;">🔐 LSA (Local Security Authority)</div>
-    <div class="compb">
-      <div class="compr"><strong>역할:</strong> 모든 계정의 로그인에 대한 <strong>검증</strong>을 하고 시스템 자원 및 파일 등에 대한 접근 권한을 검사.</div>
-      <div class="compr"><strong>범위:</strong> 로컬, 원격 모두에 해당됨.</div>
-      <div class="compr"><strong>기능:</strong> 이름과 SID를 매칭한다. SRM이 생성한 감사 로그를 기록하는 역할.</div>
-      <div class="compr"><strong>위치:</strong> 사용자 모드(User Mode)에서 동작하며 로컬 보안 정책을 집행.</div>
-    </div>
-  </div>
-  <div class="comp">
-    <div class="comph" style="background:#2d5be3;">🗄 SAM (Security Accounts Manager)</div>
-    <div class="compb">
-      <div class="compr"><strong>역할:</strong> 사용자/그룹 계정 정보에 대한 <strong>데이터베이스를 관리</strong>.</div>
-      <div class="compr"><strong>기능:</strong> 사용자의 로그인 입력정보와 SAM 데이터베이스 정보를 비교하여 <strong>인증 여부를 결정</strong>.</div>
-      <div class="compr"><strong>저장:</strong> 로컬 주체 및 그룹 관련 보안 정보 및 계정 데이터를 저장하는 DB.</div>
-    </div>
-  </div>
-  <div class="comp">
-    <div class="comph" style="background:#1a7a4a;">🛡 SRM (Security Reference Monitor)</div>
-    <div class="compb">
-      <div class="compr"><strong>역할 ①:</strong> SAM이 사용자 계정과 패스워드 일치 여부를 확인하여 알리면 SRM은 사용자에게 <strong>고유의 SID(Security Identifier)를 부여</strong>.</div>
-      <div class="compr"><strong>역할 ②:</strong> SID에 기반하여 파일이나 디렉터리에 대한 접근 허용 여부를 결정하고 이에 대한 <strong>감사 메시지를 생성</strong>.</div>
-      <div class="compr"><strong>위치:</strong> <strong>커널 모드(Kernel Mode)</strong>에서 실행되는 접근 통제 임무 수행.</div>
-    </div>
-  </div>
-</div>
-
+<div class="sh"><div class="sn2">1</div><div class="st">Windows 커널 구조</div><span class="slb ld">★★</span></div>
+<div class="sb"><p>Windows는 커널 모드(Kernel Mode, 관리자 권한)와 사용자 모드(User Mode, 응용 프로그램 실행)의 이중 모드로 동작함. 커널은 <strong>인터럽트 처리·프로세스 관리·메모리 관리·파일 시스템 관리·프로그래밍 인터페이스 제공</strong>의 기본 기능을 하는 심장부임.</p></div>
 <div class="tw"><table>
-  <thead><tr><th>구성요소</th><th>핵심 기능</th><th>동작 모드</th><th>암기 키워드</th></tr></thead>
+  <thead><tr><th>구성요소</th><th>역할</th></tr></thead>
   <tbody>
-    <tr class="tc-r"><td><strong>LSA</strong></td><td>로그인 검증, 시스템 자원 접근 권한 검사, SID 매칭, 감사 로그 기록</td><td>사용자 모드</td><td>로그인 검증, 로컬 보안 정책 집행</td></tr>
-    <tr class="tc-b"><td><strong>SAM</strong></td><td>사용자/그룹 계정 DB 관리, 로그인 정보↔DB 비교로 인증 결정</td><td>사용자 모드</td><td>계정 DB 관리, 인증 결정</td></tr>
-    <tr class="tc-g"><td><strong>SRM</strong></td><td><strong>SID 부여</strong>, 파일/디렉터리 접근 허용 결정, <strong>감사 메시지 생성</strong></td><td><strong>커널 모드</strong></td><td>SID 부여 · 감사 메시지</td></tr>
+    <tr><td><strong>HAL<br>(Hardware Abstraction Layer)</strong></td><td>하드웨어를 위한 추상화 계층. 소프트웨어가 하드웨어에 원활히 접근하도록 도와줌.</td></tr>
+    <tr><td><strong>마이크로 커널</strong></td><td>하드웨어와의 직접 통신을 담당하는 커널.</td></tr>
+    <tr><td><strong>I/O 관리자</strong></td><td>입출력을 관리한다. 장치 드라이버를 관리한다. 응용 프로그램이 곧바로 하드웨어에 접근하지 못하게 제어.</td></tr>
+    <tr><td><strong>객체 관리자</strong></td><td>파일·포트·프로세스·스레드 등 모든 것이 객체화되고 관리.</td></tr>
+    <tr><td><strong>보안 참조 모니터 관리자</strong></td><td>시스템 자원에 접근하거나 수정함으로써 강제 보안 정책 임무 수행.</td></tr>
+    <tr><td><strong>프로세스 관리자</strong></td><td>프로세스를 생성하고 규칙에 따라 관리.</td></tr>
+    <tr><td><strong>LPC 관리자</strong><br>(Local Procedure Call)</td><td>서로 다른 메모리를 공유하지 않으므로 프로세스 간 필요한 통신을 처리.</td></tr>
+    <tr><td><strong>가상 메모리 관리자</strong></td><td>응용 프로그램에 따라 RAM을 할당하고 가상 메모리를 관리.</td></tr>
+    <tr><td><strong>GDI 관리자</strong></td><td>이미지나 텍스트를 그리거나 폰트 처리.</td></tr>
   </tbody>
 </table></div>
 
+<div class="dv"></div>
+<div class="sh"><div class="sn2">2</div><div class="st">Windows 부팅 순서</div><span class="slb lw">★★</span></div>
+
+<div class="dw-t">Windows XP/2003 부팅 순서 (NTLDR 기반)</div>
+<div class="boot-flow">
+  <div class="bf">1단계<br>POST<small>Power On Self Test<br>하드웨어 자가진단</small></div>
+  <span class="bf-arrow">→</span>
+  <div class="bf">2단계<br>CMOS<small>기본 부팅 관련<br>사항 로드</small></div>
+  <span class="bf-arrow">→</span>
+  <div class="bf">3단계<br>MBR<small>Master Boot Record<br>부팅 기본 파일</small></div>
+  <span class="bf-arrow">→</span>
+  <div class="bf">4단계<br>NTLDR<small>NT Loader<br>boot.ini 읽기</small></div>
+  <span class="bf-arrow">→</span>
+  <div class="bf">5단계<br>NTDETECT<small>하드웨어 정보<br>HKLM에 저장</small></div>
+  <span class="bf-arrow">→</span>
+  <div class="bf">6단계<br>ntoskrnl.exe<small>NT OS Kernel<br>HAL·DLL 로드</small></div>
+</div>
+
+<div class="inf-b"><strong>Vista·2008·7 이후 부팅 순서 변경:</strong> POST → CMOS → MBR → <strong>Windows Boot Manager(bootmgr)</strong> → <strong>Winload.exe</strong> → ntoskrnl.exe. NTLDR·NTDETECT 대신 Boot Manager 방식으로 변경됨.</div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">3</div><div class="st">Windows 인증 구조 — LSA · SAM · SRM</div><span class="slb le">★★★ 매년 출제</span></div>
+
+<div class="tw"><table>
+  <thead><tr><th>구성요소</th><th>핵심 기능</th><th>모드</th><th>암기 키워드</th></tr></thead>
+  <tbody>
+    <tr class="tc-r"><td><strong>LSA<br>(Local Security Authority)</strong></td><td>모든 계정의 <strong>로그인 검증</strong>, 시스템 자원·파일 접근 권한 검사. 로컬·원격 모두 해당. 이름↔SID 매칭. SRM이 생성한 감사 로그 기록.</td><td>사용자 모드</td><td>로그인 검증, 로컬 보안 정책 집행</td></tr>
+    <tr class="tc-b"><td><strong>SAM<br>(Security Accounts Manager)</strong></td><td>사용자/그룹 계정 정보에 대한 <strong>데이터베이스 관리</strong>. 로그인 입력정보↔SAM DB 비교하여 <strong>인증 여부 결정</strong>.</td><td>사용자 모드</td><td>계정 DB 관리, 인증 결정</td></tr>
+    <tr class="tc-g"><td><strong>SRM<br>(Security Reference Monitor)</strong></td><td>SAM이 일치 확인 후 SRM에 알리면 SRM은 사용자에게 <strong>고유의 SID 부여</strong>. SID에 기반하여 파일/디렉터리 접근 허용 결정. <strong>감사 메시지 생성</strong>.</td><td><strong>커널 모드</strong></td><td>SID 부여, 감사 메시지</td></tr>
+  </tbody>
+</table></div>
+
+<div class="sb"><p><strong>SID 구조 예시:</strong> S-1-5-21-2823624781-484892517-3265479878-<strong>500</strong><br>
+수정자(S) - 버전(1) - 권한(5: NT Authority) - 도메인 식별자(21-...) - RID(상대식별자). RID: <strong>500=Administrator, 501=Guest, 1000이상=일반 사용자</strong>.</p></div>
+
 <div class="trap">
-  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — LSA·SAM·SRM 역할 혼동 (2015·2019·2022 국가직, 경찰 반복)</span></div>
+  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — LSA·SAM·SRM 역할 혼동</span></div>
   <div class="tb">
-    <div class="tq">"SAM은 보안 토큰 발급과 저장 등을 수행한다" → <span class="vw">✗ 오답</span> (2019 국가직)</div>
-    <p>보안 토큰(SID) 발급 = <strong>SRM</strong>. SAM은 계정 DB 관리 및 인증 결정만. "토큰 발급"이라는 키워드 → SRM.</p>
-    <div class="tq">"SRM은 로컬 컴퓨터상에서 보안을 제어함으로써 특권 컴포넌트들과 사용자 모드에서 동작하는 서브시스템에 보안 서비스를 제공한다" → <span class="vw">✗ 오답</span></div>
-    <p>이것은 <strong>LSA</strong>의 설명. SRM = 커널 모드에서 실행. LSA = 사용자 모드에서 로컬 보안 정책 집행.</p>
+    <div class="tq">"SAM = 보안 토큰(SID) 발급" → <span class="vw">✗</span> SID 발급 = <strong>SRM</strong></div>
+    <div class="tq">"SRM = 사용자 모드에서 로컬 보안 정책 집행" → <span class="vw">✗</span> SRM = <strong>커널 모드</strong>. 사용자 모드+로컬 보안 정책 = <strong>LSA</strong></div>
   </div>
 </div>
 
 <div class="dv"></div>
-
-<div class="sh"><div class="sn2">2</div><div class="st">SID (Security Identifier) — 보안 식별자</div><span class="slb ld">★★</span></div>
-
-<div class="sid-demo">
-  <div class="sid-full">S-1-5-21-2823624781-484892517-3265479878-500</div>
-  <div class="sid-parts">
-    <div class="sid-part"><span class="sid-key">S (수정자)</span><span class="sid-val">특정 SID가 수정된 SID인지 여부를 나타냄. 항상 "S"로 시작.</span></div>
-    <div class="sid-part"><span class="sid-key">1 (버전)</span><span class="sid-val">SID 구조의 버전 번호.</span></div>
-    <div class="sid-part"><span class="sid-key">5 (권한)</span><span class="sid-val">특정 보안 주체에 대해 SID를 발급할 수 있는 가장 높은 기관. 5 = NT Authority.</span></div>
-    <div class="sid-part"><span class="sid-key">21-...-...-...</span><span class="sid-val">도메인 식별자. 해당 도메인만의 동일한 값. 동일 시스템 내에 있는 사용자들은 동일한 도메인 식별자를 가짐.</span></div>
-    <div class="sid-part"><span class="sid-key">500 (RID)</span><span class="sid-val">상대 식별자(Relative Identifier). 특정 계정 식별. <strong>500=Administrator, 501=Guest, 1000↑=일반 사용자</strong>.</span></div>
-  </div>
-</div>
+<div class="sh"><div class="sn2">4</div><div class="st">Windows 이벤트 로그 3종</div><span class="slb lw">★★</span></div>
+<div class="tw"><table>
+  <thead><tr><th>로그 종류</th><th>저장 경로</th><th>기록 내용</th></tr></thead>
+  <tbody>
+    <tr><td><strong>응용 프로그램 로그</strong></td><td class="mono">C:\WINDOWS\system32\config\AppEvent.evt</td><td>응용 프로그램에서 기록한 이벤트 목록. 응용 프로그램 오류·경고 등.</td></tr>
+    <tr class="tc-r"><td><strong>보안 로그</strong></td><td class="mono">C:\WINDOWS\system32\config\SecEvent.evt</td><td>이나 다른 개체 만들기·열기·삭제 등 자원 관련된 올바른 사용, <strong>로그온 시도·잘못된 로그온 시도 같은 이벤트 기록</strong>. 감사 추적에 핵심.</td></tr>
+    <tr><td><strong>시스템 로그</strong></td><td class="mono">C:\WINDOWS\system32\config\SysEvent.evt</td><td>Windows 시스템 구성 요소에서 기록한 이벤트 목록. 드라이버·서비스 오류 등.</td></tr>
+  </tbody>
+</table></div>
 
 <div class="dv"></div>
+<div class="sh"><div class="sn2">5</div><div class="st">Windows 백업 3종</div><span class="slb ld">★★</span></div>
+<div class="tw"><table>
+  <thead><tr><th>백업 종류</th><th>방식</th><th>장점</th><th>단점</th></tr></thead>
+  <tbody>
+    <tr class="tc-b"><td><strong>전체 백업<br>(Full Backup)</strong></td><td>선택된 모든 파일을 백업하고 백업 시 아카이브 비트 초기화.</td><td>복구 단순 (백업본 1개)</td><td>시간·저장공간 많이 필요</td></tr>
+    <tr class="tc-w"><td><strong>차등 백업<br>(Differential Backup)</strong></td><td>전체 백업 이후의 <strong>모든 변경된 데이터</strong>를 백업하는 방식. 아카이브 비트 변경 안 함.</td><td>복구 시 전체+차등 2개로 복구</td><td>시간이 지날수록 백업 용량 증가</td></tr>
+    <tr class="tc-g"><td><strong>증분 백업<br>(Incremental Backup)</strong></td><td>전체 백업 또는 <strong>마지막 백업 이후 변경된 데이터</strong>만 백업하는 방식. 아카이브 비트 초기화.</td><td>백업 시간 짧음, 저장공간 절약</td><td>복구 시 전체+모든 증분 필요, 복잡</td></tr>
+  </tbody>
+</table></div>
 
-<div class="sh"><div class="sn2">3</div><div class="st">NTFS 파일 시스템 권한</div><span class="slb lw">★★ 2016 국가직 출제</span></div>
-
+<div class="dv"></div>
+<div class="sh"><div class="sn2">6</div><div class="st">NTFS vs FAT 비교 · 레지스트리</div><span class="slb lw">★★</span></div>
 <div class="tw"><table>
   <thead><tr><th>파일시스템</th><th>특징</th><th>접근 제어</th></tr></thead>
   <tbody>
-    <tr class="tc-r"><td><strong>FAT16</strong></td><td>DOS부터 사용. 최대 2GB 지원.</td><td>없음</td></tr>
-    <tr class="tc-r"><td><strong>FAT32</strong></td><td>FAT16 확장. 대용량 디스크 지원.</td><td>없음 (개별 접근 제어 불가)</td></tr>
-    <tr class="tc-g"><td><strong>NTFS</strong></td><td>Windows NT 전용. FAT32보다 보안·압축·복구 기능 강화. 클러스터 크기 2ⁿ. 파티션마다 서로 다른 NTFS 설정 가능.</td><td><strong>개별 파일/폴더 접근 권한 설정 가능</strong>. 6가지 권한: 모든 권한·수정·읽기 및 실행·내용 보기·읽기·쓰기</td></tr>
+    <tr><td><strong>FAT16</strong></td><td>MS-DOS 4.0 이후. 최대 2GB. 클러스터 커지면 FAT도 커짐.</td><td>없음</td></tr>
+    <tr><td><strong>FAT32</strong></td><td>FAT16보다 효율적. 물리적 크기에 따라 클러스터 다르게 설정.</td><td><strong>없음</strong> (개별 파일·폴더 접근 제어 불가)</td></tr>
+    <tr class="tc-g"><td><strong>NTFS</strong></td><td>FAT32 대비 대용량 디스크·보안·압축·오류 자동 복구 기능 추가. Windows NT 전용. 클러스터 크기 2ⁿ.</td><td><strong>개별 파일/폴더 접근 권한 설정 가능.</strong> 6가지 권한: 모든 권한·수정·읽기 및 실행·내용 보기·읽기·쓰기</td></tr>
   </tbody>
 </table></div>
 
-<div class="inf-b">
-  <strong>NTFS 권한 특성:</strong> 그룹 A(읽기)와 그룹 B(쓰기)에 모두 속한 사용자 → <strong>읽기 + 쓰기 모두 허용</strong>(권한 중첩 적용). 단, <strong>거부(Deny) 설정이 허용(Allow)보다 우선</strong>.
-</div>
-
-<div class="dv"></div>
-
-<div class="sh"><div class="sn2">4</div><div class="st">Windows 레지스트리 주요 루트키</div><span class="slb ld">★★ 2025 국가직 출제</span></div>
-
 <div class="tw"><table>
-  <thead><tr><th>루트키</th><th>저장 정보</th></tr></thead>
+  <thead><tr><th>레지스트리 루트키</th><th>저장 정보</th></tr></thead>
   <tbody>
-    <tr><td><strong>HKEY_CLASSES_ROOT</strong></td><td>파일 연결, OLE 객체 클래스 ID 같은 응용 정보.</td></tr>
-    <tr class="tc-g"><td><strong>HKEY_CURRENT_USER</strong></td><td><strong>현재 로그온한 사용자</strong>에 대한 구성 정보.</td></tr>
-    <tr><td><strong>HKEY_LOCAL_MACHINE</strong></td><td>모든 사용자에게 해당하는 시스템 구성 정보.</td></tr>
-    <tr><td><strong>HKEY_USERS</strong></td><td>시스템에서 사용 중인 사용자에 대한 HKCU 정보 포함.</td></tr>
+    <tr><td><strong>HKEY_CLASSES_ROOT (HKCR)</strong></td><td>파일 연결, OLE 객체 클래스 ID 같은 응용 정보.</td></tr>
+    <tr class="tc-g"><td><strong>HKEY_CURRENT_USER (HKCU)</strong></td><td><strong>현재 로그온한 사용자</strong>에 대한 구성 정보.</td></tr>
+    <tr><td><strong>HKEY_LOCAL_MACHINE (HKLM)</strong></td><td>모든 사용자에게 해당하는 시스템 구성 정보.</td></tr>
+    <tr><td><strong>HKEY_USERS (HKU)</strong></td><td>시스템에서 사용 중인 사용자에 대한 HKCU 정보 포함.</td></tr>
     <tr><td><strong>HKEY_CURRENT_CONFIG</strong></td><td>현재 실행 중인 하드웨어 구성 정보. 시동 시 생성됨.</td></tr>
+    <tr><td><strong>HKEY_PERFORMANCE_DATA</strong></td><td>런타임 성능 데이터. 레지스트리 에디터에 보이지 않지만 Windows API를 통해 접근 가능.</td></tr>
+    <tr><td><strong>HKEY_DYN_DATA</strong></td><td>윈도우 95/98/Me에서 사용. 플러그앤플레이 비롯한 하드웨어 장치, 네트워크 성능 정보.</td></tr>
   </tbody>
 </table></div>
 
 </div><!-- /tab-windows -->
 
-<!-- ════ 유닉스 파일권한 ════ -->
-<div class="tab-pane" id="tab-unix_perm">
+<!-- ════ TAB4: 유닉스 구조 ════ -->
+<div class="tab-pane" id="tab-unix_struct">
 
-<div class="sh"><div class="sn2">1</div><div class="st">유닉스/리눅스 파일 권한 체계</div><span class="slb le">★★★ 매년 출제</span></div>
-
-<div class="dfb">
-  <div class="dfl">파일 권한 구조</div>
-  <p>유닉스/리눅스에서 파일이나 디렉터리에 대한 접근 권한은 <code>ls -l</code> 명령으로 확인. 권한은 <strong>소유자(User)·그룹(Group)·기타(Other)</strong> 3범주, 각 범주에 <strong>읽기(r=4)·쓰기(w=2)·실행(x=1)</strong> 3가지 권한으로 구성. 첫 번째 문자는 파일 유형(d=디렉터리, -=일반파일, l=링크).</p>
-</div>
-
-<div class="perm-demo">
-  <div class="perm-row">
-    <span class="pch">ls -l 출력:</span>
-    <span class="pc">d</span>
-    <span class="pb"><span class="px pr">r</span><span class="px pw">w</span><span class="px pe">x</span></span>
-    <span class="pc pdash"> | </span>
-    <span class="pb"><span class="px pr">r</span><span class="px p0">-</span><span class="px pe">x</span></span>
-    <span class="pc pdash"> | </span>
-    <span class="pb"><span class="px pr">r</span><span class="px p0">-</span><span class="px p0">-</span></span>
-    <span style="color:rgba(255,255,255,.5);font-size:11px;margin-left:8px;">← 디렉터리 / 소유자 rwx / 그룹 r-x / 기타 r--</span>
-  </div>
-  <div class="perm-row">
-    <span class="pch">8진수 표현:</span>
-    <span style="color:#7dd3fc;font-size:15px;font-weight:700;letter-spacing:.1em;">755</span>
-    <span style="color:rgba(255,255,255,.5);font-size:11px;margin-left:8px;">← 7(rwx=4+2+1) / 5(r-x=4+0+1) / 5(r-x=4+0+1)</span>
-  </div>
-</div>
-
+<div class="sh"><div class="sn2">1</div><div class="st">유닉스/리눅스 커널 구조</div><span class="slb ld">★★</span></div>
+<div class="sb"><p>유닉스 커널 구조는 <strong>모놀리식 커널(Monolithic Kernel)</strong>과 <strong>마이크로 커널(Micro Kernel)</strong> 두 방식으로 나뉘어요. 모놀리식 커널은 개별 기능이 하나로 이루어진 구조로 모든 기능이 하나의 큰 커널에 포함되지만 부분 수정이 어려워요. 마이크로 커널은 여러 개의 서버들이 모여 운영체제의 기능을 이루는 개념으로 각 서버는 메시지 패싱으로 통신해요.</p></div>
 <div class="tw"><table>
-  <thead><tr><th>권한</th><th>기호</th><th>값</th><th>파일에서</th><th>디렉터리에서</th></tr></thead>
+  <thead><tr><th>커널 구성요소</th><th>기능</th></tr></thead>
   <tbody>
-    <tr class="tc-r"><td><strong>읽기 (Read)</strong></td><td>r</td><td>4</td><td>파일 내용 읽기</td><td>디렉터리 내 파일 목록 보기</td></tr>
-    <tr class="tc-g"><td><strong>쓰기 (Write)</strong></td><td>w</td><td>2</td><td>파일 내용 수정</td><td>파일 생성·삭제 (x 권한도 필요)</td></tr>
-    <tr class="tc-b"><td><strong>실행 (Execute)</strong></td><td>x</td><td>1</td><td>프로그램 실행</td><td>디렉터리 이동(cd)</td></tr>
-    <tr><td><strong>없음</strong></td><td>-</td><td>0</td><td>해당 권한 없음</td><td>해당 권한 없음</td></tr>
+    <tr><td><strong>프로세서 제어</strong></td><td>전체 프로세스 간 통신, 스케줄링, 메모리 관리 현황 관리.</td></tr>
+    <tr><td><strong>장치 드라이버</strong></td><td>하드웨어 장치를 관리하는 소프트웨어 인터페이스 제공.</td></tr>
+    <tr><td><strong>파일 시스템</strong></td><td>디스크 같은 저장 장치에 데이터를 저장하고 읽는 기능 제공.</td></tr>
   </tbody>
 </table></div>
 
 <div class="dv"></div>
-
-<div class="sh"><div class="sn2">2</div><div class="st">권한 변경 명령어</div><span class="slb le">★★★</span></div>
-
+<div class="sh"><div class="sn2">2</div><div class="st">유닉스 셸 (Shell) 종류</div><span class="slb ld">★★</span></div>
+<div class="dfb">
+  <div class="dfl">셸 정의</div>
+  <p>셸(Shell)은 <strong>응용 프로그램에서 요청을 받아 처리하는 사용자 인터페이스</strong>. 키보드를 통해 입력된 명령을 받아 해당 명령을 실행하기도 함.</p>
+</div>
 <div class="tw"><table>
-  <thead><tr><th>명령어</th><th>기능</th><th>사용 예</th></tr></thead>
+  <thead><tr><th>셸 종류</th><th>명칭</th><th>특징</th></tr></thead>
   <tbody>
-    <tr><td><strong>chmod</strong></td><td>파일/디렉터리의 <strong>권한(permission) 변경</strong></td><td>chmod 755 file / chmod u+x file</td></tr>
-    <tr><td><strong>chown</strong></td><td>파일/디렉터리의 <strong>소유자(owner) 변경</strong></td><td>chown user:group file</td></tr>
-    <tr><td><strong>chgrp</strong></td><td>파일/디렉터리의 <strong>소유 그룹(group) 변경</strong></td><td>chgrp developers file</td></tr>
+    <tr class="tc-b"><td><strong>Bourne Shell</strong></td><td>/bin/sh (sh)</td><td>유닉스 최초의 셸. 스크립트 작성에 강함. 대부분의 유닉스 시스템에 기본 탑재.</td></tr>
+    <tr class="tc-g"><td><strong>C Shell</strong></td><td>/bin/csh (csh)</td><td>C 언어와 유사한 문법. BSD 유닉스에서 개발. 히스토리·별칭 기능 강화.</td></tr>
+    <tr><td><strong>Korn Shell</strong></td><td>/bin/ksh (ksh)</td><td>Bourne Shell 호환. C Shell 기능 통합. 상업용 유닉스에서 많이 사용.</td></tr>
+    <tr class="tc-v"><td><strong>Bash Shell</strong></td><td>/bin/bash</td><td>Bourne Again Shell. 리눅스 기본 셸. Bourne·C·Korn Shell 기능을 모두 포함.</td></tr>
+  </tbody>
+</table></div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">3</div><div class="st">유닉스 디렉터리 구조</div><span class="slb le">★★★ 경찰·군무원 출제</span></div>
+<div class="tw"><table>
+  <thead><tr><th>디렉터리</th><th>포함 내용</th><th>주의사항</th></tr></thead>
+  <tbody>
+    <tr class="tc-b"><td><strong>/bin</strong></td><td>기본 실행 가능한 명령어들(ls, cd, cp 등)을 갖고 있음.</td><td>일반 사용자·관리자 모두 사용 가능한 필수 명령어</td></tr>
+    <tr class="tc-b"><td><strong>/etc</strong></td><td>시스템의 환경 설정 및 주요 설정 파일을 갖고 있음. (/etc/passwd, /etc/shadow, /etc/hosts 등)</td><td>보안 관련 파일이 집중됨 ★</td></tr>
+    <tr class="tc-v"><td><strong>/tmp</strong></td><td>프로그램 실행 및 설치 시 생성되는 임시 파일을 갖고 있음. 재부팅 시 임의 삭제 가능.</td><td>Sticky bit 설정 디렉터리. 누구나 쓰기 가능하나 타인 파일 삭제 불가.</td></tr>
+    <tr><td><strong>/lib</strong></td><td>기본 프로그램의 공유 라이브러리를 갖고 있음.</td><td></td></tr>
+    <tr><td><strong>/boot</strong></td><td>부팅을 위한 파일들을 갖고 있으며, 부팅 시 커널 코드가 실행됨.</td><td>커널 이미지(vmlinuz), GRUB 등</td></tr>
+    <tr><td><strong>/dev</strong></td><td>터미널 같은 장치를 다루기 위한 파일(장치 파일)들을 갖고 있음.</td><td>특수 파일(c, b 타입)</td></tr>
+    <tr class="tc-g"><td><strong>/home</strong></td><td>사용자의 홈 작업 디렉터리를 갖고 있음. 기본적으로 사용자 디렉터리 내의 자신의 작업 시작점이 됨.</td><td>개인 파일·설정 저장</td></tr>
+    <tr><td><strong>/var</strong></td><td>시스템 로그·직접 쓰는 파일들을 갖고 있음. (/var/log 등)</td><td>로그 파일이 여기에 저장 ★</td></tr>
   </tbody>
 </table></div>
 
 <div class="trap">
-  <div class="th"><span>⚠</span><span class="tht">함정 ★★ — chmask는 존재하지 않는 명령어 (2019 국가직 출제)</span></div>
+  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — 디렉터리 역할 혼동 (경찰공무원 출제)</span></div>
   <div class="tb">
-    <div class="tq">"chmask — 파일 및 디렉터리 생성 시 부여되는 기본 권한 변경" → <span class="vw">✗ 오답</span></div>
-    <p>기본 권한 설정은 <strong>umask</strong> 명령어. "chmask"라는 명령어는 없어요. chmod(권한 변경)와 umask(기본 권한 마스크)를 혼동하면 안 됩니다.</p>
+    <div class="tq">"시스템 로그가 저장되는 디렉터리 = /tmp" → <span class="vw">✗</span> 로그 = <strong>/var</strong> (/var/log). /tmp = 임시 파일.</div>
+    <div class="tq">"시스템의 환경설정 파일을 포함하는 디렉터리 = /bin" → <span class="vw">✗</span> 환경설정 = <strong>/etc</strong>. /bin = 실행 가능한 명령어.</div>
   </div>
 </div>
 
 <div class="dv"></div>
+<div class="sh"><div class="sn2">4</div><div class="st">유닉스 파일 시스템 구조 (4블록)</div><span class="slb lv">★★ 2024 국가직 관련</span></div>
+<div class="tw"><table>
+  <thead><tr><th>블록</th><th>명칭</th><th>저장 내용</th></tr></thead>
+  <tbody>
+    <tr class="tc-b"><td><strong>①</strong></td><td><strong>부트 블록 (Boot Block)</strong></td><td>부팅에 필요한 정보를 저장함.</td></tr>
+    <tr class="tc-g"><td><strong>②</strong></td><td><strong>슈퍼 블록 (Super Block)</strong></td><td>전체 파일 시스템에 대한 정보 저장. 데이터 블록의 개수·실린더 그룹 개수·데이터 블록과 프래그먼트의 크기·하드웨어 설명·마운트 위치 저장.</td></tr>
+    <tr class="tc-r"><td><strong>③</strong></td><td><strong>i-node 블록 (Index Node Block)</strong></td><td>파일이나 디렉터리에 대한 모든 정보 저장. <strong>모든 파일은 i-node를 갖는다</strong>. 파일의 소유자·유형·접근 권한·접근 시간·크기·링크 수·저장된 블록 주소 저장. ⚠ <strong>파일 이름은 포함 안 됨</strong>.</td></tr>
+    <tr><td><strong>④</strong></td><td><strong>데이터 블록 (Data Block)</strong></td><td>파일별 디렉터리 및 실제 파일에 대한 내용이 저장됨.</td></tr>
+  </tbody>
+</table></div>
 
-<div class="sh"><div class="sn2">3</div><div class="st">i-node (아이노드)</div><span class="slb lch">★★ 2024 국가직 출제</span></div>
+<div class="dv"></div>
+<div class="sh"><div class="sn2">5</div><div class="st">유닉스/리눅스 부팅 순서</div><span class="slb ld">★★</span></div>
+<div class="boot-flow">
+  <div class="bf">1단계<br>POST<small>하드웨어<br>자가진단</small></div>
+  <span class="bf-arrow">→</span>
+  <div class="bf">2단계<br>CMOS<small>기본 부팅<br>관련 사항 로드</small></div>
+  <span class="bf-arrow">→</span>
+  <div class="bf">3단계<br>MBR<small>Master Boot<br>Record 로드</small></div>
+  <span class="bf-arrow">→</span>
+  <div class="bf">4단계<br>Boot Loader<small>GRUB/LILO<br>커널 로드</small></div>
+  <span class="bf-arrow">→</span>
+  <div class="bf">5단계<br>init / systemd<small>pid 1 실행<br>inittab 읽기</small></div>
+</div>
+<div class="inf-b">4단계 Boot Loader(GRUB 등)가 실행되면 부팅하고자 하는 커널이 로드됨. 5단계에서 <strong>init 프로세스(pid=1)</strong>가 /etc/inittab을 읽고 기본 런레벨을 설정하여 그에 따른 서비스를 제공함.</div>
 
-<div class="sb">
-<p>i-node(Index Node)는 유닉스 파일 시스템에서 <strong>각 파일과 디렉터리에 대한 메타데이터를 저장하는 자료구조</strong>예요. 중요한 것은 <strong>i-node에는 파일명이 포함되지 않는다</strong>는 점이에요. 파일명은 디렉터리에 별도로 저장되고 i-node 번호와 연결돼요.</p>
+<div class="dv"></div>
+<div class="sh"><div class="sn2">6</div><div class="st">주요 유닉스/리눅스 명령어</div><span class="slb lg">★★</span></div>
+<div class="tw"><table>
+  <thead><tr><th>명령어</th><th>기능</th></tr></thead>
+  <tbody>
+    <tr><td class="mono">ls</td><td>현재 디렉터리 파일 목록 출력</td></tr>
+    <tr><td class="mono">cd</td><td>지정된 다른 디렉터리로 이동</td></tr>
+    <tr><td class="mono">rm</td><td>파일 삭제</td></tr>
+    <tr><td class="mono">mkdir</td><td>새로운 디렉터리 생성</td></tr>
+    <tr><td class="mono">rmdir</td><td>지정된 디렉터리 삭제</td></tr>
+    <tr><td class="mono">pwd</td><td>현재 경로 출력</td></tr>
+    <tr><td class="mono">cat</td><td>파일 내용을 표준 출력에 표시</td></tr>
+    <tr><td class="mono">chmod</td><td>지정된 파일에 대한 사용 권한 변경</td></tr>
+    <tr><td class="mono">ps</td><td>현재 시스템에서 활동 중인 프로세스 출력</td></tr>
+    <tr><td class="mono">passwd</td><td>사용자의 패스워드를 설정하거나 변경</td></tr>
+    <tr><td class="mono">chgrp</td><td>지정된 파일의 소유 그룹 변경</td></tr>
+    <tr><td class="mono">chown</td><td>지정된 파일에 대한 소유자 변경</td></tr>
+    <tr><td class="mono">su</td><td>사용자 전환</td></tr>
+    <tr><td class="mono">useradd</td><td>사용자 계정 추가</td></tr>
+    <tr><td class="mono">userdel</td><td>사용자 계정 삭제</td></tr>
+  </tbody>
+</table></div>
+
+</div><!-- /tab-unix_struct -->
+
+<!-- ════ TAB5: 계정·권한·특수권한 ════ -->
+<div class="tab-pane" id="tab-unix_perm">
+
+<div class="sh"><div class="sn2">1</div><div class="st">/etc/passwd · /etc/shadow 파일 구조</div><span class="slb le">★★★</span></div>
+<div class="dfb">
+  <div class="dfl">/etc/passwd 구조 (7개 필드)</div>
+  <p><code>root : x : 0 : 0 : root : /root : /bin/bash</code></p>
+  <p>① 사용자 계정 이름 | ② 패스워드(x=shadow에 저장) | ③ UID(root→0) | ④ GID(root→0) | ⑤ 사용자 정보(이름·연락처) | ⑥ 홈 디렉터리 | ⑦ <strong>로그인 시 선택한 사용자의 셸</strong></p>
+</div>
+<div class="dfb">
+  <div class="dfl">/etc/shadow 구조 (9개 필드)</div>
+  <p><code>gong : $uwZvLF9p$YTqglbDFIo : 10917 : 0 : 99999 : 7 : : :</code></p>
+  <p>① 계정명 | ② <strong>암호화 패스워드</strong>(salt+해시) | ③ 마지막 변경일(1970.1.1 기준 일수) | ④ 변경 최소 일수(0=즉시 가능) | ⑤ 변경 최대 일수 | ⑥ 만료 경고 일수 | ⑦ 비활성화 일수 | ⑧ 만기일 | ⑨ 예약 필드</p>
+</div>
+<div class="sb"><p>UID: 리눅스에서 관리자는 UID를 <strong>0</strong>으로 부여. 일반 사용자는 일반적으로 <strong>500 이상</strong>의 번호를 부여받음. GID도 관리자 그룹은 0, 일반 사용자 그룹은 그 외의 번호. 사용자 번호는 중복되어 사용될 수 있으며, 동일한 사용자 번호를 가지고 있으면 사용자 이름이 달라도 동일한 권한을 부여받음.</p></div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">2</div><div class="st">파일 속성 문자 및 권한 체계</div><span class="slb le">★★★</span></div>
+<div class="tw"><table>
+  <thead><tr><th>속성 문자</th><th>파일 속성</th></tr></thead>
+  <tbody>
+    <tr><td class="mono"><strong>d</strong></td><td>디렉터리 파일</td></tr>
+    <tr><td class="mono"><strong>-</strong></td><td>일반 정규 파일</td></tr>
+    <tr><td class="mono"><strong>l</strong></td><td>링크되어 있는 파일(Symbolic link file)</td></tr>
+    <tr><td class="mono"><strong>c</strong></td><td>버퍼에 저장되지 않은 특수 파일</td></tr>
+    <tr><td class="mono"><strong>b</strong></td><td>버퍼된 특수 파일</td></tr>
+    <tr><td class="mono"><strong>s</strong></td><td>소켓 기능을 하는 파일</td></tr>
+    <tr><td class="mono"><strong>p</strong></td><td>파이프 기능을 수행하는 파일</td></tr>
+  </tbody>
+</table></div>
+
+<div class="perm-demo">
+  <div class="perm-row">
+    <span class="pch">chmod 644 →</span>
+    <span class="px pr">r</span><span class="px pw">w</span><span class="px p0">-</span>
+    <span style="color:rgba(255,255,255,.3);margin:0 4px;">|</span>
+    <span class="px pr">r</span><span class="px p0">-</span><span class="px p0">-</span>
+    <span style="color:rgba(255,255,255,.3);margin:0 4px;">|</span>
+    <span class="px pr">r</span><span class="px p0">-</span><span class="px p0">-</span>
+    <span style="color:rgba(255,255,255,.5);font-size:11px;margin-left:8px;">소유자 rw / 그룹 r / 기타 r</span>
+  </div>
+  <div class="perm-row">
+    <span class="pch">chmod 751 →</span>
+    <span class="px pr">r</span><span class="px pw">w</span><span class="px pe">x</span>
+    <span style="color:rgba(255,255,255,.3);margin:0 4px;">|</span>
+    <span class="px pr">r</span><span class="px p0">-</span><span class="px pe">x</span>
+    <span style="color:rgba(255,255,255,.3);margin:0 4px;">|</span>
+    <span class="px p0">-</span><span class="px p0">-</span><span class="px pe">x</span>
+    <span style="color:rgba(255,255,255,.5);font-size:11px;margin-left:8px;">소유자 rwx=7 / 그룹 r-x=5 / 기타 --x=1</span>
+  </div>
 </div>
 
 <div class="tw"><table>
-  <thead><tr><th>i-node에 저장되는 정보</th><th>저장 안 되는 정보</th></tr></thead>
+  <thead><tr><th>권한 기호</th><th>값</th><th>파일에서 의미</th><th>디렉터리에서 의미</th></tr></thead>
   <tbody>
-    <tr><td>파일 유형(일반/디렉터리/링크 등), 접근 권한(rwxrwxrwx), 소유자(UID), 소유 그룹(GID), 파일 크기, 링크 수, 접근·수정·변경 시간, 데이터 블록 포인터</td><td><strong>파일 이름(File Name)</strong> — 디렉터리에 별도 저장</td></tr>
+    <tr class="tc-r"><td class="mono"><strong>r (읽기)</strong></td><td>4</td><td>파일 내용 읽기</td><td>디렉터리 내 파일 목록 읽기(ls)</td></tr>
+    <tr class="tc-g"><td class="mono"><strong>w (쓰기)</strong></td><td>2</td><td>파일 내용 수정</td><td>파일 생성·삭제·이름 변경(rm, mkdir, cp 등)</td></tr>
+    <tr class="tc-b"><td class="mono"><strong>x (실행)</strong></td><td>1</td><td>프로그램 실행</td><td>디렉터리 이동(cd, ls -l)</td></tr>
+    <tr><td class="mono"><strong>- (없음)</strong></td><td>0</td><td>해당 권한 없음</td><td>해당 권한 없음</td></tr>
+  </tbody>
+</table></div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">3</div><div class="st">umask — 기본 권한 마스크</div><span class="slb le">★★★</span></div>
+<div class="dfb">
+  <div class="dfl">umask 계산 공식</div>
+  <p>파일 기본 최대 권한 = <strong>666</strong> / 디렉터리 기본 최대 권한 = <strong>777</strong>. 실제 권한 = 기본 권한 − umask 값.</p>
+</div>
+<div class="umask-box">
+  <div class="urow"><span class="uk">umask 022 → 파일</span><span class="ueq">666 − 022 =</span><span class="uv">644 (rw-r--r--)</span><span class="ud">소유자 rw / 그룹·기타 r</span></div>
+  <div class="urow"><span class="uk">umask 022 → 디렉터리</span><span class="ueq">777 − 022 =</span><span class="uv">755 (rwxr-xr-x)</span><span class="ud">소유자 rwx / 그룹·기타 r-x</span></div>
+  <div class="urow"><span class="uk">umask 027 → 디렉터리</span><span class="ueq">777 − 027 =</span><span class="uv">750 (rwxr-x---)</span><span class="ud">소유자 rwx / 그룹 r-x / 기타 없음</span></div>
+  <div class="urow"><span class="uk">umask 133 → 파일</span><span class="ueq">666 − 133 =</span><span class="uv">644 (rw-r--r--)</span><span class="ud">소유자 rw / 그룹·기타 r</span></div>
+  <div class="urow"><span class="uk">umask 077 → 파일</span><span class="ueq">666 − 077 =</span><span class="uv">600 (rw-------)</span><span class="ud">소유자만 rw</span></div>
+</div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">4</div><div class="st">특수 접근 권한 — SetUID · SetGID · Sticky bit</div><span class="slb le">★★★</span></div>
+<div class="tw"><table>
+  <thead><tr><th>특수 권한</th><th>8진수</th><th>기호</th><th>동작</th><th>주요 용도</th></tr></thead>
+  <tbody>
+    <tr class="tc-r"><td><strong>SetUID</strong></td><td><strong>4</strong>xxx<br>chmod 4754</td><td>소유자 x 위치 → <strong>s</strong><br>예: rws r-x r--</td><td>실행 시 파일 <strong>소유자</strong> 권한으로 동작. 실행 완료 후 원래 권한으로 복귀.</td><td>passwd 명령(root 소유+SetUID → 일반 사용자도 /etc/shadow 수정 가능). ⚠ 백도어·버퍼 오버플로 공격에 이용될 수 있음.</td></tr>
+    <tr class="tc-b"><td><strong>SetGID</strong></td><td><strong>2</strong>xxx<br>chmod 2754</td><td>그룹 x 위치 → <strong>s</strong><br>예: rwx r-s r--</td><td>실행 시 파일 <strong>소유 그룹</strong> 권한으로 동작. 실행 완료 후 원래 그룹으로 복귀.</td><td>그룹 소유로만 접근 가능한 리소스에 일반 사용자 접근 허용.</td></tr>
+    <tr class="tc-v"><td><strong>Sticky bit</strong></td><td><strong>1</strong>xxx<br>chmod 1755</td><td>기타 x 위치 → <strong>t</strong><br>예: rwx r-x r-t</td><td>디렉터리에 설정 시 해당 파일은 생성한 사람 소유가 되며, <strong>오직 소유자·root만 삭제·변경 가능</strong>.</td><td>/tmp 디렉터리. 공유 디렉터리에서 타인 파일 삭제 방지.</td></tr>
+  </tbody>
+</table></div>
+
+<div class="trap">
+  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — 번호 혼동 암기</span></div>
+  <div class="tb">
+    <div class="tq">"SetGID = chmod 1755" → <span class="vw">✗</span> SetGID = <strong>2</strong>xxx / 1xxx = Sticky bit</div>
+    <div class="tq">시험 암기: <strong>4=SetUID(소유자) / 2=SetGID(그룹) / 1=Sticky(기타)</strong></div>
+  </div>
+</div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">5</div><div class="st">iptables 패킷 필터링</div><span class="slb lv">★★ 심화</span></div>
+<div class="sb"><p>iptables는 리눅스 커널의 <strong>패킷 필터링</strong>을 위한 도구. 커널은 필터 테이블에 삭제가 불가능한 <strong>INPUT·OUTPUT·FORWARD</strong> 세 개의 기본 체인을 가지고 있으며 이 외에 체인 추가·삭제가 가능함.</p></div>
+
+<div class="ipt-box">
+<span class="cmt"># 체인 관련 옵션</span><br>
+<span class="cmd"># iptables -N</span><span class="opt">   새로운 체인 만들기</span><br>
+<span class="cmd"># iptables -X</span><span class="opt">   비어있는 체인 제거</span><br>
+<span class="cmd"># iptables -P</span><span class="opt">   미리 만들어진 체인의 정책 바꾸기</span><br>
+<span class="cmd"># iptables -L</span><span class="opt">   어떤 체인의 규칙들을 나열</span><br>
+<span class="cmd"># iptables -F</span><span class="opt">   체인으로부터 규칙들을 지우기</span><br>
+<span class="cmd"># iptables -Z</span><span class="opt">   체인 내의 모든 규칙들의 패킷·바이트 카운트를 0으로</span><br>
+<br>
+<span class="cmt"># 체인 내부 규칙 조작</span><br>
+<span class="cmd"># iptables -A INPUT -p tcp --dport 80 -j ACCEPT</span><span class="opt">  체인에 새로운 규칙 추가(-A)</span><br>
+<span class="cmd"># iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT</span><span class="opt"> 어떤 지점에 규칙 삽입(-I)</span><br>
+<span class="cmd"># iptables -R INPUT 1 -p tcp --dport 80 -j ACCEPT</span><span class="opt"> 어떤 지점의 규칙을 교환(-R)</span><br>
+<span class="cmd"># iptables -D INPUT 1</span><span class="opt">                            첫번째 일치 규칙 제거(-D)</span><br>
+<br>
+<span class="cmt"># 필터링 옵션</span><br>
+<span class="cmd"># iptables -A INPUT -p tcp/udp/all</span><span class="opt">          -p: 프로토콜</span><br>
+<span class="cmd"># iptables -A INPUT -p tcp -s 192.168.0.3</span><span class="opt">   -s: source(출발지)</span><br>
+<span class="cmd"># iptables -A INPUT -p tcp -d 192.168.0.4</span><span class="opt">   -d: destination(목적지)</span><br>
+<span class="cmd"># iptables -A INPUT -i eth0 -p tcp</span><span class="opt">           -i: input device</span><br>
+<span class="cmd"># iptables -A OUTPUT -o eth1 -p tcp</span><span class="opt">          -o: output device</span>
+</div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">6</div><div class="st">TCP Wrapper</div><span class="slb lv">★★</span></div>
+<div class="dfb">
+  <div class="dfl">TCP Wrapper 정의</div>
+  <p>TCP Wrapper는 <strong>유닉스에서 네트워크 서비스에 대한 접근을 제어하기 위한 호스트 기반 접근 제어 구현</strong>. 특정 IP나 도메인에 대해 서비스를 허용하거나 차단할 수 있음. <code>/etc/hosts.allow</code>와 <code>/etc/hosts.deny</code> 파일을 통해 접근을 제어하며 호스트별로 접근을 제어함.</p>
+</div>
+<div class="tw"><table>
+  <thead><tr><th>파일</th><th>역할</th><th>우선순위</th></tr></thead>
+  <tbody>
+    <tr class="tc-g"><td class="mono"><strong>/etc/hosts.allow</strong></td><td>접근을 <strong>허용</strong>할 호스트·서비스 목록</td><td><strong>1순위</strong> (먼저 확인)</td></tr>
+    <tr class="tc-r"><td class="mono"><strong>/etc/hosts.deny</strong></td><td>접근을 <strong>차단</strong>할 호스트·서비스 목록</td><td>2순위 (allow에 없을 때)</td></tr>
   </tbody>
 </table></div>
 
 </div><!-- /tab-unix_perm -->
 
-<!-- ════ 특수권한·umask ════ -->
-<div class="tab-pane" id="tab-unix_special">
+<!-- ════ TAB6: 로그 파일 ════ -->
+<div class="tab-pane" id="tab-unix_log">
 
-<div class="sh"><div class="sn2">1</div><div class="st">특수 접근 권한 3종 — SetUID · SetGID · Sticky bit</div><span class="slb le">★★★ 매년 출제</span></div>
-
-<div class="tw"><table>
-  <thead><tr><th>특수 권한</th><th>8진수</th><th>기호 표시</th><th>동작 원리</th><th>용도 및 주의</th></tr></thead>
-  <tbody>
-    <tr class="tc-r">
-      <td><strong>SetUID</strong></td>
-      <td><strong>4xxx</strong><br>(chmod 4754)</td>
-      <td>소유자 실행 위치에 <strong>s</strong><br>예: rws r-x r--</td>
-      <td>SetUID가 설정된 파일을 <strong>일반 사용자가 실행하면 해당 실행 동안 파일 소유자의 권한으로 실행</strong>. 실행이 끝나면 다시 일반 사용자 권한으로 복귀.</td>
-      <td>passwd 명령(root 소유+SetUID → 일반 사용자도 /etc/shadow 수정 가능). <strong>보안 취약점</strong>: 불필요한 SetUID 파일 = 백도어·버퍼 오버플로 공격에 이용.</td>
-    </tr>
-    <tr class="tc-b">
-      <td><strong>SetGID</strong></td>
-      <td><strong>2xxx</strong><br>(chmod 2754)</td>
-      <td>그룹 실행 위치에 <strong>s</strong><br>예: rwx r-s r--</td>
-      <td>SetGID가 설정된 파일을 실행하면 <strong>해당 실행 동안 파일 소유 그룹의 권한으로 실행</strong>. 실행 후 원래 그룹으로 복귀.</td>
-      <td>그룹 소유로만 접근 가능한 리소스에 일반 사용자가 접근할 수 있도록 허용.</td>
-    </tr>
-    <tr class="tc-v">
-      <td><strong>Sticky bit</strong></td>
-      <td><strong>1xxx</strong><br>(chmod 1755)</td>
-      <td>기타 실행 위치에 <strong>t</strong><br>예: rwx r-x r-t</td>
-      <td>Sticky bit가 설정된 디렉터리에 파일을 생성하면 해당 파일은 생성한 사람의 소유가 되며, <strong>오직 소유자와 슈퍼유저(root)만 파일 삭제·변경 가능</strong>. 다른 사람은 삭제·수정 불가.</td>
-      <td><strong>/tmp 디렉터리</strong>에 설정. 공유 디렉터리에서 타인의 파일 삭제 방지.</td>
-    </tr>
-  </tbody>
-</table></div>
-
-<div class="dw">
-  <div class="dt2">특수 권한 chmod 명령 예시 (암기)</div>
-  <div style="font-family:monospace;font-size:13px;display:flex;flex-direction:column;gap:8px;">
-    <div><span style="color:#c0392b;font-weight:700;">chmod 4754 file</span><span style="color:#5a6478;margin-left:12px;">→ rws r-x r--  (SetUID = 4xxx)</span></div>
-    <div><span style="color:#2d5be3;font-weight:700;">chmod 2754 file</span><span style="color:#5a6478;margin-left:12px;">→ rwx r-s r--  (SetGID = 2xxx)</span></div>
-    <div><span style="color:#6d28d9;font-weight:700;">chmod 1755 dir</span><span style="color:#5a6478;margin-left:12px;">→ rwx r-x r-t  (Sticky = 1xxx)</span></div>
-  </div>
-</div>
-
-<div class="trap">
-  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — SetGID chmod 번호 혼동 (2022 군무원)</span></div>
-  <div class="tb">
-    <div class="tq">"SetGID 명령은 chmod 명령에서 'chmod <strong>1755</strong> setgid_program'과 같이 1000번대 인자를 주어 설정할 수 있다" → <span class="vw">✗ 오답</span></div>
-    <p>SetGID = <strong>2xxx</strong> (2000번대). 1000번대(1xxx) = Sticky bit. 각 번호 암기: <strong>4=SetUID / 2=SetGID / 1=Sticky</strong>.</p>
-  </div>
-</div>
-
-<div class="dv"></div>
-
-<div class="sh"><div class="sn2">2</div><div class="st">umask — 기본 권한 마스크</div><span class="slb le">★★★ 매년 출제</span></div>
-
-<div class="dfb">
-  <div class="dfl">umask 정의</div>
-  <p>umask(User file creation mode MASK)는 <strong>파일이나 디렉터리 생성 시 부여되는 기본(디폴트) 권한을 결정하는 마스크</strong>. 파일 기본 최대 권한 = <strong>666</strong>, 디렉터리 기본 최대 권한 = <strong>777</strong>. 실제 권한 = 기본 권한 - umask.</p>
-</div>
-
-<div class="umask-calc">
-  <div class="umask-row">
-    <span class="umask-k">umask 022 → 파일</span>
-    <span class="umask-eq">666 - 022 =</span>
-    <span class="umask-v">644 (rw-r--r--)</span>
-    <span class="umask-desc">소유자: 읽기+쓰기 / 그룹·기타: 읽기</span>
-  </div>
-  <div class="umask-row">
-    <span class="umask-k">umask 022 → 디렉터리</span>
-    <span class="umask-eq">777 - 022 =</span>
-    <span class="umask-v">755 (rwxr-xr-x)</span>
-    <span class="umask-desc">소유자: 모든 권한 / 그룹·기타: 읽기+실행</span>
-  </div>
-  <div class="umask-row">
-    <span class="umask-k">umask 133 → 파일</span>
-    <span class="umask-eq">666 - 133 =</span>
-    <span class="umask-v">644 (rw-r--r--)</span>
-    <span class="umask-desc">소유자: rw / 그룹·기타: r</span>
-  </div>
-  <div class="umask-row">
-    <span class="umask-k">umask 077 → 파일</span>
-    <span class="umask-eq">666 - 077 =</span>
-    <span class="umask-v">600 (rw-------)</span>
-    <span class="umask-desc">소유자만 읽기+쓰기</span>
-  </div>
-</div>
-
-<div class="inf-v">
-  <strong>핵심 공식:</strong> 파일 실제 권한 = <strong>666 − umask</strong> / 디렉터리 실제 권한 = <strong>777 − umask</strong>. umask 기본값은 보통 022. umask 명령어로 변경 가능.
-</div>
-
-<div class="dv"></div>
-
-<div class="sh"><div class="sn2">3</div><div class="st">특수 파일 찾기 명령 (find)</div><span class="slb ld">★★</span></div>
-
-<div class="tw"><table>
-  <thead><tr><th>명령어</th><th>의미</th></tr></thead>
-  <tbody>
-    <tr><td><code>find / -perm -4000 -print</code></td><td>SetUID(4xxx)가 설정된 파일 찾기</td></tr>
-    <tr><td><code>find / -perm -2000 -print</code></td><td>SetGID(2xxx)가 설정된 파일 찾기</td></tr>
-    <tr><td><code>find / -perm -1000 -print</code></td><td>Sticky bit(1xxx)가 설정된 파일 찾기</td></tr>
-    <tr><td><code>find / -perm -6000 -print</code></td><td>SetUID + SetGID 모두 설정된 파일 찾기</td></tr>
-  </tbody>
-</table></div>
-
-</div><!-- /tab-unix_special -->
-
-<!-- ════ 계정파일·로그 ════ -->
-<div class="tab-pane" id="tab-unix_files">
-
-<div class="sh"><div class="sn2">1</div><div class="st">/etc/passwd 파일 구조</div><span class="slb le">★★★ 매년 출제</span></div>
-
-<div class="dfb">
-  <div class="dfl">/etc/passwd 형식</div>
-  <p><code>root : x : 0 : 0 : root : /root : /bin/bash</code></p>
-  <p>① 사용자 계정 이름 | ② 패스워드(x=shadow에 암호화 저장) | ③ 사용자 UID(root→0) | ④ 사용자 소속 그룹 GID(root→0) | ⑤ 사용자 정보(이름·연락처 기입란) | ⑥ 사용자 계정 홈 디렉터리 | ⑦ 로그인 시 선택한 사용자의 <strong>셸</strong></p>
-</div>
-
-<div class="sb">
-<p>② 필드의 'x'는 shadow 패스워드 시스템에 의해 <strong>/etc/shadow</strong>에 암호화된 형태로 저장되어 있음을 의미해요. 과거에는 passwd 파일에 직접 암호화 패스워드를 저장했지만, 보안상 이유로 shadow 파일로 분리됐어요. 일반 사용자에게는 /etc/shadow 읽기 권한 없음.</p>
-<p>UID: 리눅스에서 관리자는 UID를 0으로 부여. 일반 사용자는 일반적으로 <strong>500 이상</strong>의 번호를 부여받음. GID도 마찬가지로 관리자 그룹은 0, 일반 사용자 그룹은 그 외의 번호.</p>
-</div>
-
-<div class="dv"></div>
-
-<div class="sh"><div class="sn2">2</div><div class="st">/etc/shadow 파일 구조</div><span class="slb le">★★★</span></div>
-
-<div class="dfb">
-  <div class="dfl">/etc/shadow 형식</div>
-  <p><code>gong : $uwZvLF9p$YTqglbDFIo : 10917 : 0 : 99999 : 7 : : :</code></p>
-  <p>① 사용자 계정 이름 | ② 암호화된 패스워드(salt+해시) | ③ 마지막으로 패스워드 변경한 날짜(1970.1.1 기준 일수) | ④ 변경 최소 일수(0=즉시 변경 가능) | ⑤ 변경 최대 일수(99999=거의 무제한) | ⑥ 만료 경고일수 | ⑦ 비활성화 일수 | ⑧ 만기일 | ⑨ 예약 필드</p>
-</div>
-
-<div class="tw"><table>
-  <thead><tr><th>필드</th><th>내용</th></tr></thead>
-  <tbody>
-    <tr><td><strong>② 암호화 패스워드</strong></td><td><code>$5$...</code> = SHA-256, <code>$6$...</code> = SHA-512, <code>$1$</code> = MD5. salt 포함.</td></tr>
-    <tr><td><strong>③ 마지막 변경일</strong></td><td>1970년 1월 1일부터 현재까지 경과한 일수.</td></tr>
-    <tr><td><strong>④ 변경 최소 일수</strong></td><td>0 = 즉시 패스워드 변경 가능.</td></tr>
-    <tr><td><strong>⑤ 변경 최대 일수</strong></td><td>패스워드 변경하지 않고 사용 가능한 최대 일수.</td></tr>
-    <tr><td><strong>! 또는 * 기호</strong></td><td>패스워드 미설정 또는 잠긴 계정을 의미.</td></tr>
-  </tbody>
-</table></div>
-
-<div class="dv"></div>
-
-<div class="sh"><div class="sn2">3</div><div class="st">유닉스/리눅스 주요 로그 파일</div><span class="slb le">★★★ 매년 출제</span></div>
+<div class="sh"><div class="sn2">1</div><div class="st">유닉스/리눅스 주요 로그 파일 13종</div><span class="slb le">★★★ 매년 출제</span></div>
 
 <div class="log-grid">
   <div class="lc">
-    <div class="lct">/var/log/wtmp</div>
-    <div class="lcb">
-      <strong>사용자 로그인·로그아웃·시스템 재부팅 정보</strong>를 기록.<br>
-      <span class="fmt">형식: 바이너리 (last 명령으로 조회)</span>
-    </div>
+    <div class="lct">messages</div>
+    <div class="lcb"><strong>시스템 전반적인 로그.</strong> 보안 공격에 의한 로그, su에 대한 로그, 특정 데몬 로그, 부팅 시 발생한 오류 기록.<br><span class="fmt">형식: 텍스트 / 위치: /var/log/messages</span></div>
   </div>
   <div class="lc">
-    <div class="lct">/var/log/btmp</div>
-    <div class="lcb">
-      <strong>실패한 로그인 시도 정보</strong>를 기록. 비밀번호 틀렸을 때.<br>
-      <span class="fmt">형식: 바이너리 (lastb 명령으로 조회)</span>
-    </div>
+    <div class="lct">lastlog</div>
+    <div class="lcb">사용자별로 <strong>가장 최근에 로그인한 시간·접속 장소·사용자명·IP 주소</strong> 등을 기록.<br><span class="fmt">형식: 바이너리 / lastlog 명령으로 조회</span></div>
   </div>
   <div class="lc">
-    <div class="lct">/var/run/utmp</div>
-    <div class="lcb">
-      <strong>현재 로그인한 사용자 정보</strong>를 기록 (현재 상태).<br>
-      <span class="fmt">형식: 바이너리 (who, w 명령으로 조회)</span>
-    </div>
+    <div class="lct">wtmp</div>
+    <div class="lcb">처음부터 현재까지 <strong>사용자 로그인·로그아웃·시스템 재부팅 정보</strong> 기록. 모든 사용자의 로그인·로그아웃과 마지막 재부팅 시간 데이터 포함.<br><span class="fmt">형식: <strong>바이너리</strong> / last 명령으로 조회</span></div>
   </div>
   <div class="lc">
-    <div class="lct">/var/log/syslog</div>
-    <div class="lcb">
-      <strong>시스템 전반적인 이벤트 로그</strong>. 각종 서비스 메시지.<br>
-      <span class="fmt">형식: 텍스트</span>
-    </div>
+    <div class="lct">utmp</div>
+    <div class="lcb">wtmp에 대한 대칭 관계는 없음. <strong>현재 로그인한 사용자에 대한 상태 정보</strong>를 집중적으로 기록.<br><span class="fmt">형식: <strong>바이너리</strong> ⚠텍스트 아님 / who, w 명령으로 조회</span></div>
   </div>
   <div class="lc">
-    <div class="lct">sulog</div>
-    <div class="lcb">
-      <strong>su 명령어 사용 내역</strong>. 권한 변경 시도 및 변경 정보.<br>
-      <span class="fmt">형식: 텍스트</span>
-    </div>
-  </div>
-  <div class="lc">
-    <div class="lct">xferlog</div>
-    <div class="lcb">
-      <strong>FTP 파일 전송 내역</strong>. FTP 서버 접속·전송 기록.<br>
-      <span class="fmt">형식: 텍스트</span>
-    </div>
-  </div>
-  <div class="lc">
-    <div class="lct">loginlog (Solaris)</div>
-    <div class="lcb">
-      <strong>5회 이상 실패한 로그인 시도 내역</strong>.<br>
-      <span class="fmt">Solaris 전용 / Linux에서는 btmp 사용</span>
-    </div>
+    <div class="lct">btmp</div>
+    <div class="lcb"><strong>실패한 로그인 시도 정보</strong>를 기록. 비밀번호를 틀렸을 때 등.<br><span class="fmt">형식: <strong>바이너리</strong> / lastb 명령으로 조회</span></div>
   </div>
   <div class="lc">
     <div class="lct">pacct</div>
-    <div class="lcb">
-      <strong>시스템에 로그인한 모든 사용자가 수행한 프로그램 정보</strong>.<br>
-      <span class="fmt">형식: 바이너리</span>
-    </div>
+    <div class="lcb">시스템에 로그인한 <strong>모든 사용자가 로그아웃할 때까지 수행한 프로그램 정보와 사용 내역</strong> 기록. 해킹 피해·백도어 설치 여부 파악 가능.<br><span class="fmt">형식: <strong>바이너리</strong></span></div>
+  </div>
+  <div class="lc">
+    <div class="lct">sulog</div>
+    <div class="lcb">root나 일반 사용자에서 다른 사용자로 전환 시 사용할 수 있는 <strong>su 명령에 대한 로그</strong>. 날짜·시간·성공(+)·패배(-)·사용한 터미널·사용자 정보 기록.<br><span class="fmt">형식: 텍스트</span></div>
   </div>
   <div class="lc">
     <div class="lct">history</div>
-    <div class="lcb">
-      <strong>사용자가 실행했던 명령어 내역</strong>. 셸 명령 이력.<br>
-      <span class="fmt">~/.bash_history (텍스트)</span>
-    </div>
+    <div class="lcb">침해 시스템 분석 시 불법 사용자나 root의 <strong>history를 분석하면 어떤 활동을 했는지 확인</strong> 가능. acct/pacct에서 기록되지 않는 명령의 argument까지 확인 가능.<br><span class="fmt">형식: 텍스트 / ~/.bash_history</span></div>
   </div>
   <div class="lc">
-    <div class="lct">secure (messages)</div>
-    <div class="lcb">
-      <strong>PAM 인증 관련 로그</strong>. sudo, su, SSH 등 인증 기록.<br>
-      <span class="fmt">형식: 텍스트</span>
-    </div>
+    <div class="lct">secure</div>
+    <div class="lcb">Telnet이나 FTP를 거치는 <strong>PAM 인증 관련 로그</strong>. sudo·su·SSH 등 인증 기록 저장.<br><span class="fmt">형식: 텍스트 / /var/log/secure</span></div>
+  </div>
+  <div class="lc">
+    <div class="lct">dmesg</div>
+    <div class="lcb">시스템이 부팅할 때 <strong>커널에서 에러 로그 기록</strong>. 부팅 시 하드웨어 감지 메시지.<br><span class="fmt">형식: 텍스트 / dmesg 명령으로 조회</span></div>
+  </div>
+  <div class="lc">
+    <div class="lct">syslog</div>
+    <div class="lcb">사용자 관련 로그 및 <strong>커널·각종 데몬에서 발생된 로그를 포함</strong>. rlogin·ftp·finger·telnet·pop3 등에 대한 실패 기록. 발생 시 가장 먼저 업데이트됨.<br><span class="fmt">형식: 텍스트 / /var/log/syslog</span></div>
+  </div>
+  <div class="lc">
+    <div class="lct">httpd access_log<br>/ error_log</div>
+    <div class="lcb">웹 서버에 대한 <strong>액세스 및 에러 로그</strong>. DDoS 공격 등에 대한 액세스 로그 분석 가능.<br><span class="fmt">형식: 텍스트 / /var/log/httpd/</span></div>
+  </div>
+  <div class="lc">
+    <div class="lct">xferlog</div>
+    <div class="lcb">FTP를 통해 전송되는 <strong>모든 파일에 대한 로그 저장</strong>. 접속 IP·파일명·전송방향(송수신) 등 포함.<br><span class="fmt">형식: 텍스트</span></div>
+  </div>
+  <div class="lc">
+    <div class="lct">loginlog</div>
+    <div class="lcb">로그인 시도 시 <strong>5회 이상 실패한 경우 기록</strong>. (Solaris 전용, Linux에서는 btmp 사용)<br><span class="fmt">형식: 텍스트</span></div>
   </div>
 </div>
 
 <div class="trap">
-  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — 로그 파일 역할 혼동 (2015 국가직, 경찰간부 출제)</span></div>
+  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — 로그 파일 역할·형식 혼동 (2015 국가직·2023 국가직 출제)</span></div>
   <div class="tb">
-    <div class="tq">"loginlog — FTP 파일 전송 내역" → <span class="vw">✗ 오답</span></div>
-    <p>FTP 파일 전송 = <strong>xferlog</strong>. loginlog = <strong>5회 이상 실패한 로그인 시도 내역</strong>(Solaris). 이 두 개를 바꿔 놓는 함정 문제가 출제됐어요.</p>
-    <div class="tq">"utmp — 로그인, 로그아웃, 현재 시스템 사용자의 계정 정보를 텍스트 형태로 기록" → <span class="vw">✗ 오답</span> (2023 국가직)</div>
-    <p>utmp는 <strong>바이너리</strong> 형태로 기록. 텍스트가 아님. wtmp도 바이너리, btmp도 바이너리.</p>
+    <div class="tq">"loginlog = FTP 파일 전송 내역" → <span class="vw">✗</span> loginlog = <strong>5회 이상 실패 로그인</strong> / FTP 전송 = <strong>xferlog</strong></div>
+    <div class="tq">"xferlog = 익명 로그인 시도 내역" → <span class="vw">✗</span> xferlog = <strong>FTP 파일 전송 내역</strong></div>
+    <div class="tq">"utmp = 텍스트 형태로 기록" → <span class="vw">✗</span> utmp = <strong>바이너리</strong> 형태. wtmp·btmp·utmp·pacct 모두 바이너리.</div>
   </div>
 </div>
 
-</div><!-- /tab-unix_files -->
+<div class="mem">
+  <div class="mt">📋 로그 형식 암기 (바이너리 vs 텍스트)</div>
+  <div class="mi">
+    <div class="mr"><span class="mk">바이너리</span><span class="mv"><strong>wtmp·btmp·utmp·pacct·lastlog</strong> → 모두 바이너리. 전용 명령어로 조회.</span></div>
+    <div class="mr"><span class="mk">텍스트</span><span class="mv">messages·sulog·xferlog·loginlog·history·secure·dmesg·syslog·httpd → 텍스트. cat/grep으로 직접 열람 가능.</span></div>
+    <div class="mr"><span class="mk">xferlog</span><span class="mv">FTP 전송 내역. 전송 시각·IP·파일명·방향(o=송신, i=수신)·사용자명 포함.</span></div>
+    <div class="mr"><span class="mk">loginlog</span><span class="mv">5회 이상 실패한 로그인. (Solaris). 리눅스 = btmp.</span></div>
+  </div>
+</div>
 
-<!-- ════ 기출 8선 ════ -->
+</div><!-- /tab-unix_log -->
+
+<!-- ════ TAB7: 기출 ════ -->
 <div class="tab-pane" id="tab-exam">
 
 <div class="sh"><div class="sn2">📝</div><div class="st">기출문제 전수 해설 — 8문제</div><span class="slb le">연도순</span></div>
 
 <div class="ec">
-  <div class="eh"><span class="ey">📄 2015 국가직 9급 · SRM = SID 부여 식별</span><span class="es">★★★</span></div>
+  <div class="eh"><span class="ey">📄 2016 국가직 9급 정보시스템보안 · 시스템 콜 빈칸</span><span class="es">★★★</span></div>
   <div class="eb">
-    <div class="eq">다음에서 설명하는 윈도우 인증 구성 요소는?<br>• 사용자 계정과 패스워드가 일치하는 사용자에게 고유의 SID(Security Identifier)를 부여한다.<br>• SID에 기반을 두어 파일이나 디렉터리에 대한 접근 허용 여부를 결정하고 이에 대한 감사 메시지를 생성한다.</div>
+    <div class="eq">운영체제는 이중 모드(Dual Mode)로 되어 있는데, 이는 사용자 모드와 커널 모드로 구분된다. 사용자는 특권 명령을 사용할 수 없으며, 이러한 사용자가 운영체제에게 작업을 수행하게 되는데, 이를 ( )라 한다.</div>
+    <div class="eo">
+      <div class="op ow">① 시스템 관리(System management)</div>
+      <div class="op or">② 시스템 콜(System call)</div>
+      <div class="op ow">③ 프로세스 관리(Process management)</div>
+      <div class="op ow">④ 스케줄링(Scheduling)</div>
+    </div>
+    <div class="ex"><strong>정답 ②</strong> — 시스템 콜(System Call)은 사용자 모드 프로그램이 커널 모드의 기능을 요청하는 인터페이스. 입출력 제어를 운영체제(OS)에게 요청하여 사용자 영역으로부터 분리되는 운영체제의 기본 명령어.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2015 국가직 9급 · 로그 파일 역할 매칭 오답</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">유닉스 로그 파일에 대한 설명으로 바르게 연결한 것은?<br>ㄱ. history — 사용자가 했던 명령 내역<br>ㄴ. sulog — su 명령어 사용 내역<br>ㄷ. xferlog — 익명 로그인 시도 내역<br>ㄹ. loginlog — FTP 파일 전송 내역</div>
+    <div class="eo">
+      <div class="op ow">① ㄱ, ㄴ, ㄷ, ㄹ 모두 맞음</div>
+      <div class="op or">② ㄱ, ㄴ만 맞음 (ㄷ·ㄹ 바뀜)</div>
+      <div class="op ow">③ ㄴ, ㄷ만 맞음</div>
+      <div class="op ow">④ ㄷ, ㄹ만 맞음</div>
+    </div>
+    <div class="ex"><strong>정답 ② (ㄱ·ㄴ 맞음, ㄷ·ㄹ 틀림)</strong> — ㄷ xferlog = <strong>FTP 파일 전송 내역</strong>. ㄹ loginlog = <strong>5회 이상 실패한 로그인 내역</strong>. ㄷ·ㄹ이 서로 바뀌어 출제됨. 반드시 xferlog=FTP전송, loginlog=실패 로그인으로 암기.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2016 국가직 9급 · chmod 751 권한 값</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">다음 접근 권한으로 옳은 것은? chmod 751 test.c</div>
+    <div class="eo">
+      <div class="op ow">① -rwxr-x--x (정답과 동일하나 표기 오류)</div>
+      <div class="op or">② -rwxr-x--x</div>
+      <div class="op ow">③ -rwxrwx--x</div>
+      <div class="op ow">④ -rwxr-xr--</div>
+    </div>
+    <div class="ex"><strong>정답 ②</strong> — 751 = 7(111=rwx) / 5(101=r-x) / 1(001=--x). 맨 앞 - = 일반 파일. 결과: <strong>-rwxr-x--x</strong>.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2015·2022 국가직 · SRM = SID 부여 + 감사 메시지</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">다음에서 설명하는 윈도우 인증 구성 요소는?<br>• 사용자의 계정과 패스워드가 일치하는 사용자에게 고유의 SID를 부여한다.<br>• SID에 기반을 두어 파일이나 디렉터리에 대한 접근 허용 여부를 결정하고 감사 메시지를 생성한다.</div>
     <div class="eo">
       <div class="op ow">① LSA(Local Security Authority)</div>
       <div class="op or">② SRM(Security Reference Monitor)</div>
       <div class="op ow">③ SAM(Security Account Manager)</div>
       <div class="op ow">④ IPSec</div>
     </div>
-    <div class="ex"><strong>정답 ②</strong> — 키워드: "<strong>SID 부여</strong>", "<strong>감사 메시지 생성</strong>", "파일·디렉터리 접근 허용 결정" → 모두 <strong>SRM</strong>. LSA=로그인 검증·SID 매칭. SAM=계정DB 관리. SRM=SID 부여+감사 메시지.</div>
+    <div class="ex"><strong>정답 ②</strong> — 키워드: <strong>"SID 부여" + "감사 메시지 생성"</strong> = SRM. SRM은 커널 모드에서 실행. LSA=로그인 검증. SAM=계정DB 관리.</div>
   </div>
 </div>
 
 <div class="ec">
-  <div class="eh"><span class="ey">📄 2019 국가직 7급 · LSA·SRM·SAM 빈칸 (가)(나)(다)</span><span class="es">★★★</span></div>
+  <div class="eh"><span class="ey">📄 2023 국가직 9급 · passwd + SetUID + /etc/shadow</span><span class="es">★★★</span></div>
   <div class="eb">
-    <div class="eq">(㉠)은 로컬 사용자에 관련된 보안 정보 및 계정 데이터를 저장하는 데이터베이스이다. (㉡)은 커널 모드에서 수행되며, 사용자나 프로세스가 어떤 객체를 열려고 시도하면 접근 권한을 확인한다. (㉢)는 사용자 모드에서 수행되며, 로컬 보안 정책을 집행하는 책임이 있다.</div>
-    <div class="eo">
-      <div class="op or">① ㉠SAM ㉡SRM ㉢LSA</div>
-      <div class="op ow">② ㉠SRM ㉡SAM ㉢LSA</div>
-      <div class="op ow">③ ㉠SAM ㉡SRM ㉢SID</div>
-      <div class="op ow">④ ㉠SRM ㉡SAM ㉢SID</div>
-    </div>
-    <div class="ex"><strong>정답 ①</strong> — ㉠ 계정 데이터 저장 DB = <strong>SAM</strong>. ㉡ 커널 모드 + 접근 권한 확인 = <strong>SRM</strong>. ㉢ 사용자 모드 + 로컬 보안 정책 집행 = <strong>LSA</strong>. 동작 모드로 구분: SRM만 커널 모드, LSA·SAM은 사용자 모드.</div>
-  </div>
-</div>
-
-<div class="ec">
-  <div class="eh"><span class="ey">📄 2022 국가직 9급 · 보안 커널 정의 빈칸</span><span class="es">★★★</span></div>
-  <div class="eb">
-    <div class="eq">보안 운영체제는 기존 운영체제에 내재된 보안상의 결함으로 인한 각종 침해로부터 시스템을 보호하기 위하여 기존의 운영체제 내에 보안 기능을 통합시킨 (가)을/를 추가로 이식한 운영체제이다.</div>
-    <div class="eo">
-      <div class="op or">① 보안 커널</div>
-      <div class="op ow">② 접근 제어</div>
-      <div class="op ow">③ 신뢰 플랫폼 모듈</div>
-      <div class="op ow">④ 하이퍼바이저</div>
-    </div>
-    <div class="ex"><strong>정답 ①</strong> — 보안 운영체제 = 기존 OS에 <strong>보안 커널(Security Kernel)</strong>을 추가 이식. 보안 커널은 참조 모니터를 구현한 TCB의 핵심 구성 요소. 하이퍼바이저는 가상화 기술.</div>
-  </div>
-</div>
-
-<div class="ec">
-  <div class="eh"><span class="ey">📄 2024 국가직 9급 · 참조 모니터 오답</span><span class="es">★★★</span></div>
-  <div class="eb">
-    <div class="eq">참조 모니터(Reference Monitor)에 대한 설명으로 옳지 않은 것은?</div>
-    <div class="eo">
-      <div class="op ow">① 모든 주체 간 상호 접근통제를 담당하는 추상적인 기계이다.</div>
-      <div class="op on">② 참조 모니터 데이터베이스를 참조하여 접근통제를 수행한다.</div>
-      <div class="op on">③ 모든 접근 시도에 대해 시행되어야 하고 회피하는 것이 불가능해야 한다.</div>
-      <div class="op ow">④ 보안 매개변수 설정 등과 같은 다른 보안 메커니즘과 데이터를 교환하면서 상호 작용을 한다.</div>
-    </div>
-    <div class="ex"><strong>정답 ①과 ④</strong> — ①"주체 간" → ✗, 참조 모니터는 <strong>주체↔객체</strong> 간 접근통제. ④다른 메커니즘과 데이터 교환 → ✗, 참조 모니터는 <strong>격리(Isolation)</strong>되어야 함. 일반적 시험 출제: ①번이 오답으로 자주 출제됨.</div>
-  </div>
-</div>
-
-<div class="ec">
-  <div class="eh"><span class="ey">📄 2020 경찰간부 · chmod 752 파일 권한</span><span class="es">★★★</span></div>
-  <div class="eb">
-    <div class="eq">유닉스(Unix) 운영체제에서 명령어 'chmod 752 test.c'를 실행한 파일의 접근 권한에 대한 설명으로 가장 옳은 것은?</div>
-    <div class="eo">
-      <div class="op ow">① group 권한 : 읽기(X) 쓰기(O) 실행(X)</div>
-      <div class="op or">② user 권한 : 읽기(O) 쓰기(O) 실행(O)</div>
-      <div class="op ow">③ group 권한 : 읽기(O) 쓰기(O) 실행(O)</div>
-      <div class="op ow">④ user 권한 : 읽기(O) 쓰기(X) 실행(O)</div>
-    </div>
-    <div class="ex"><strong>정답 ②</strong> — 752 = 7(rwx)/5(r-x)/2(-w-). user=<strong>7=rwx</strong>(읽기O·쓰기O·실행O). group=5=r-x(읽기O·쓰기X·실행O). other=2=-w-(읽기X·쓰기O·실행X).</div>
-  </div>
-</div>
-
-<div class="ec">
-  <div class="eh"><span class="ey">📄 2023 국가직 9급 · SetUID + /etc/shadow + passwd 명령</span><span class="es">★★★</span></div>
-  <div class="eb">
-    <div class="eq">리눅스에서 passwd 명령어와 /etc/shadow 파일의 관계에서 (가)(나)(다)에 들어갈 내용은?<br>일반 사용자가 (다)가 설정된 (가) 명령어를 실행하면 해당 프로세스는 일시적으로 파일 소유자인 관리자(root)의 권한을 얻게 되어 (나) 파일에 접근하여 해당 사용자의 비밀번호를 수정할 수 있다.</div>
+    <div class="eq">(가)~(다)에 들어갈 내용을 바르게 연결한 것은?<br>일반 사용자가 (다)가 설정된 (가) 명령어를 실행하면 해당 프로세스는 일시적으로 파일 소유자인 관리자(root)의 권한을 얻게 되어 관리자만 접근할 수 있는 (나) 파일에 접근하여 비밀번호를 수정할 수 있다.</div>
     <div class="eo">
       <div class="op ow">① (가)passwrd (나)/etc/shadow (다)SetUID</div>
-      <div class="op ow">② (가)passwrd (나)/etc/passwd (다)SetRID</div>
-      <div class="op or">③ (가)passwd (나)/etc/shadow (다)SetUID</div>
+      <div class="op or">② (가)passwd (나)/etc/shadow (다)SetUID</div>
+      <div class="op ow">③ (가)passwd (나)/etc/passwd (다)SetGID</div>
       <div class="op ow">④ (가)passwd (나)/etc/shadow (다)SetRID</div>
     </div>
-    <div class="ex"><strong>정답 ③</strong> — 명령어 = <strong>passwd</strong>(passwrd 아님). 접근 파일 = <strong>/etc/shadow</strong>(암호화 패스워드 저장). 일반 사용자가 root 권한으로 실행 = <strong>SetUID</strong>. "SetRID"는 존재하지 않는 개념.</div>
+    <div class="ex"><strong>정답 ②</strong> — 명령어 = <strong>passwd</strong>(passwrd 아님). 파일 = <strong>/etc/shadow</strong>. 권한 = <strong>SetUID</strong>. "SetRID"는 존재하지 않음.</div>
   </div>
 </div>
 
 <div class="ec">
-  <div class="eh"><span class="ey">📄 2023 국가직 9급 · utmp 로그 텍스트/바이너리 형식</span><span class="es">★★</span></div>
+  <div class="eh"><span class="ey">📄 2023 국가직 9급 · utmp 바이너리 형태</span><span class="es">★★</span></div>
   <div class="eb">
     <div class="eq">유닉스/리눅스 시스템의 로그 파일에 대한 설명으로 옳지 않은 것은?</div>
     <div class="eo">
@@ -804,12 +887,26 @@ tbody td:first-child{font-weight:600;color:var(--p);}
       <div class="op on">③ su 로그는 su 명령어 수행에 따른 권한 변경 시도 및 변경 정보를 텍스트 형태로 기록한다.</div>
       <div class="op on">④ pacct 로그는 시스템에 로그인한 모든 사용자가 수행한 프로그램의 정보를 바이너리 형태로 기록한다.</div>
     </div>
-    <div class="ex"><strong>정답 ①</strong> — utmp는 <strong>바이너리</strong> 형태로 기록. 텍스트가 아님. wtmp·btmp·utmp·pacct 모두 바이너리. 텍스트로 기록되는 로그: sulog, xferlog, syslog, history.</div>
+    <div class="ex"><strong>정답 ①</strong> — utmp는 <strong>바이너리</strong> 형태. "텍스트"가 오답. wtmp·btmp·utmp·pacct·lastlog 모두 바이너리. 텍스트 로그: sulog·xferlog·syslog·history.</div>
   </div>
 </div>
 
 <div class="ec">
-  <div class="eh"><span class="ey">📄 2025 국가직 9급 · chmod 1111 → Sticky Bit</span><span class="es">★★★</span></div>
+  <div class="eh"><span class="ey">📄 2024 국가직 9급 · i-node에 파일명 없음</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">유닉스 파일 시스템의 i-node 정보에 해당하지 않는 것은?</div>
+    <div class="eo">
+      <div class="op on">① 소유그룹</div>
+      <div class="op on">② 파일 타입</div>
+      <div class="op or">③ 파일명</div>
+      <div class="op on">④ 접근권한</div>
+    </div>
+    <div class="ex"><strong>정답 ③</strong> — <strong>파일명(File Name)은 i-node에 저장되지 않는다.</strong> 파일명은 디렉터리에 별도 저장되고 i-node 번호와 연결됨. i-node에는 파일 타입·접근권한·소유자(UID)·소유그룹(GID)·파일크기·링크수·시간정보·데이터블록 포인터가 저장됨.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2025 국가직 9급 · chmod 1111 = Sticky Bit</span><span class="es">★★★</span></div>
   <div class="eb">
     <div class="eq">다음 명령을 수행한 후 '/directory'에 부여된 권한은? chmod 1111 /directory</div>
     <div class="eo">
@@ -818,46 +915,45 @@ tbody td:first-child{font-weight:600;color:var(--p);}
       <div class="op ow">③ SetUID</div>
       <div class="op or">④ Sticky Bit</div>
     </div>
-    <div class="ex"><strong>정답 ④</strong> — chmod <strong>1</strong>111: 첫 자리 1 = <strong>Sticky bit</strong>. 4xxx=SetUID, 2xxx=SetGID, 1xxx=Sticky bit. 나머지 111(--x--x--x)은 실행 권한만. 결과: --x--x--t.</div>
+    <div class="ex"><strong>정답 ④</strong> — chmod <strong>1</strong>111 → 첫 자리 1 = <strong>Sticky bit</strong>. 4xxx=SetUID, 2xxx=SetGID, 1xxx=Sticky. 나머지 111 = --x--x--x. 결과: --x--x--t.</div>
   </div>
 </div>
 
 <div class="dv"></div>
-
 <div class="mem">
-  <div class="mt">💻 운영체제 보안 핵심 암기</div>
+  <div class="mt">💻 운영체제 보안 전체 핵심 암기</div>
   <div class="mi">
-    <div class="mr"><span class="mk">LSA</span><span class="mv">로그인 <strong>검증</strong>, 시스템 자원 접근 권한 검사, 이름↔SID 매칭, 감사 로그 기록. 사용자 모드.</span></div>
-    <div class="mr"><span class="mk">SAM</span><span class="mv">사용자/그룹 계정 <strong>DB 관리</strong>, 로그인 정보↔DB 비교로 <strong>인증 결정</strong>. 사용자 모드.</span></div>
-    <div class="mr"><span class="mk">SRM</span><span class="mv"><strong>SID 부여</strong>, 파일·디렉터리 접근 허용 결정, <strong>감사 메시지 생성</strong>. <strong>커널 모드</strong>.</span></div>
-    <div class="mr"><span class="mk">참조 모니터</span><span class="mv">주체→객체 접근 통제 추상 기계. 3특성: <strong>격리·완전성·검증 가능</strong></span></div>
-    <div class="mr"><span class="mk">TCB</span><span class="mv">HW+FW+SW 내의 모든 보안 메커니즘 총체. 보안 커널 포함.</span></div>
-    <div class="mr"><span class="mk">SetUID=4</span><span class="mv"><strong>4</strong>xxx. 실행 시 소유자 권한. chmod <strong>4</strong>754. passwd 명령 활용.</span></div>
-    <div class="mr"><span class="mk">SetGID=2</span><span class="mv"><strong>2</strong>xxx. 실행 시 소유 그룹 권한. chmod <strong>2</strong>754.</span></div>
-    <div class="mr"><span class="mk">Sticky=1</span><span class="mv"><strong>1</strong>xxx. 디렉터리에서 소유자·root만 삭제 가능. /tmp에 사용. chmod <strong>1</strong>755.</span></div>
-    <div class="mr"><span class="mk">umask 022</span><span class="mv">파일: 666-022=<strong>644</strong>(rw-r--r--) / 디렉터리: 777-022=<strong>755</strong>(rwxr-xr-x)</span></div>
-    <div class="mr"><span class="mk">wtmp·btmp·utmp</span><span class="mv">wtmp=로그인·로그아웃·재부팅 / btmp=<strong>실패한 로그인</strong> / utmp=현재 로그인. 모두 <strong>바이너리</strong>.</span></div>
-    <div class="mr"><span class="mk">xferlog·sulog</span><span class="mv">xferlog=<strong>FTP 전송</strong> / sulog=<strong>su 명령 이력</strong>. 텍스트 형식.</span></div>
-    <div class="mr"><span class="mk">i-node</span><span class="mv">파일 메타데이터 저장. <strong>파일명은 포함 안 됨</strong>(디렉터리에 저장).</span></div>
+    <div class="mr"><span class="mk">DAC·MAC·RBAC</span><span class="mv">DAC=개인/그룹 기반·ACL / MAC=<strong>보안 등급 비교·군사용</strong> / RBAC=역할 기반·기업용</span></div>
+    <div class="mr"><span class="mk">참조 모니터</span><span class="mv">주체→객체 접근 통제. 3특성: <strong>격리·완전성·검증가능</strong></span></div>
+    <div class="mr"><span class="mk">LSA·SAM·SRM</span><span class="mv">LSA=로그인검증/사용자모드 / SAM=계정DB / <strong>SRM=SID부여+감사메시지/커널모드</strong></span></div>
+    <div class="mr"><span class="mk">윈도우 부팅</span><span class="mv">POST → CMOS → MBR → <strong>NTLDR</strong> → NTDETECT → <strong>ntoskrnl.exe</strong></span></div>
+    <div class="mr"><span class="mk">이벤트 로그 3종</span><span class="mv">응용프로그램 로그 / <strong>보안 로그(로그온 시도)</strong> / 시스템 로그</span></div>
+    <div class="mr"><span class="mk">백업 3종</span><span class="mv">전체(모두) / 차등(전체 이후 모든 변경) / <strong>증분(마지막 백업 이후 변경분만)</strong></span></div>
+    <div class="mr"><span class="mk">유닉스 셸</span><span class="mv">Bourne(sh)·C(csh)·Korn(ksh)·<strong>Bash(bash)</strong></span></div>
+    <div class="mr"><span class="mk">디렉터리</span><span class="mv">/bin=명령어 / <strong>/etc=설정파일</strong> / /tmp=임시 / /var=<strong>로그</strong> / /home=사용자홈</span></div>
+    <div class="mr"><span class="mk">파일 구조 4블록</span><span class="mv">부트블록 → 슈퍼블록 → <strong>i-node블록(파일명 없음)</strong> → 데이터블록</span></div>
+    <div class="mr"><span class="mk">SetUID=4·SetGID=2·Sticky=1</span><span class="mv">umask: 파일=666−umask / 디렉터리=777−umask</span></div>
+    <div class="mr"><span class="mk">바이너리 로그</span><span class="mv"><strong>wtmp·btmp·utmp·pacct·lastlog</strong> / 나머지=텍스트</span></div>
+    <div class="mr"><span class="mk">xferlog vs loginlog</span><span class="mv">xferlog=<strong>FTP전송</strong> / loginlog=<strong>5회이상 실패 로그인</strong></span></div>
   </div>
 </div>
 
 <ul class="cl">
-  <li class="clw">"SRM = 사용자 모드에서 로컬 보안 정책 집행" → ✗ (SRM=커널 모드, LSA=사용자 모드+로컬 보안 정책)</li>
-  <li class="clw">"SAM = 보안 토큰(SID) 발급" → ✗ (SID 부여=SRM)</li>
-  <li class="clw">"참조 모니터 = 주체 간 상호 접근통제" → ✗ (주체↔객체 간 접근통제)</li>
-  <li class="clw">"SetGID = chmod 1755" → ✗ (SetGID=2xxx, 1xxx=Sticky bit)</li>
-  <li class="clw">"utmp = 텍스트 형태 로그" → ✗ (바이너리 형태)</li>
-  <li class="clw">"FAT32 = 개별 접근 제어 설정 가능" → ✗ (FAT32는 불가, NTFS만 가능)</li>
+  <li class="clw">"유닉스 기본 접근 통제 = MAC" → ✗ (유닉스 기본 = DAC·ACL)</li>
+  <li class="clw">"SRM = 사용자 모드 + 로컬 보안 정책 집행" → ✗ (그건 LSA, SRM=커널 모드+SID부여)</li>
+  <li class="clw">"SetGID = chmod 1755" → ✗ (SetGID=2xxx, 1xxx=Sticky)</li>
+  <li class="clw">"utmp = 텍스트 형태로 기록" → ✗ (바이너리)</li>
+  <li class="clw">"loginlog = FTP 파일 전송" → ✗ (FTP=xferlog, loginlog=5회이상 실패로그인)</li>
+  <li class="clw">"i-node에 파일명 저장" → ✗ (파일명은 디렉터리에 별도 저장)</li>
+  <li class="clr">"MAC = 보안 등급(레이블) 비교 · 군사용" → ✓</li>
   <li class="clr">"SRM = SID 부여 + 감사 메시지 생성 + 커널 모드" → ✓</li>
-  <li class="clr">"SetUID=4xxx / SetGID=2xxx / Sticky=1xxx" → ✓</li>
-  <li class="clr">"umask 022 → 파일권한 644, 디렉터리 권한 755" → ✓</li>
-  <li class="clr">"xferlog = FTP 파일 전송 내역, loginlog = 5회 이상 실패 로그인 내역" → ✓</li>
+  <li class="clr">"SetUID=4 / SetGID=2 / Sticky=1" → ✓</li>
+  <li class="clr">"wtmp·btmp·utmp·pacct = 바이너리 형식" → ✓</li>
 </ul>
 
 <div class="ft">
   <span>정보보안 합격전략 교재 · INHYUK PI</span>
-  <span>Chapter 09 · 운영체제 보안 완전 교재 · 2026 목표</span>
+  <span>Chapter 09 · 운영체제 보안 완전 교재 v2 · 2026 목표</span>
 </div>
 
 </div><!-- /tab-exam -->
@@ -867,15 +963,15 @@ tbody td:first-child{font-weight:600;color:var(--p);}
 
 <script>
 function sw(id){
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
-  document.querySelectorAll('.tab-btn').forEach(b=>{
-    if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes("'"+id+"'")){
-      b.classList.add('active');
+  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+  document.querySelectorAll(".tab-pane").forEach(p=>p.classList.remove("active"));
+  document.getElementById("tab-"+id).classList.add("active");
+  document.querySelectorAll(".tab-btn").forEach(b=>{
+    if(b.getAttribute("onclick")&&b.getAttribute("onclick").includes("'"+id+"'")){
+      b.classList.add("active");
     }
   });
-  window.scrollTo({top:0,behavior:'smooth'});
+  window.scrollTo({top:0,behavior:"smooth"});
 }
 </script>
 </body>
