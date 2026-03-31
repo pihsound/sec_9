@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>재난복구시스템·BCP 완전 교재 | INHYUK PI</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p:#1a2540;--a:#2d5be3;--al:#e8eeff;
+  --r:#c0392b;--rl:#fdf0ef;
+  --g:#1a7a4a;--gl:#edf7f2;
+  --w:#b45309;--wl:#fffbeb;
+  --v:#6d28d9;--vl:#ede9fe;
+  --t:#0f766e;--tl:#ccfbf1;
+  --bd:#dde3ec;--bg:#fff;--tx:#1c2331;--tm:#5a6478;
+  --g0:#f8f9fa;--g1:#f0f2f5;
+  --sans:"Noto Sans KR",sans-serif;--serif:"Noto Serif KR",serif;--mono:"JetBrains Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--sans);background:#e8eef8;color:var(--tx);font-size:14px;line-height:1.8;}
+.wrap{max-width:960px;margin:0 auto;padding:28px 14px 70px;}
+.hdr{background:linear-gradient(135deg,#050b1a 0%,#1a0530 55%,#020c10 100%);border-radius:14px 14px 0 0;padding:30px 42px 26px;position:relative;overflow:hidden;}
+.hdr::before{content:"🔄";position:absolute;right:28px;top:8px;font-size:120px;opacity:.06;}
+.mbr{display:flex;gap:7px;margin-bottom:12px;flex-wrap:wrap;}
+.bdg{font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;}
+.bdg-ch{background:rgba(255,255,255,.13);color:rgba(255,255,255,.9);}
+.bdg-hot{background:#c0392b;color:white;}
+.bdg-ok{background:#6d28d9;color:white;}
+.ht{font-family:var(--serif);font-size:26px;font-weight:600;color:white;letter-spacing:-.02em;margin-bottom:3px;}
+.hs{color:rgba(255,255,255,.55);font-size:12px;}
+.hst{display:flex;gap:20px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap;}
+.hn{font-size:16px;font-weight:700;color:#c4b5fd;}
+.hl{font-size:9px;color:rgba(255,255,255,.5);margin-top:1px;}
+.tab-bar{display:flex;background:var(--p);padding:0 20px;gap:1px;flex-wrap:wrap;border-bottom:2px solid rgba(255,255,255,.08);}
+.tab-btn{padding:10px 13px;font-size:11.5px;font-weight:600;color:rgba(255,255,255,.5);cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;transition:all .18s;white-space:nowrap;}
+.tab-btn:hover{color:rgba(255,255,255,.8);}
+.tab-btn.active{color:#c4b5fd;border-bottom-color:#6d28d9;}
+.cc{background:var(--bg);border-radius:0 0 14px 14px;padding:34px 40px;border:1px solid var(--bd);border-top:none;}
+.tab-pane{display:none;}.tab-pane.active{display:block;}
+.sh{display:flex;align-items:center;gap:9px;margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--g1);margin-top:8px;}
+.sn2{width:28px;height:28px;background:var(--p);color:white;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;}
+.st{font-size:16px;font-weight:700;color:var(--p);}
+.slb{font-size:9.5px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;}
+.le{background:var(--rl);color:var(--r);}
+.ld{background:var(--al);color:var(--a);}
+.lv{background:var(--vl);color:var(--v);}
+.lw{background:var(--wl);color:var(--w);}
+.lg{background:var(--gl);color:var(--g);}
+.lt{background:var(--tl);color:var(--t);}
+.sb{font-size:13.5px;line-height:2.0;color:var(--tx);}
+.sb p{margin-bottom:12px;}
+.sb strong{color:var(--p);}
+.dfb{background:var(--p);color:white;border-radius:11px;padding:14px 19px;margin-bottom:13px;}
+.dfl{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c4b5fd;margin-bottom:5px;}
+.dfb p{font-size:13px;line-height:1.9;color:rgba(255,255,255,.9);}
+.dfb strong{color:#c4b5fd;}
+.tw{overflow-x:auto;margin:10px 0;border-radius:9px;border:1px solid var(--bd);}
+table{width:100%;border-collapse:collapse;font-size:12.5px;}
+thead tr{background:var(--p);color:white;}
+thead th{padding:9px 12px;text-align:left;font-weight:600;font-size:11px;}
+tbody tr{border-bottom:1px solid var(--g1);}
+tbody tr:last-child{border-bottom:none;}
+tbody tr:hover{background:#faf5ff;}
+tbody td{padding:8px 12px;color:var(--tx);vertical-align:top;line-height:1.65;}
+tbody td:first-child{font-weight:600;color:var(--p);}
+.tc-r{background:#fdf0ef!important;}
+.tc-g{background:#edf7f2!important;}
+.tc-b{background:#e8eeff!important;}
+.tc-v{background:#ede9fe!important;}
+.tc-w{background:#fffbeb!important;}
+/* DRS 사이트 카드 */
+.site-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:12px 0;}
+.sc{border-radius:10px;overflow:hidden;border:1px solid var(--bd);}
+.sch{padding:11px 15px;font-size:13px;font-weight:700;color:white;display:flex;justify-content:space-between;align-items:center;}
+.scb{padding:13px 15px;background:var(--bg);}
+.scr{font-size:12.5px;color:var(--tx);padding:5px 0;border-bottom:1px solid var(--g1);line-height:1.65;}
+.scr:last-child{border-bottom:none;}
+.scr strong{color:var(--p);}
+.badge{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(255,255,255,.25);}
+/* RTO 타임라인 */
+.timeline{display:flex;align-items:stretch;margin:13px 0;gap:0;border-radius:10px;overflow:hidden;border:1px solid var(--bd);}
+.tl-item{flex:1;padding:12px 10px;text-align:center;border-right:1px solid var(--bd);}
+.tl-item:last-child{border-right:none;}
+.tl-label{font-size:10px;font-weight:700;color:var(--tm);margin-bottom:4px;}
+.tl-val{font-size:13px;font-weight:700;color:var(--p);}
+.tl-sub{font-size:10.5px;color:var(--tm);margin-top:2px;}
+/* 함정 */
+.trap{border-radius:11px;margin:14px 0;overflow:hidden;}
+.th{display:flex;align-items:center;gap:8px;padding:10px 15px;background:var(--r);color:white;}
+.tht{font-size:12.5px;font-weight:700;}
+.tb{background:var(--rl);padding:13px 17px;border:1px solid #f5c6c2;border-top:none;border-radius:0 0 11px 11px;}
+.tb p{font-size:13px;color:#7a1c1c;line-height:1.85;margin-bottom:7px;}
+.tb p:last-child{margin-bottom:0;}
+.tq{background:white;border-left:3px solid var(--r);padding:8px 12px;border-radius:0 7px 7px 0;margin:8px 0;font-size:12.5px;color:var(--tx);line-height:1.7;}
+.vw{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:20px;background:var(--r);color:white;}
+.vr{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:20px;background:var(--g);color:white;}
+.inf-v{background:var(--vl);border:1px solid #c4b5fd;border-radius:9px;padding:11px 15px;margin:11px 0;font-size:13px;color:#3b0764;line-height:1.8;}
+.inf-v strong{color:var(--p);}
+.inf-g{background:var(--gl);border:1px solid #a3dbc0;border-radius:9px;padding:11px 15px;margin:11px 0;font-size:13px;color:#0d3321;line-height:1.8;}
+.inf-g strong{color:var(--p);}
+/* 기출 */
+.ec{border:1px solid var(--bd);border-radius:11px;margin:10px 0;overflow:hidden;}
+.eh{display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:var(--g0);border-bottom:1px solid var(--bd);}
+.ey{font-size:11px;font-weight:700;color:var(--p);}
+.es{color:#e8b000;font-size:11px;letter-spacing:2px;}
+.eb{padding:13px 15px;}
+.eq{font-size:13px;font-weight:600;color:var(--tx);margin-bottom:10px;line-height:1.7;}
+.eo{display:flex;flex-direction:column;gap:4px;}
+.op{font-size:12.5px;padding:6px 10px;border-radius:6px;border:1px solid transparent;line-height:1.55;}
+.ow{background:#fdf0ef;border-color:#f5c6c2;color:#7a1c1c;text-decoration:line-through;opacity:.8;}
+.ow::before{content:"✗ ";}
+.or{background:var(--gl);border-color:#a3dbc0;color:#0d4a2a;font-weight:600;}
+.or::before{content:"✓ ";}
+.on{background:var(--g0);border-color:var(--bd);color:var(--tx);}
+.ex{margin-top:10px;padding:11px 13px;background:var(--g0);border-radius:7px;font-size:12.5px;color:var(--tm);line-height:1.85;border-left:3px solid var(--v);}
+/* 암기 */
+.mem{background:linear-gradient(135deg,#050b1a 0%,#1a0530 100%);border-radius:13px;padding:20px 24px;color:white;margin:13px 0;position:relative;overflow:hidden;}
+.mem::before{content:"🔄";position:absolute;right:12px;top:6px;font-size:48px;opacity:.08;}
+.mt{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c4b5fd;margin-bottom:11px;}
+.mi{display:flex;flex-direction:column;gap:8px;}
+.mr{display:flex;gap:9px;align-items:flex-start;}
+.mk{font-family:var(--mono);font-size:10px;font-weight:600;background:rgba(196,181,253,.18);color:#c4b5fd;padding:2px 7px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.mv{font-size:13px;color:rgba(255,255,255,.85);line-height:1.7;}
+.mv strong{color:#c4b5fd;}
+.cl{list-style:none;margin:11px 0;display:flex;flex-direction:column;gap:4px;}
+.cl li{display:flex;align-items:flex-start;gap:7px;font-size:12.5px;padding:7px 12px;border-radius:7px;border:1px solid var(--bd);background:var(--bg);line-height:1.6;}
+.clw{background:#fdf0ef;border-color:#f5c6c2;}
+.clw::before{content:"⚠";color:var(--r)!important;font-size:11px;flex-shrink:0;margin-top:2px;}
+.clr{background:var(--gl);border-color:#a3dbc0;}
+.clr::before{content:"✓";color:var(--g)!important;font-size:11px;flex-shrink:0;margin-top:2px;}
+.dv{height:1px;background:var(--g1);margin:22px 0;}
+.ft{display:flex;justify-content:space-between;margin-top:26px;padding-top:12px;border-top:1px solid var(--bd);font-size:10px;color:var(--tm);}
+@media(max-width:640px){.cc,.hdr{padding:20px 14px;}.tab-bar{padding:0 8px;}.site-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hdr">
+  <div class="mbr">
+    <span class="bdg bdg-ch">Chapter 09 · 재난복구·BCP</span>
+    <span class="bdg bdg-hot">매년 출제</span>
+    <span class="bdg bdg-ok">기출 8문제 수록</span>
+  </div>
+  <div class="ht">재난복구시스템(DRS) · BCP 완전 교재</div>
+  <div class="hs">DRS 4종(Mirror·Hot·Warm·Cold) · MTD·RTO·RPO · DRS/BRS/BCP 비교 · BIA 4지표 · 비용-복구속도 Trade-off</div>
+  <div class="hst">
+    <div><div class="hn">RTO 속도</div><div class="hl">Mirror > Hot > Warm > Cold</div></div>
+    <div><div class="hn">MTD·RTO·RPO</div><div class="hl">BIA 핵심 3지표</div></div>
+    <div><div class="hn">BCP</div><div class="hl">단순 복구 초월 연속성 계획</div></div>
+    <div><div class="hn">기출 8문제</div><div class="hl">국가직·경찰·군무원 전수</div></div>
+  </div>
+</div>
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="sw('drs')">🔄 DRS 4종 비교</button>
+  <button class="tab-btn" onclick="sw('metrics')">📊 MTD·RTO·RPO</button>
+  <button class="tab-btn" onclick="sw('bcp')">🏢 BCP·BIA</button>
+  <button class="tab-btn" onclick="sw('exam')">📝 기출 8선</button>
+</div>
+<div class="cc">
+
+<!-- ════ DRS ════ -->
+<div class="tab-pane active" id="tab-drs">
+<div class="sh"><div class="sn2">1</div><div class="st">재난복구시스템(DRS) 개요</div><span class="slb lg">★★</span></div>
+<div class="dfb">
+  <div class="dfl">DRS 정의</div>
+  <p>DRS(Disaster Recovery System/Service)는 <strong>재해·재난 발생 시 핵심 시스템을 원격지에 구축하여 업무 연속성을 유지</strong>하기 위한 시스템. 복구 속도에 따라 Mirror → Hot → Warm → Cold 4가지 유형으로 구분됨. <strong>복구 속도가 빠를수록 구축 비용이 높고, 느릴수록 비용이 저렴</strong>함.</p>
+</div>
+
+<div class="site-grid">
+  <div class="sc">
+    <div class="sch" style="background:#c0392b;">🔴 Mirror Site<span class="badge">최고 비용·즉시 복구</span></div>
+    <div class="scb">
+      <div class="scr"><strong>운영 방식:</strong> <strong>Active-Active</strong> 상태. 재난복구시스템에 동일한 데이터를 실시간으로 처리하는 형태.</div>
+      <div class="scr"><strong>복구 시간:</strong> 즉시(실시간). 주 전산센터 재해 시 백업센터에서 즉시 업무 대행 가능.</div>
+      <div class="scr"><strong>데이터:</strong> 실시간 동기적 또는 비동기적 방식의 실시간 미러링으로 최신 상태 유지.</div>
+      <div class="scr"><strong>비용:</strong> 구축 비용(모든 장비 이중화)과 운영 비용이 가장 많이 듦. <strong>가장 고비용.</strong></div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sch" style="background:#2d5be3;">🔵 Hot Site<span class="badge">고비용·수시간 내</span></div>
+    <div class="scb">
+      <div class="scr"><strong>운영 방식:</strong> <strong>Active-Standby</strong> 상태. 주 센터와 동일한 H/W·S/W·기타 부대장비·비품까지 동일하게 갖추어 놓고 대기.</div>
+      <div class="scr"><strong>복구 시간:</strong> 수시간 이내. 주 전산센터 재해 시 최단 시간 내에 대체 가능한 상태를 유지.</div>
+      <div class="scr"><strong>데이터:</strong> 동기적·비동기적 실시간 복제로 최신 데이터 상태 유지.</div>
+      <div class="scr"><strong>비용:</strong> 고비용. Mirror보다 저렴하지만 Warm·Cold보다 고가.</div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sch" style="background:#b45309;">🟡 Warm Site<span class="badge">중간 비용·수일</span></div>
+    <div class="scb">
+      <div class="scr"><strong>운영 방식:</strong> 주 전산센터 장비 일부를 백업센터에 설치하여 <strong>주요 업무에 대한 복구만</strong>을 함.</div>
+      <div class="scr"><strong>복구 시간:</strong> 수 시간 ~ 수일. 장애 시 필요 장비의 추가 도입으로 Hot Site 전환이 가능.</div>
+      <div class="scr"><strong>데이터:</strong> 수 시간 ~ 1일 주기로 주기적 백업.</div>
+      <div class="scr"><strong>비용:</strong> Hot Site보다 저렴. 중간 수준의 비용과 복구 속도.</div>
+    </div>
+  </div>
+  <div class="sc">
+    <div class="sch" style="background:#374151;">⚫ Cold Site<span class="badge">최저 비용·수주</span></div>
+    <div class="scb">
+      <div class="scr"><strong>운영 방식:</strong> 시스템을 사용할 수 있도록 전원시설·통신설비·공조시설·온도 조절 시스템만 갖추어 놓음. 재해 시 H/W와 S/W를 설치하여 시스템 가동.</div>
+      <div class="scr"><strong>복구 시간:</strong> 수 시간 혹은 수 주의 <strong>장기간</strong>. 복구 상태의 신뢰도 문제 발생 가능.</div>
+      <div class="scr"><strong>데이터:</strong> 데이터만 원격지에 보관. 정보자원 확보 없거나 최소한만 확보.</div>
+      <div class="scr"><strong>비용:</strong> 구축 비용이 가장 저렴. <strong>최저 비용.</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="tw"><table>
+  <thead><tr><th>구분</th><th>Mirror</th><th>Hot</th><th>Warm</th><th>Cold</th></tr></thead>
+  <tbody>
+    <tr><td><strong>운영 상태</strong></td><td class="tc-r"><strong>Active-Active</strong></td><td class="tc-b">Active-Standby</td><td class="tc-w">일부 장비만</td><td>시설만</td></tr>
+    <tr><td><strong>복구 시간(RTO)</strong></td><td class="tc-r"><strong>즉시(0)</strong></td><td class="tc-b">수시간 이내</td><td class="tc-w">수일</td><td>수주</td></tr>
+    <tr><td><strong>데이터 유실(RPO)</strong></td><td class="tc-r"><strong>거의 없음</strong></td><td class="tc-b">최소</td><td class="tc-w">수시간~1일</td><td>많음</td></tr>
+    <tr><td><strong>구축 비용</strong></td><td class="tc-r"><strong>최고</strong></td><td class="tc-b">고</td><td class="tc-w">중</td><td>최저</td></tr>
+    <tr><td><strong>데이터 처리</strong></td><td class="tc-r">실시간 동시 처리</td><td class="tc-b">실시간 복제</td><td class="tc-w">주기적 백업</td><td>데이터만 보관</td></tr>
+  </tbody>
+</table></div>
+
+<div class="trap">
+  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — Mirror vs Hot 운영 방식·RTO 순서 혼동</span></div>
+  <div class="tb">
+    <div class="tq">"RTO가 빠른 것은 Hot Site → Mirror Site → Warm Site → Cold Site 순서" → <span class="vw">✗ 오답</span> (2021 국회직)</div>
+    <p>정확한 RTO 순서(빠른 것 → 느린 것): <strong>Mirror > Hot > Warm > Cold</strong>. Mirror가 즉시 복구로 가장 빠름.</p>
+    <div class="tq">"Hot Site = 주 센터와 동일한 수준의 정보기술 지원을 원격지에 구축하고 Active-Active 운영 상태" → <span class="vw">✗ 오답</span></div>
+    <p>Active-Active = <strong>Mirror Site</strong>. Hot Site = <strong>Active-Standby</strong>. 두 사이트를 동시에 운영하는 것은 Mirror.</p>
+  </div>
+</div>
+
+<div class="sb">
+<p><strong>DRS 문제점:</strong> ① Cold·Warm·Hot·Mirror Site 별 복구 시간 및 경비에 많은 차이가 발생하므로 적절한 방법 선택이 어려움. ② 재해복구센터 구축 및 운영 비용이 많이 발생함. ③ 우리나라 국토 대부분이 <strong>동일 재해 영향권</strong>임(지리적 한계).</p>
+</div>
+</div><!-- /tab-drs -->
+
+<!-- ════ MTD·RTO·RPO ════ -->
+<div class="tab-pane" id="tab-metrics">
+<div class="sh"><div class="sn2">1</div><div class="st">BIA 핵심 지표 — MTD · RTO · RPO · RLO · RIO</div><span class="slb le">★★★ 매년 출제</span></div>
+<div class="dfb">
+  <div class="dfl">BIA(Business Impact Analysis) 핵심 지표</div>
+  <p>BIA(비즈니스 영향 평가) 과정에서 고려하는 핵심 지표들. <strong>MTD ≥ RTO</strong> 관계가 성립해야 함. RTO가 MTD를 초과하면 비즈니스 중단 위기.</p>
+</div>
+
+<div class="tw"><table>
+  <thead><tr><th>지표</th><th>Full Name</th><th>정의</th><th>핵심 키워드</th></tr></thead>
+  <tbody>
+    <tr class="tc-r"><td><strong>MTD</strong></td><td>Maximum Tolerable Downtime</td><td>조직이 업무 처리 중단으로 인한 영향을 감내할 수 있는 <strong>최대 허용 시간</strong>. 이 시간이 지나면 비즈니스에 치명적 손해. MTD = 최고 주요 지원 서비스로 인한 업무 중단에 대해 감내할 수 있는 최대 시간.</td><td>최대 허용 다운타임</td></tr>
+    <tr class="tc-b"><td><strong>RTO</strong></td><td>Recovery Time Objective</td><td>장애 발생 후 <strong>업무 처리 능력을 복구하기 위한 목표 시점</strong>. 서비스가 중단된 경우 이를 복구하는데 걸리는 <strong>최대 허용 시간</strong>. RTO ≤ MTD 이어야 함.</td><td>복구 목표 시간</td></tr>
+    <tr class="tc-g"><td><strong>RPO</strong></td><td>Recovery Point Objective</td><td>재해 발생 시 중단된 서비스를 복구할 경우 <strong>이에 허용 가능한 데이터 유실 범위</strong>를 시간으로 정의. 즉, 가장 최근 복구 가능한 시점(백업 시점)까지의 시간 목표.</td><td>복구 목표 시점·데이터 유실 범위</td></tr>
+    <tr class="tc-w"><td><strong>RIO</strong></td><td>Recovery Location Objective</td><td>장애 발생 후 복구하고자 하는 <strong>위치</strong>. 어디에서 복구할 것인지의 목표.</td><td>복구 목표 위치</td></tr>
+    <tr class="tc-v"><td><strong>RLO</strong></td><td>Recovery Level Objective</td><td>장애 발생 후 복구하고자 하는 <strong>목표 수준</strong>. 얼마나 완전하게 복구할 것인지의 목표.</td><td>복구 목표 수준</td></tr>
+  </tbody>
+</table></div>
+
+<div class="inf-g"><strong>MTD vs RTO 관계:</strong> MTD = 비즈니스가 견딜 수 있는 최대 한계. RTO = 실제 복구 목표 시간. <strong>반드시 RTO ≤ MTD</strong>. RTO가 MTD보다 크면 복구하기 전에 비즈니스가 무너짐.</div>
+
+<div class="inf-v"><strong>DRS 유형별 RTO·RPO:</strong> Mirror(즉시/0) &gt; Hot(수시간/최소) &gt; Warm(수일/수시간~1일) &gt; Cold(수주/많음). RTO가 짧을수록 비용 증가.</div>
+</div><!-- /tab-metrics -->
+
+<!-- ════ BCP ════ -->
+<div class="tab-pane" id="tab-bcp">
+<div class="sh"><div class="sn2">1</div><div class="st">BCP · BRS · DRS 비교</div><span class="slb le">★★★</span></div>
+<div class="dfb">
+  <div class="dfl">BCP 정의</div>
+  <p>BCP(Business Continuity Planning: 비즈니스 연속성 계획)는 <strong>재해에 대한 회복이 아닌 지속적인 서비스를 통한 중단 없는 서비스를 제공</strong>하기 위한 방법. 기존 장애 복구 중심이던 'DRS'나 'BRS'를 넘어 <strong>시스템 환경 통해 비즈니스 각종 연속성을 보장</strong>. 재해뿐만 아니라 모든 형태의 업무 중단에 대처하는 데 초점.</p>
+</div>
+
+<div class="tw"><table>
+  <thead><tr><th>구분</th><th>초점</th><th>범위</th></tr></thead>
+  <tbody>
+    <tr class="tc-b"><td><strong>DRS</strong><br>(Disaster Recovery Service)</td><td>재해 후 <strong>IT 시스템 복구</strong> 전략</td><td>시스템·데이터 복구</td></tr>
+    <tr class="tc-w"><td><strong>BRS</strong><br>(Business Recovery Service)</td><td>재해 후 <strong>업무 재개</strong> 계획</td><td>업무 프로세스 복구</td></tr>
+    <tr class="tc-r"><td><strong>BCP</strong><br>(Business Continuity Planning)</td><td><strong>장애 예방·전략</strong>. 재해뿐 아니라 모든 업무 중단에 초점</td><td>조직 전체 연속성 보장</td></tr>
+  </tbody>
+</table></div>
+
+<div class="sb"><p>BCP는 재해 대응을 넘어 <strong>Prevention(예방책)·Deterrent(억제 대책)·Detect(탐지 대책)·Recovery(복구)·Resumption(재개)</strong> 5가지와 관련된 전략을 수립하는 포괄적 계획이에요.</p></div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">2</div><div class="st">BIA (Business Impact Analysis: 영향 평가)</div><span class="slb le">★★★</span></div>
+<div class="dfb">
+  <div class="dfl">BIA 정의</div>
+  <p>BIA(Business Impact Analysis: 비즈니스 영향 평가)는 <strong>사업이 어떠한 위협에 직면하고 있으며 이러한 위협이 잠재적으로 비즈니스에 미칠 수 있는 영향을 분석하여 평가하는 과정(정량적)</strong>. 사업 중단으로 입을 수 있는 손실의 정도를 평가해 봄.</p>
+</div>
+
+<div class="tw"><table>
+  <thead><tr><th>BIA 핵심 지표</th><th>정의</th></tr></thead>
+  <tbody>
+    <tr><td><strong>RPO</strong> (Recovery Point Objective)</td><td>재해 발생 전 가장 가까운 복구 시점(백업 시점)까지의 시간 목표. 허용 가능한 데이터 유실 범위.</td></tr>
+    <tr><td><strong>RTO</strong> (Recovery Time Objective)</td><td>장애 발생 후 복구하는데 소요되는 시간. 복구 목표 시간.</td></tr>
+    <tr><td><strong>RIO</strong> (Recovery Location Objective)</td><td>장애 발생 후 복구하고자 하는 위치. 복구 목표 위치.</td></tr>
+    <tr><td><strong>RLO</strong> (Recovery Level Objective)</td><td>장애 발생 후 복구하고자 하는 목표 수준. 복구 목표 수준.</td></tr>
+    <tr><td><strong>MTD</strong> (Maximum Tolerable Downtime)</td><td>업무 처리 중단으로 인한 영향을 감내할 수 있는 최대 시간. MTD = 비용 감내 한계점.</td></tr>
+  </tbody>
+</table></div>
+
+<div class="mem">
+  <div class="mt">🔄 DRS·BCP 핵심 암기</div>
+  <div class="mi">
+    <div class="mr"><span class="mk">RTO 속도</span><span class="mv"><strong>Mirror(즉시) > Hot(수시간) > Warm(수일) > Cold(수주)</strong></span></div>
+    <div class="mr"><span class="mk">Mirror</span><span class="mv"><strong>Active-Active</strong>. 실시간 동시 처리. 최고 비용. 즉시 복구.</span></div>
+    <div class="mr"><span class="mk">Hot</span><span class="mv"><strong>Active-Standby</strong>. 동일 H/W·S/W 갖추고 대기. 수시간 내 복구.</span></div>
+    <div class="mr"><span class="mk">Warm</span><span class="mv">일부 장비만 보유. 수일 복구. Hot Site 전환 가능.</span></div>
+    <div class="mr"><span class="mk">Cold</span><span class="mv">시설만 갖춤. 수주 복구. 최저 비용. 데이터만 원격 보관.</span></div>
+    <div class="mr"><span class="mk">MTD vs RTO</span><span class="mv">MTD = 비즈니스가 견딜 최대 한계 / RTO = 실제 복구 목표 / <strong>RTO ≤ MTD</strong></span></div>
+    <div class="mr"><span class="mk">RPO</span><span class="mv">데이터 유실 범위(시간). 재해 발생 전 가장 가까운 복구 가능 시점.</span></div>
+    <div class="mr"><span class="mk">BCP</span><span class="mv">DRS·BRS 넘어선 <strong>포괄적 연속성 계획</strong>. 장애 예방부터 재개까지.</span></div>
+  </div>
+</div>
+</div><!-- /tab-bcp -->
+
+<!-- ════ 기출 ════ -->
+<div class="tab-pane" id="tab-exam">
+<div class="sh"><div class="sn2">📝</div><div class="st">기출문제 전수 해설 — 8문제</div><span class="slb le">연도순</span></div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2015 국가직 9급 · Hot Site 정의 (동일 대기 상태)</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">다음에서 설명하는 복구 방식은?<br>"동일한 시스템을 대기 상태로 두어, 동기 또는 비동기적으로 실시간 통하여 데이터를 복제하다가, 재해 발생 시 활성화하여 업무를 재개하는 방식"</div>
+    <div class="eo">
+      <div class="op ow">① 핫 사이트(Hot Site)</div>
+      <div class="op ow">② 미러 사이트(Mirror Site)</div>
+      <div class="op or">③ 위 ① 이 정답 (문제 해설 참조)</div>
+      <div class="op ow">④ 콜드 사이트(Cold Site)</div>
+    </div>
+    <div class="ex"><strong>정답 ① Hot Site</strong> — 키워드: "동일한 시스템을 <strong>대기(Standby) 상태</strong>로 두고" + "실시간 데이터 복제" + "재해 시 <strong>활성화</strong>하여 복구" = <strong>Hot Site (Active-Standby)</strong>. Mirror Site는 이미 Active-Active로 동시 운영 중이므로 "대기 상태"가 아님.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2018 경찰공무원 · DRS 유형 설명 오답 찾기</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">재해복구 시스템의 복구 수준별 유형에 대한 설명으로 가장 적절하지 않은 것은?</div>
+    <div class="eo">
+      <div class="op ow">① 미러 사이트 - 주 센터 재해 시 원격지 시스템을 운영(Active) 상태로 전환하며, 서비스 제공 데이터는 동기적 또는 비동기적 방식의 <u>실시간 미러링</u>을 통하여 최신 상태를 유지한다.</div>
+      <div class="op ow">② 핫 사이트 - 주 센터와 동일한 수준의 정보기술 자원을 원격지에 구축하여 스탠바이(Stand-by) 상태로 유지하며, <u>액티브-스탠바이(Active-Standby)</u> 상태로 서비스를 제공함으로써 주기적인 테스트와 구성의 유연성을 제공한다.</div>
+      <div class="op on">③ 웜 사이트 - 중요성이 높은 정보기술 지원만 부분적으로 재해복구센터에 보유하고, 데이터는 수시간에서 1일의 주기로 백업하여 구축 및 유지비용이 핫 사이트에 비해 저렴하다.</div>
+      <div class="op on">④ 콜드 사이트 - 데이터만 원격지에 보관하고, 이의 서비스를 위한 정보자원은 확보하지 않거나 장소 등 최소한으로만 확보하고, 재해 시 데이터를 근간으로 필요한 정보자원을 조달하여 정보시스템의 복구를 개시한다.</div>
+    </div>
+    <div class="ex"><strong>정답 ①</strong> — Mirror Site는 이미 <strong>Active-Active</strong>로 동시 운영 중. "재해 시 운영(Active) 상태로 <strong>전환</strong>"이라는 표현이 틀림. Mirror는 전환 없이 이미 두 곳이 동시에 Active. ②Hot Site = Active-Standby는 맞음. ③Warm ④Cold 모두 맞음.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2019 경찰공무원 · Mirror Site 정의</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">다음에서 설명하는 재해복구 시스템의 유형으로 가장 적절한 것은?<br>"주 센터와 동일한 수준의 정보기술 지원을 원격지에 구축하고, 상시 운영 가능한 Active-Active 운영 상태를 유지함으로써 주 센터 재해 시 실시간으로 복구가 가능하다."</div>
+    <div class="eo">
+      <div class="op ow">① Hot Site</div>
+      <div class="op ow">② Warm Site</div>
+      <div class="op or">③ Mirror Site</div>
+      <div class="op ow">④ Cold Site</div>
+    </div>
+    <div class="ex"><strong>정답 ③ Mirror Site</strong> — 키워드: <strong>"Active-Active"</strong> + "상시 운영" + "실시간 복구" = Mirror Site. Hot Site는 Active-Standby.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2021 경찰공무원 · Hot Site 정의 (대기·실시간 복제)</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">다음에서 설명하는 재해복구 시스템의 유형으로 가장 적절한 것은?<br>· 재해복구센터에 주 센터와 동일 수준의 시스템을 대기상태(Stand-by)로 유지<br>· 동기적 또는 비동기적 방식의 실시간 복제를 통하여 최신 데이터 상태 유지<br>· 재해 발생 시 재해복구센터의 시스템을 액티브(Active)로 전환하여 복구<br>· RTO: 수시간 이내</div>
+    <div class="eo">
+      <div class="op ow">① 미러 사이트(Mirror Site)</div>
+      <div class="op or">② 핫 사이트(Hot Site)</div>
+      <div class="op ow">③ 웜 사이트(Warm Site)</div>
+      <div class="op ow">④ 콜드 사이트(Cold Site)</div>
+    </div>
+    <div class="ex"><strong>정답 ② Hot Site</strong> — 키워드: <strong>"대기상태(Stand-by)"</strong> + "실시간 복제" + "재해 시 Active로 전환" + "RTO 수시간" = Hot Site. Mirror는 이미 Active-Active라 전환 불필요.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2021 국회직 9급 · RTO 순서 오답</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">재해복구시스템의 복구 수준별 유형을 비교한 설명으로 옳지 않은 것은?</div>
+    <div class="eo">
+      <div class="op on">① Mirror Site는 주센터와 동일한 수준의 정보 기술 자원을 원격지에 구축하고 Active-Active 상태로 운영한다.</div>
+      <div class="op on">② Hot Site는 주센터와 동일한 수준의 정보 기술 자원을 원격지에 구축하여 대기(Standby) 상태로 유지한다.</div>
+      <div class="op on">③ Warm Site는 중요성이 높은 정보기술 자원만 부분적으로 재해복구센터에 보유한다.</div>
+      <div class="op on">④ Cold Site는 데이터만 원격지에 보관하고 이의 서비스를 위한 정보자원을 확보하지 않거나 장소 등 최소한으로만 확보한다.</div>
+      <div class="op ow">⑤ 재해발생 시 RTO가 빠른 것은 <u>Hot Site → Mirror Site → Warm Site → Cold Site</u> 순서이다.</div>
+    </div>
+    <div class="ex"><strong>정답 ⑤</strong> — RTO 빠른 순서: <strong>Mirror Site > Hot Site > Warm Site > Cold Site</strong>. Mirror가 즉시 복구로 가장 빠름. ①②③④는 모두 맞음.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2019·2021 경찰공무원 · BCP 정의</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">다음에서 설명하는 내용으로 가장 적절한 것은?<br>"각종 재해나 재난 발생에 대비하여 핵심 시스템의 가용성과 신뢰성을 회복하고 업무의 연속성을 유지하기 위한 일련의 계획과 절차. 단순한 데이터의 복구나 원상회복뿐만 아니라 업무의 지속성을 보장하며 이를 통해 조직의 신뢰도를 유지하고 나아가 전체적인 신뢰성 유지와 가치를 최대화하는 방법."</div>
+    <div class="eo">
+      <div class="op or">① BCP(Business Continuity Planning)</div>
+      <div class="op ow">② BIA(Business Impact Analysis)</div>
+      <div class="op ow">③ DRP(Disaster Recovery Planning)</div>
+      <div class="op ow">④ MTD(Maximum Tolerable Downtime)</div>
+    </div>
+    <div class="ex"><strong>정답 ① BCP</strong> — 키워드: "업무의 연속성" + "단순 복구 초월" + "지속성 보장" + "신뢰성 유지와 가치 최대화" = <strong>BCP</strong>. BIA = 영향 평가 과정. DRP = 재해복구 계획(IT 중심).</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 단원별 문제 · 2015 국가직 · BCP 정의 빈칸</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">다음 보기에서 설명하는 것은?<br>"각종 위협에 대하여 핵심 업무 기능을 확인하고 생존 가능한 방법을 구축해 지속성에 대한 위험도를 낮추는 신속한 방법을 구축해 최대화 한다. 단순한 복구뿐만 아니라 업무를 지속하고 그로 인하여 비즈니스를 유지하고 나아가 전체적인 신뢰성 유지와 가치를 최대화 한다."</div>
+    <div class="eo">
+      <div class="op ow">① DRP(Disaster Recovery Planning)</div>
+      <div class="op or">② BCP(Business Continuity Planning)</div>
+      <div class="op ow">③ BIA(Business Impact Assessment)</div>
+      <div class="op ow">④ MTD(Maximum Tolerable Downtime)</div>
+    </div>
+    <div class="ex"><strong>정답 ② BCP</strong> — 핵심 키워드: "단순한 복구 초월" + "업무 지속" + "비즈니스 연속성" + "신뢰성 최대화" = <strong>BCP</strong>. 단순 IT 복구 = DRP. 영향 평가 = BIA.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2022 경찰간부 · Cold Site 오답 — 핫 사이트 설명</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">재해복구 시스템 유형별 내용으로 가장 적절하지 않은 것은?</div>
+    <div class="eo">
+      <div class="op on">① 미러 사이트: 주 센터와 동일한 수준의 정보기술 지원을 원격지에 구축하고, 실시간 동시 서비스를 제공</div>
+      <div class="op ow">② 핫 사이트: <u>중요성이 높은 정보기술 지원만 부분적으로</u> 재해복구센터에 보유하고 서비스 제공 데이터는 동기적 또는 비동기적 방식의 실시간 미러링을 통하여 최신상태 유지</div>
+      <div class="op on">③ 웜 사이트: 데이터를 주기적(수 시간~1일)으로 백업하고 구축 및 유지비용이 핫 사이트에 비해 저렴</div>
+      <div class="op on">④ 콜드 사이트: 데이터만 원격지에 보관하고 서비스를 위한 정보자원은 확보하지 않거나 장소 등 최소한으로만 확보</div>
+    </div>
+    <div class="ex"><strong>정답 ②</strong> — ②의 설명("중요성이 높은 것만 부분적으로 보유")은 <strong>Warm Site</strong>의 설명. Hot Site = 주 센터와 <strong>동일한 수준</strong>의 모든 자원을 갖추고 Active-Standby 상태 유지.</div>
+  </div>
+</div>
+
+<div class="ft">
+  <span>정보보안 합격전략 교재 · INHYUK PI</span>
+  <span>Chapter 09 · DRS·BCP 완전 교재 · 2026 목표</span>
+</div>
+</div><!-- /tab-exam -->
+</div><!-- /cc -->
+</div><!-- /wrap -->
+<script>
+function sw(id){
+  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+  document.querySelectorAll(".tab-pane").forEach(p=>p.classList.remove("active"));
+  document.getElementById("tab-"+id).classList.add("active");
+  document.querySelectorAll(".tab-btn").forEach(b=>{
+    if(b.getAttribute("onclick")&&b.getAttribute("onclick").includes("\'"+id+"\'")){b.classList.add("active");}
+  });
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>포렌식·DRM 완전 교재 | INHYUK PI</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p:#1a2540;--a:#2d5be3;--al:#e8eeff;
+  --r:#c0392b;--rl:#fdf0ef;
+  --g:#1a7a4a;--gl:#edf7f2;
+  --w:#b45309;--wl:#fffbeb;
+  --v:#6d28d9;--vl:#ede9fe;
+  --t:#0f766e;--tl:#ccfbf1;
+  --bd:#dde3ec;--bg:#fff;--tx:#1c2331;--tm:#5a6478;
+  --g0:#f8f9fa;--g1:#f0f2f5;
+  --sans:"Noto Sans KR",sans-serif;--serif:"Noto Serif KR",serif;--mono:"JetBrains Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--sans);background:#e8eef8;color:var(--tx);font-size:14px;line-height:1.8;}
+.wrap{max-width:960px;margin:0 auto;padding:28px 14px 70px;}
+.hdr{background:linear-gradient(135deg,#050b1a 0%,#001a1a 55%,#020c10 100%);border-radius:14px 14px 0 0;padding:30px 42px 26px;position:relative;overflow:hidden;}
+.hdr::before{content:"🔍";position:absolute;right:28px;top:8px;font-size:120px;opacity:.06;}
+.mbr{display:flex;gap:7px;margin-bottom:12px;flex-wrap:wrap;}
+.bdg{font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;}
+.bdg-ch{background:rgba(255,255,255,.13);color:rgba(255,255,255,.9);}
+.bdg-hot{background:#c0392b;color:white;}
+.bdg-ok{background:#0f766e;color:white;}
+.ht{font-family:var(--serif);font-size:26px;font-weight:600;color:white;letter-spacing:-.02em;margin-bottom:3px;}
+.hs{color:rgba(255,255,255,.55);font-size:12px;}
+.hst{display:flex;gap:20px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap;}
+.hn{font-size:16px;font-weight:700;color:#5eead4;}
+.hl{font-size:9px;color:rgba(255,255,255,.5);margin-top:1px;}
+.tab-bar{display:flex;background:var(--p);padding:0 20px;gap:1px;flex-wrap:wrap;border-bottom:2px solid rgba(255,255,255,.08);}
+.tab-btn{padding:10px 13px;font-size:11.5px;font-weight:600;color:rgba(255,255,255,.5);cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;transition:all .18s;white-space:nowrap;}
+.tab-btn:hover{color:rgba(255,255,255,.8);}
+.tab-btn.active{color:#5eead4;border-bottom-color:#0f766e;}
+.cc{background:var(--bg);border-radius:0 0 14px 14px;padding:34px 40px;border:1px solid var(--bd);border-top:none;}
+.tab-pane{display:none;}.tab-pane.active{display:block;}
+.sh{display:flex;align-items:center;gap:9px;margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--g1);margin-top:8px;}
+.sn2{width:28px;height:28px;background:var(--p);color:white;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;}
+.st{font-size:16px;font-weight:700;color:var(--p);}
+.slb{font-size:9.5px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;}
+.le{background:var(--rl);color:var(--r);}
+.ld{background:var(--al);color:var(--a);}
+.lv{background:var(--vl);color:var(--v);}
+.lw{background:var(--wl);color:var(--w);}
+.lg{background:var(--gl);color:var(--g);}
+.lt{background:var(--tl);color:var(--t);}
+.sb{font-size:13.5px;line-height:2.0;color:var(--tx);}
+.sb p{margin-bottom:12px;}
+.sb strong{color:var(--p);}
+.dfb{background:var(--p);color:white;border-radius:11px;padding:14px 19px;margin-bottom:13px;}
+.dfl{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5eead4;margin-bottom:5px;}
+.dfb p{font-size:13px;line-height:1.9;color:rgba(255,255,255,.9);}
+.dfb strong{color:#5eead4;}
+.tw{overflow-x:auto;margin:10px 0;border-radius:9px;border:1px solid var(--bd);}
+table{width:100%;border-collapse:collapse;font-size:12.5px;}
+thead tr{background:var(--p);color:white;}
+thead th{padding:9px 12px;text-align:left;font-weight:600;font-size:11px;}
+tbody tr{border-bottom:1px solid var(--g1);}
+tbody tr:last-child{border-bottom:none;}
+tbody tr:hover{background:#f0fdfa;}
+tbody td{padding:8px 12px;color:var(--tx);vertical-align:top;line-height:1.65;}
+tbody td:first-child{font-weight:600;color:var(--p);}
+.tc-r{background:#fdf0ef!important;}
+.tc-g{background:#edf7f2!important;}
+.tc-b{background:#e8eeff!important;}
+.tc-v{background:#ede9fe!important;}
+.tc-t{background:#ccfbf1!important;}
+.tc-w{background:#fffbeb!important;}
+/* 침해사고 5단계 */
+.step-flow{display:flex;flex-direction:column;gap:0;border-radius:11px;overflow:hidden;border:1px solid var(--bd);margin:12px 0;}
+.step{display:flex;gap:14px;padding:13px 16px;border-bottom:1px solid var(--g1);align-items:flex-start;}
+.step:last-child{border-bottom:none;}
+.step:nth-child(even){background:var(--g0);}
+.snum{width:30px;height:30px;border-radius:50%;background:var(--t);color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:2px;}
+.stitle{font-size:13.5px;font-weight:700;color:var(--p);margin-bottom:4px;}
+.sdesc{font-size:13px;color:var(--tm);line-height:1.8;}
+/* 포렌식 원칙 카드 */
+.prin-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;}
+.pc{border-radius:10px;padding:14px 16px;border:1px solid var(--bd);background:var(--g0);}
+.pct{font-size:13.5px;font-weight:700;color:var(--p);margin-bottom:6px;display:flex;align-items:center;gap:7px;}
+.pcn{width:24px;height:24px;border-radius:50%;background:var(--t);color:white;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;}
+.pcd{font-size:12.5px;color:var(--tm);line-height:1.75;}
+.pcd strong{color:var(--p);}
+/* 슬랙 공간 */
+.slack-vis{background:var(--p);border-radius:10px;padding:14px 18px;margin:12px 0;overflow-x:auto;}
+.slack-row{display:flex;align-items:center;gap:4px;margin-bottom:8px;flex-wrap:nowrap;}
+.slack-row:last-child{margin-bottom:0;}
+.sl-lbl{font-size:10px;color:rgba(255,255,255,.6);font-weight:700;min-width:60px;flex-shrink:0;}
+.sl-blk{height:32px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;border-radius:5px;padding:0 6px;white-space:nowrap;}
+.sl-data{background:#0369a1;color:white;flex:3;}
+.sl-ram{background:#b45309;color:white;flex:1;}
+.sl-file{background:#374151;color:rgba(255,255,255,.5);flex:2;}
+.sl-desc{font-size:10.5px;color:rgba(255,255,255,.7);margin-left:6px;flex-shrink:0;}
+/* DRM 구조 */
+.drm-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:12px 0;}
+.dc{border-radius:10px;overflow:hidden;border:1px solid var(--bd);}
+.dch{padding:10px 13px;font-size:12.5px;font-weight:700;color:white;text-align:center;}
+.dcb{padding:12px 13px;background:var(--bg);}
+.dcr{font-size:12.5px;color:var(--tx);padding:4px 0;border-bottom:1px solid var(--g1);line-height:1.65;}
+.dcr:last-child{border-bottom:none;}
+.dcr strong{color:var(--p);}
+/* 함정 */
+.trap{border-radius:11px;margin:14px 0;overflow:hidden;}
+.th{display:flex;align-items:center;gap:8px;padding:10px 15px;background:var(--r);color:white;}
+.tht{font-size:12.5px;font-weight:700;}
+.tb{background:var(--rl);padding:13px 17px;border:1px solid #f5c6c2;border-top:none;border-radius:0 0 11px 11px;}
+.tb p{font-size:13px;color:#7a1c1c;line-height:1.85;margin-bottom:7px;}
+.tb p:last-child{margin-bottom:0;}
+.tq{background:white;border-left:3px solid var(--r);padding:8px 12px;border-radius:0 7px 7px 0;margin:8px 0;font-size:12.5px;color:var(--tx);line-height:1.7;}
+.vw{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:20px;background:var(--r);color:white;}
+.vr{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:20px;background:var(--g);color:white;}
+.inf-t{background:var(--tl);border:1px solid #99f6e4;border-radius:9px;padding:11px 15px;margin:11px 0;font-size:13px;color:#134e4a;line-height:1.8;}
+.inf-t strong{color:var(--p);}
+.inf-b{background:var(--al);border:1px solid #bae6fd;border-radius:9px;padding:11px 15px;margin:11px 0;font-size:13px;color:#0c4a6e;line-height:1.8;}
+.inf-b strong{color:var(--p);}
+/* 기출 */
+.ec{border:1px solid var(--bd);border-radius:11px;margin:10px 0;overflow:hidden;}
+.eh{display:flex;align-items:center;justify-content:space-between;padding:8px 14px;background:var(--g0);border-bottom:1px solid var(--bd);}
+.ey{font-size:11px;font-weight:700;color:var(--p);}
+.es{color:#e8b000;font-size:11px;letter-spacing:2px;}
+.eb{padding:13px 15px;}
+.eq{font-size:13px;font-weight:600;color:var(--tx);margin-bottom:10px;line-height:1.7;}
+.eo{display:flex;flex-direction:column;gap:4px;}
+.op{font-size:12.5px;padding:6px 10px;border-radius:6px;border:1px solid transparent;line-height:1.55;}
+.ow{background:#fdf0ef;border-color:#f5c6c2;color:#7a1c1c;text-decoration:line-through;opacity:.8;}
+.ow::before{content:"✗ ";}
+.or{background:var(--gl);border-color:#a3dbc0;color:#0d4a2a;font-weight:600;}
+.or::before{content:"✓ ";}
+.on{background:var(--g0);border-color:var(--bd);color:var(--tx);}
+.ex{margin-top:10px;padding:11px 13px;background:var(--g0);border-radius:7px;font-size:12.5px;color:var(--tm);line-height:1.85;border-left:3px solid var(--t);}
+.mem{background:linear-gradient(135deg,#050b1a 0%,#001a1a 100%);border-radius:13px;padding:20px 24px;color:white;margin:13px 0;position:relative;overflow:hidden;}
+.mem::before{content:"🔍";position:absolute;right:12px;top:6px;font-size:48px;opacity:.08;}
+.mt{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5eead4;margin-bottom:11px;}
+.mi{display:flex;flex-direction:column;gap:8px;}
+.mr2{display:flex;gap:9px;align-items:flex-start;}
+.mk{font-family:var(--mono);font-size:10px;font-weight:600;background:rgba(94,234,212,.18);color:#5eead4;padding:2px 7px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
+.mv{font-size:13px;color:rgba(255,255,255,.85);line-height:1.7;}
+.mv strong{color:#5eead4;}
+.cl{list-style:none;margin:11px 0;display:flex;flex-direction:column;gap:4px;}
+.cl li{display:flex;align-items:flex-start;gap:7px;font-size:12.5px;padding:7px 12px;border-radius:7px;border:1px solid var(--bd);background:var(--bg);line-height:1.6;}
+.clw{background:#fdf0ef;border-color:#f5c6c2;}
+.clw::before{content:"⚠";color:var(--r)!important;font-size:11px;flex-shrink:0;margin-top:2px;}
+.clr{background:var(--gl);border-color:#a3dbc0;}
+.clr::before{content:"✓";color:var(--g)!important;font-size:11px;flex-shrink:0;margin-top:2px;}
+.dv{height:1px;background:var(--g1);margin:22px 0;}
+.ft{display:flex;justify-content:space-between;margin-top:26px;padding-top:12px;border-top:1px solid var(--bd);font-size:10px;color:var(--tm);}
+@media(max-width:640px){.cc,.hdr{padding:20px 14px;}.tab-bar{padding:0 8px;}.prin-grid{grid-template-columns:1fr;}.drm-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hdr">
+  <div class="mbr">
+    <span class="bdg bdg-ch">Chapter 09 · 포렌식·DRM</span>
+    <span class="bdg bdg-hot">원칙 5종 매년 출제</span>
+    <span class="bdg bdg-ok">기출 9문제 수록</span>
+  </div>
+  <div class="ht">디지털 포렌식 · DRM 완전 교재</div>
+  <div class="hs">침해사고 대응 5단계 · 포렌식 원칙 5종(정당성·재현·신속성·연계보관성·무결성) · 슬랙 공간·이미징 · DRM 구조·기술 3종</div>
+  <div class="hst">
+    <div><div class="hn">포렌식 원칙 5종</div><div class="hl">정당성·재현·신속성·연계보관성·무결성</div></div>
+    <div><div class="hn">슬랙 공간</div><div class="hl">RAM 슬랙·파일 슬랙·볼륨 슬랙</div></div>
+    <div><div class="hn">DRM</div><div class="hl">디지털 콘텐츠 보호 기술 3종</div></div>
+    <div><div class="hn">기출 9문제</div><div class="hl">2014~2025 전수</div></div>
+  </div>
+</div>
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="sw('incident')">🚨 침해사고 대응</button>
+  <button class="tab-btn" onclick="sw('forensic')">🔍 디지털 포렌식</button>
+  <button class="tab-btn" onclick="sw('slack')">💾 슬랙공간·이미징</button>
+  <button class="tab-btn" onclick="sw('drm')">©️ DRM</button>
+  <button class="tab-btn" onclick="sw('exam')">📝 기출 9선</button>
+</div>
+<div class="cc">
+
+<!-- ════ 침해사고 대응 ════ -->
+<div class="tab-pane active" id="tab-incident">
+<div class="sh"><div class="sn2">1</div><div class="st">침해사고 대응 절차 5단계</div><span class="slb lg">★★</span></div>
+<div class="dfb">
+  <div class="dfl">침해사고 대응 정의</div>
+  <p>침해사고 대응(Incident Response)은 <strong>컴퓨터 시스템에 대한 해킹, 악성코드 감염, 정보 유출 등의 침해 사고 발생 시 체계적으로 대응하는 절차</strong>. 포렌식은 이 과정에서 수집된 증거를 법적 효력을 갖도록 분석·보고하는 활동.</p>
+</div>
+
+<div class="step-flow">
+  <div class="step">
+    <div class="snum">1</div>
+    <div>
+      <div class="stitle">사전 대응 (Preparation)</div>
+      <div class="sdesc">침해 사고가 발생하기 전, 실질적인 침해 사고 대응 체계를 갖춘다. 보안 정책 수립, 대응팀 구성, 도구 준비, 교육 훈련 등 사전 준비 활동.</div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="snum">2</div>
+    <div>
+      <div class="stitle">사고 탐지 (Detection)</div>
+      <div class="sdesc">정상적인 운영인지 침해 사고 발생인지를 탐지한다. IDS·로그 분석·이상 행동 탐지 등을 통해 침해 여부를 식별.</div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="snum">3</div>
+    <div>
+      <div class="stitle">초기 대응 (Containment)</div>
+      <div class="sdesc">침해 사고로 인한 피해를 최소화하고 추가적인 침해를 막는다. 단기 대응: 피해를 최소화하기 위해 침해 발생한 시스템이나 네트워크를 격리하거나 차단한다. 백업 및 증거 확보: 후속 침해 사고 분석을 위해 시스템 초기화 전에 증거를 백업.</div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="snum">4</div>
+    <div>
+      <div class="stitle">제거 및 복구 (Eradication &amp; Recovery)</div>
+      <div class="sdesc">최초 침해 사고 시스템·네트워크 이외에 추가적으로 침해가 발생한 곳이 있는지 모두 확인하고 조치한다. 백도어 제거 후 시스템 계정을 정비하고 보안 패치 적용 뒤 다시 서비스에 연결한다.</div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="snum">5</div>
+    <div>
+      <div class="stitle">후속 조치 및 보고 (Post-Incident)</div>
+      <div class="sdesc">침해 사고에 대한 보고서를 작성하고 침해 사고를 재발하지 않도록 조치하며 장기적인 보안 개선 계획을 수립한다. 증거 데이터·분석 결과·조사 과정에서 증거를 위해 수행하면서 관련된 정보·스크립트 수행 내역 등을 포함하여 보고서 작성.</div>
+    </div>
+  </div>
+</div>
+
+<div class="inf-t"><strong>반포렌식 (Anti-Forensics):</strong> 디지털 포렌식이 수행되는 조사를 방해하기 위하여 수행하는 활동. 증거의 <strong>삭제·파괴·은닉·조작</strong> 의 형태로 나타남. 수집에 의한 피해, 증거에 대한 혼란, 포렌식 도구 신뢰성 훼손 등을 통해 수행하는 모든 활동을 말함.</div>
+</div><!-- /tab-incident -->
+
+<!-- ════ 디지털 포렌식 ════ -->
+<div class="tab-pane" id="tab-forensic">
+<div class="sh"><div class="sn2">1</div><div class="st">디지털 포렌식 (Digital Forensics) 정의</div><span class="slb le">★★★</span></div>
+<div class="dfb">
+  <div class="dfl">디지털 포렌식 정의</div>
+  <p>디지털 포렌식(Digital Forensics)은 <strong>컴퓨터 관련 사건·사고 조사를 위해 디지털 증거가 법적 효력을 갖도록 하는 논리적·기술적 과학 학문</strong>. 법적 효력을 갖기 위해 휴대폰·PC·서버 등에서 데이터를 수집하는 디지털 조사 활동. 대검찰청이 주요 수사 기법으로 활용. <strong>모바일 포렌식(Mobile Forensics)</strong>은 되는 조사를 위해 수행하는 활동.</p>
+</div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">2</div><div class="st">디지털 포렌식 5원칙</div><span class="slb le">★★★ 매년 출제</span></div>
+<div class="sb"><p>디지털 포렌식 증거가 <strong>법정에서 증거 능력을 가지기 위해 반드시 지켜야 하는 5가지 원칙</strong>이에요. 시험에서 "포렌식 기본 원칙이 아닌 것은?" 유형으로 자주 출제돼요.</p></div>
+
+<div class="prin-grid">
+  <div class="pc">
+    <div class="pct"><div class="pcn">1</div>정당성의 원칙 (Legitimacy)</div>
+    <div class="pcd">모든 증거는 <strong>적법한 절차와 방법을 거쳐서</strong> 수집되어야 한다. 적법한 절차를 거치지 않고 수집한 증거는 법적 효력이 없다. <strong>위법 수집 증거 배제 원칙</strong>과 연계.</div>
+  </div>
+  <div class="pc">
+    <div class="pct"><div class="pcn">2</div>재현의 원칙 (Reproducibility)</div>
+    <div class="pcd"><strong>동일한 조건과 환경에서 동일한 결과</strong>가 나와야 한다. 법정에 제출하려면 같은 환경에서 같은 결과가 재현되어야 함. A 분석관이 EnCase로 얻은 결과 = B 분석관이 FTK로 얻은 결과여야 함.</div>
+  </div>
+  <div class="pc">
+    <div class="pct"><div class="pcn">3</div>신속성의 원칙 (Promptness)</div>
+    <div class="pcd">컴퓨터 내의 정보는 <strong>휘발성(Volatile)을 가진 것이 많기 때문에</strong> 비교적 신속하게 이루어져야 한다. 전원 차단 시 메모리·레지스터 등 휘발성 증거가 소멸되므로 즉각 수집 필요.</div>
+  </div>
+  <div class="pc">
+    <div class="pct"><div class="pcn">4</div>연계 보관성의 원칙 (Chain of Custody)</div>
+    <div class="pcd">증거는 <strong>획득·이송·분석·보관·법정 제출</strong>이라는 일련의 과정이 명확해야 하며, 이에 대한 추적이 가능해야 한다. 증거를 전달하고 전달받는 데 관여한 담당자와 책임자를 명시.</div>
+  </div>
+  <div class="pc" style="grid-column: 1 / -1;">
+    <div class="pct"><div class="pcn">5</div>무결성의 원칙 (Integrity)</div>
+    <div class="pcd">수집된 증거는 <strong>위조·변조되어서는 안 되며</strong>, 증거를 거치는 모든 과정에서 위조·변조되지 않았음을 매번 증명할 수 있어야 한다. <strong>"증거가 위조·변조되지 않았다"는 것을 증명하는 원칙.</strong> 해시값 비교로 무결성 검증.</div>
+  </div>
+</div>
+
+<div class="tw"><table>
+  <thead><tr><th>원칙</th><th>핵심 키워드</th><th>기출 연도</th></tr></thead>
+  <tbody>
+    <tr><td><strong>정당성</strong></td><td>적법한 절차. 위법 수집 = 증거 능력 없음.</td><td>2014 지방, 2021 군무원</td></tr>
+    <tr><td><strong>재현</strong></td><td>동일 조건·동일 결과. A·B 분석관 동일 결과. 교차 분석.</td><td>2025 군무원, 2024 국가직, 2022 네트워크보안</td></tr>
+    <tr><td><strong>신속성</strong></td><td>휘발성 정보 → 신속 수집 필요.</td><td>2021 군무원, 다수 출제</td></tr>
+    <tr class="tc-t"><td><strong>연계 보관성</strong></td><td>획득→이송→분석→보관→법정 제출 과정 명확. 담당자 명시.</td><td>2018 서울시 7급, 2014 지방 ★★★</td></tr>
+    <tr><td><strong>무결성</strong></td><td>위조·변조 금지. 해시값으로 무결성 검증.</td><td>2022 국가직 네트워크보안, 2025 군무원</td></tr>
+  </tbody>
+</table></div>
+
+<div class="trap">
+  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — 존재하지 않는 원칙 (2021 군무원 출제)</span></div>
+  <div class="tb">
+    <div class="tq">"디지털 포렌식 원칙에 해당하지 않는 것은? → ④ 무죄 추정의 원칙" → <span class="vr">✓ 정답</span></div>
+    <p>포렌식 5원칙: 정당성·재현·신속성·연계보관성·무결성. <strong>"무죄 추정의 원칙"은 포렌식 원칙이 아님</strong>(형사소송법 원칙). "지속성의 원칙"도 포렌식 원칙이 아님 (2025 군무원 출제).</p>
+    <div class="tq">"디지털 포렌식 원칙이 아닌 것은? → ④ 지속성(Continuity)의 원칙" → <span class="vr">✓ 정답</span> (2025 군무원)</div>
+    <p>5원칙에 "지속성" 없음. 연계보관성(Chain of Custody)과 혼동 유의.</p>
+  </div>
+</div>
+
+<div class="trap">
+  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — 원칙 설명 혼동 (2014 지방직 출제)</span></div>
+  <div class="tb">
+    <div class="tq">"재현의 원칙: 증거는 어떤 도구를 통해서도 획득할 수 없으며 똑같은 환경에서 한번만 나오면 된다" → <span class="vw">✗ 오답</span></div>
+    <p>재현의 원칙 = 똑같은 환경에서 <strong>같은 결과가 재현되도록</strong> 해야 함. "한번만 나오면 된다"가 아니라 <strong>언제나 같은 결과</strong>가 나와야 함.</p>
+  </div>
+</div>
+</div><!-- /tab-forensic -->
+
+<!-- ════ 슬랙공간·이미징 ════ -->
+<div class="tab-pane" id="tab-slack">
+<div class="sh"><div class="sn2">1</div><div class="st">슬랙 공간 (Slack Space)</div><span class="slb lw">★★ 2022 국가직 7급</span></div>
+<div class="dfb">
+  <div class="dfl">슬랙 공간 정의</div>
+  <p>슬랙 공간(Slack Space)은 <strong>파일 저장 시 발생하는 낭비 공간</strong>. 파일 시스템은 데이터를 클러스터(섹터 묶음) 단위로 저장하는데, 파일 크기가 클러스터 크기의 배수가 아니면 마지막 클러스터의 남은 공간이 낭비됨. 이 공간에 <strong>삭제된 데이터의 흔적이 남아있을 수 있어</strong> 포렌식 분석의 핵심 대상.</p>
+</div>
+
+<div class="slack-vis">
+  <div class="slack-row">
+    <span class="sl-lbl">파일 데이터</span>
+    <div class="sl-blk sl-data">실제 파일 데이터 (600 bytes)</div>
+    <div class="sl-blk sl-ram">RAM 슬랙 (424 bytes)</div>
+    <span class="sl-desc">← 섹터 1 (512 bytes)</span>
+  </div>
+  <div class="slack-row">
+    <span class="sl-lbl">파일 슬랙</span>
+    <div class="sl-blk sl-file" style="flex:4;">파일 슬랙 — 미사용 섹터 (섹터 2,3,4 = 1,536 bytes)</div>
+    <span class="sl-desc">← 클러스터 나머지</span>
+  </div>
+</div>
+
+<div class="tw"><table>
+  <thead><tr><th>슬랙 유형</th><th>위치</th><th>내용</th></tr></thead>
+  <tbody>
+    <tr class="tc-w"><td><strong>RAM 슬랙</strong><br>(Ram Slack)</td><td>마지막 사용 섹터의 파일 데이터 이후 ~ 섹터 끝</td><td>파일 마지막 섹터에서 실제 데이터가 끝나고 섹터 경계까지의 공간. <strong>OS가 메모리(RAM)의 내용으로 채움</strong>. 이전 데이터 흔적 포함 가능.</td></tr>
+    <tr class="tc-b"><td><strong>파일 슬랙</strong><br>(File Slack)</td><td>마지막 사용 섹터 다음 ~ 클러스터 끝</td><td>마지막 섹터 이후의 <strong>미사용 섹터</strong>들. 이전에 저장된 파일의 흔적이 남아있을 수 있음. 포렌식 분석 핵심 대상.</td></tr>
+    <tr><td><strong>볼륨 슬랙</strong><br>(Volume Slack)</td><td>파일 시스템 끝 ~ 볼륨(파티션) 끝</td><td>파일 시스템이 끝난 이후 볼륨이 끝나기 전의 공간. 데이터 은닉에 악용 가능.</td></tr>
+  </tbody>
+</table></div>
+
+<div class="inf-b"><strong>슬랙 공간 계산 예시 (2022 국가직 7급):</strong> 섹터 크기 512 bytes, 4개 섹터로 구성된 하나의 클러스터에 600 bytes 파일 저장 시.<br>
+① RAM 슬랙 = 512 − (600 mod 512) = 512 − 88 = <strong>424 bytes</strong><br>
+② 파일 슬랙 = (4 − 2) × 512 = <strong>1,024 bytes</strong> (남은 섹터 2개 × 512)</div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">2</div><div class="st">이미징 (Imaging)</div><span class="slb lg">★★</span></div>
+<div class="dfb">
+  <div class="dfl">이미징 정의</div>
+  <p>이미징(Imaging)은 <strong>원본 저장 매체의 정보를 파일 형태로 복사하는 것이 아닌, 비트(Bit) 단위로 완전히 동일한 복사본을 만드는 것</strong>. 원본 데이터의 무결성을 보장하기 위해 이미지 파일을 만들고 <strong>해시값(MD5, SHA-1 등)으로 무결성을 검증</strong>. 포렌식 분석은 원본이 아닌 이미지 복사본에 대해 수행.</p>
+</div>
+
+<div class="tw"><table>
+  <thead><tr><th>구분</th><th>일반 파일 복사</th><th>이미징(Forensic Imaging)</th></tr></thead>
+  <tbody>
+    <tr><td><strong>복사 단위</strong></td><td>파일/폴더 단위</td><td><strong>비트(Bit) 단위 — 완전 동일 복사</strong></td></tr>
+    <tr><td><strong>삭제 데이터</strong></td><td>복사 안 됨</td><td><strong>슬랙 공간, 삭제 파일 흔적까지 복사됨</strong></td></tr>
+    <tr><td><strong>무결성 검증</strong></td><td>어려움</td><td><strong>해시값(MD5/SHA-1)으로 검증</strong></td></tr>
+    <tr><td><strong>분석 대상</strong></td><td>원본에서 직접 분석</td><td>이미지 복사본에서 분석 (원본 보존)</td></tr>
+    <tr><td><strong>포렌식 도구</strong></td><td>-</td><td>EnCase, FTK, FinalForensic 등</td></tr>
+  </tbody>
+</table></div>
+</div><!-- /tab-slack -->
+
+<!-- ════ DRM ════ -->
+<div class="tab-pane" id="tab-drm">
+<div class="sh"><div class="sn2">1</div><div class="st">DRM (Digital Rights Management)</div><span class="slb le">★★★</span></div>
+<div class="dfb">
+  <div class="dfl">DRM 정의</div>
+  <p>DRM(Digital Rights Management: 디지털 저작권 관리)은 <strong>저작물(책·음악·비디오·게임·소프트웨어·정보 이미지 등)을 디지털 불법 복제·배포로부터 보호하고, 저작권 관련 당사자에게 이익을 제공하는 서비스</strong>. 디지털화가 진행되면서 콘텐츠에 대한 불법 이동이 급속히 확산되고 있어 개별적인 보호 기술이 필요함. 문서 DRM은 허가받지 않은 중요 문서가 외부로 유출되는 것을 방지하여 내부 정보 보안을 강화하고 데이터 보안을 향상시킬 수 있음.</p>
+</div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">2</div><div class="st">DRM 시스템 구성 요소</div><span class="slb ld">★★</span></div>
+<div class="tw"><table>
+  <thead><tr><th>구성 요소</th><th>역할</th></tr></thead>
+  <tbody>
+    <tr><td><strong>콘텐츠 제공자</strong><br>(Content Provider)</td><td>저작권자. 콘텐츠를 제공하고 DRM 패키져에게 원본 콘텐츠 전달.</td></tr>
+    <tr><td><strong>콘텐츠 배포자</strong><br>(Content Distributor)</td><td>콘텐츠를 소비자에게 배포하는 역할. 암호화된 콘텐츠 컨테이너 배포.</td></tr>
+    <tr><td><strong>콘텐츠 소비자</strong><br>(Content Consumer)</td><td>콘텐츠를 이용하는 최종 사용자. 라이센스 요청 후 콘텐츠 이용.</td></tr>
+    <tr class="tc-t"><td><strong>클리어링 하우스</strong><br>(Clearing House)</td><td>라이센스 등록·정책 수립·라이센스 발급·요금 지불 처리. DRM의 핵심 관리 기관.</td></tr>
+    <tr><td><strong>DRM 패키져</strong><br>(DRM Packager)</td><td>콘텐츠를 암호화하여 컨테이너(Container)로 만드는 도구.</td></tr>
+  </tbody>
+</table></div>
+
+<div class="inf-t"><strong>DRM 동작 흐름:</strong> 콘텐츠 제공자 → DRM 패키져(암호화) → 콘텐츠 배포자(배포) → 콘텐츠 소비자(라이센스 요청) → 클리어링 하우스(라이센스 발급·요금 수취) → 소비자(콘텐츠 이용)</div>
+
+<div class="dv"></div>
+<div class="sh"><div class="sn2">3</div><div class="st">디지털 콘텐츠 보호 기술 3종</div><span class="slb le">★★★</span></div>
+
+<div class="drm-grid">
+  <div class="dc">
+    <div class="dch" style="background:#0f766e;">추적 기술</div>
+    <div class="dcb">
+      <div class="dcr"><strong>목적:</strong> 저작권자·소유권자 입증, 워터마킹/핑거프린팅</div>
+      <div class="dcr"><strong>워터마킹(Watermarking):</strong> 원본 내용을 왜곡하지 않는 범위 내에서 혹은 사용자가 인식하지 못하도록 <strong>저작권 정보를 콘텐츠에 삽입</strong>하는 기술. 저작권 보호 목적.</div>
+      <div class="dcr"><strong>핑거프린팅(Fingerprinting):</strong> 콘텐츠를 구매할 때 <strong>구매자 정보를 삽입</strong>하여 불법 배포 발견 시 <strong>최초 배포자를 추적</strong>할 수 있게 하는 기술. 판매자 정보 삽입.</div>
+    </div>
+  </div>
+  <div class="dc">
+    <div class="dch" style="background:#2d5be3;">관리 기술</div>
+    <div class="dcb">
+      <div class="dcr"><strong>목적:</strong> 사용 조건, 규칙 통제, 과금 수행</div>
+      <div class="dcr"><strong>DRM:</strong> 디지털 콘텐츠의 불법 복제·배포를 막고 지적재산권 보유자의 이익과 권리를 보호하는 기술과 서비스.</div>
+      <div class="dcr"><strong>MPEG-21:</strong> 멀티미디어 콘텐츠의 접근·사용·보호·거래를 위한 표준 프레임워크.</div>
+    </div>
+  </div>
+  <div class="dc">
+    <div class="dch" style="background:#6d28d9;">식별 기술</div>
+    <div class="dcb">
+      <div class="dcr"><strong>목적:</strong> 콘텐츠 식별, 데이터 관리</div>
+      <div class="dcr"><strong>DOI(Digital Object Identifier):</strong> 디지털 콘텐츠에 부여하는 고유 식별 번호. URL이 바뀌어도 항상 동일 콘텐츠를 찾을 수 있음.</div>
+      <div class="dcr"><strong>INDECS(Interoperability of Data in E-Commerce Systems):</strong> 전자상거래 시스템에서 데이터 상호운용성을 위한 메타데이터 프레임워크.</div>
+    </div>
+  </div>
+</div>
+
+<div class="tw"><table>
+  <thead><tr><th>기술</th><th>워터마킹</th><th>핑거프린팅</th><th>스테가노그래피</th></tr></thead>
+  <tbody>
+    <tr><td><strong>삽입 정보</strong></td><td>저작권자 정보</td><td>구매자(사용자) 정보</td><td>비밀 메시지</td></tr>
+    <tr><td><strong>주 목적</strong></td><td>저작권 보호·증명</td><td>불법 배포자 추적</td><td>비밀 통신·정보 은닉</td></tr>
+    <tr><td><strong>공개 여부</strong></td><td>비공개(인식 불가)</td><td>비공개(인식 불가)</td><td>비공개(은닉)</td></tr>
+  </tbody>
+</table></div>
+
+<div class="trap">
+  <div class="th"><span>⚠</span><span class="tht">함정 ★★★ — 워터마킹 vs 핑거프린팅 혼동 (2022 경찰간부)</span></div>
+  <div class="tb">
+    <div class="tq">"핑거프린팅은 콘텐츠를 구매할 때 <u>판매자의 정보</u>를 삽입하여 최초 배포자를 추적" → <span class="vw">✗ 오답</span></div>
+    <p>핑거프린팅 = <strong>구매자(소비자) 정보</strong>를 삽입. 불법 배포 시 누가 유출했는지 구매자를 추적 가능. 판매자 정보가 아님.</p>
+    <div class="tq">"스테가노그래피 = 저작권 보호가 주 목적" → <span class="vw">✗ 오답</span></div>
+    <p>스테가노그래피 = <strong>정보 은닉·비밀 통신</strong>이 목적. 저작권 보호는 워터마킹.</p>
+  </div>
+</div>
+</div><!-- /tab-drm -->
+
+<!-- ════ 기출 ════ -->
+<div class="tab-pane" id="tab-exam">
+<div class="sh"><div class="sn2">📝</div><div class="st">기출문제 전수 해설 — 9문제</div><span class="slb le">연도순</span></div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2014 지방직 9급 · 포렌식 원칙 오답 (재현 vs 연계보관성)</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">디지털 포렌식 기본 원칙에 대한 설명으로 옳지 않은 것은?</div>
+    <div class="eo">
+      <div class="op on">① 정당성의 원칙: 모든 증거는 적법한 절차를 거쳐 수집하여야 하며, 적법한 절차를 거치지 않고 수집한 증거는 효력이 없다.</div>
+      <div class="op ow">② 재현의 원칙: 증거는 어떤 도구를 통해서도 획득할 수 없으며 똑같은 환경에서 <u>한번만 나오면 된다</u>.</div>
+      <div class="op on">③ 신속성의 원칙: 컴퓨터 내부의 정보는 휘발성이 있기 때문에 신속하게 이루어져야 한다.</div>
+      <div class="op on">④ 연계보관성의 원칙: 증거의 획득 후 이송·분석·보관·법정 제출 시 담당자를 명시하여야 한다.</div>
+    </div>
+    <div class="ex"><strong>정답 ②</strong> — 재현의 원칙 = 똑같은 환경에서 <strong>항상 같은 결과</strong>가 나와야 함. "한번만 나오면 된다"가 틀림. 재현 가능해야 증거 능력이 인정됨.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2015 지방직 9급 · 포렌식 기본 원칙이 아닌 것</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">디지털 증거가 법적 효력을 받기 위해 지켜야 하는 디지털 포렌식의 기본 원칙이 아닌 것은?</div>
+    <div class="eo">
+      <div class="op on">① 정당성의 원칙</div>
+      <div class="op on">② 재현의 원칙</div>
+      <div class="op ow">③ <u>보전의 원칙</u></div>
+      <div class="op on">④ 무결성의 원칙</div>
+    </div>
+    <div class="ex"><strong>정답 ③</strong> — 포렌식 5원칙: 정당성·재현·신속성·연계보관성·무결성. <strong>"보전의 원칙"은 5원칙에 없음</strong>. "연계보관성"이 증거 보전과 관련된 원칙이나 "보전" 자체는 원칙 명칭이 아님.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2017 서울시 7급 · 연계 보관성 원칙 서술</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">포렌식(Forensic)의 기본 원칙 중 "증거는 획득되고, 이송·분석·보관·법정 제출의 과정이 명확해야 함을 말하는 원칙"은?</div>
+    <div class="eo">
+      <div class="op ow">① 정당성의 원칙</div>
+      <div class="op ow">② 재현의 원칙</div>
+      <div class="op or">③ 연계 보관성의 원칙</div>
+      <div class="op ow">④ 무결성의 원칙</div>
+    </div>
+    <div class="ex"><strong>정답 ③</strong> — 키워드: <strong>"획득→이송→분석→보관→법정 제출"</strong>의 일련 과정이 명확, 추적 가능 = <strong>연계 보관성의 원칙</strong> (Chain of Custody). 관여한 담당자·책임자를 명시해야 함.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2021 군무원 9급 · 포렌식 원칙 아닌 것 (무죄 추정)</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">디지털 포렌식 원칙에 해당하지 않는 것은?</div>
+    <div class="eo">
+      <div class="op on">① 정당성의 원칙</div>
+      <div class="op on">② 재현의 원칙</div>
+      <div class="op on">③ 연계보관성의 원칙</div>
+      <div class="op ow">④ 무죄 추정의 원칙</div>
+    </div>
+    <div class="ex"><strong>정답 ④</strong> — 포렌식 5원칙: 정당성·재현·신속성·연계보관성·무결성. <strong>"무죄 추정의 원칙"은 형사소송법 원칙</strong>이지 포렌식 원칙이 아님.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2022 국가직 9급 네트워크보안 · 무결성 원칙</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">디지털 포렌식(digital forensic)에서 '증거가 위조되거나 변조되지 않았다'는 것을 증명하는 원칙은?</div>
+    <div class="eo">
+      <div class="op or">① 무결성</div>
+      <div class="op ow">② 신속성</div>
+      <div class="op ow">③ 재현성</div>
+      <div class="op ow">④ 정당성</div>
+    </div>
+    <div class="ex"><strong>정답 ①</strong> — <strong>"위조·변조되지 않았다는 것을 증명"</strong> = <strong>무결성(Integrity) 원칙</strong>. 해시값(MD5, SHA-1 등)으로 수집 전후 무결성 검증. 신속성=휘발성 데이터 신속 수집. 재현성=동일 조건 동일 결과.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2024 국가직 7급 · 재현의 원칙 서술</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">다음에서 설명하는 디지털 포렌식의 기본 원칙은?<br>"증거는 절차를 통해 삭제 또는 손상된 파일이 복구되는 과정을 거칠 수 있다. 이 증거를 법정에 제출하려면 같은 환경에서 같은 결과가 나와야 한다."</div>
+    <div class="eo">
+      <div class="op or">① 재현의 원칙</div>
+      <div class="op ow">② 신속성의 원칙</div>
+      <div class="op ow">③ 무결성의 원칙</div>
+      <div class="op ow">④ 연계 보관성의 원칙</div>
+    </div>
+    <div class="ex"><strong>정답 ①</strong> — 키워드: <strong>"같은 환경에서 같은 결과"</strong> = 재현의 원칙. 불법 해킹 용의자의 해킹 툴이 증거 능력을 가지려면 같은 상황의 피해 시스템에 적용 시 피해 결과와 일치하는 결과가 나와야 함.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2025 군무원 9급 · 포렌식 원칙 아닌 것 (지속성)</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">디지털 포렌식에 의해 확보된 자료가 법정에서 증거로 효력을 가지기 위한 원칙 중 가장 적절하지 않은 것은?</div>
+    <div class="eo">
+      <div class="op on">① 정당성(Legitimacy)의 원칙</div>
+      <div class="op on">② 무결성(Integrity)의 원칙</div>
+      <div class="op on">③ 재현(Reproducibility)의 원칙</div>
+      <div class="op ow">④ 지속성(Continuity)의 원칙</div>
+    </div>
+    <div class="ex"><strong>정답 ④</strong> — 포렌식 5원칙: 정당성·재현·신속성·연계보관성·무결성. <strong>"지속성의 원칙"은 없음</strong>. "연계보관성(Chain of Custody)"과 혼동 주의.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2022 경찰간부 · 핑거프린팅 = 판매자? 구매자? 오답</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">디지털 콘텐츠 보호에 활용되는 저작권 기술에 대한 설명으로 가장 적절하지 않은 것은?</div>
+    <div class="eo">
+      <div class="op on">① 디지털 워터마킹은 원본의 내용을 왜곡하지 않는 범위 내에서 혹은 사용자가 인식하지 못하도록 저작권 정보를 디지털 콘텐츠에 삽입하는 기술이다.</div>
+      <div class="op ow">② 핑거프린팅은 디지털 콘텐츠를 구매할 때 <u>판매자의 정보</u>를 삽입하여 불법 배포 발견 시 최초의 배포자를 추적할 수 있게 하는 기술이다.</div>
+      <div class="op on">③ DRM은 디지털 콘텐츠의 불법 복제와 유포를 막고 지적재산권 보유자의 이익과 권리를 보호해주는 기술과 서비스이다.</div>
+      <div class="op on">④ DRM 구성요소 중 메타데이터(Metadata)는 콘텐츠 생명주기 범위 내에서 관리되어야 할 각종 데이터의 구조 및 정보를 의미한다.</div>
+    </div>
+    <div class="ex"><strong>정답 ②</strong> — 핑거프린팅 = <strong>구매자(소비자)의 정보</strong>를 삽입. 불법 배포 시 <strong>누가 유출했는지(구매자)</strong>를 추적. "판매자 정보"가 아님. 워터마킹은 저작권자(제공자) 정보 삽입.</div>
+  </div>
+</div>
+
+<div class="ec">
+  <div class="eh"><span class="ey">📄 2025 군무원 7급 · 재현의 원칙 교차 분석</span><span class="es">★★★</span></div>
+  <div class="eb">
+    <div class="eq">다음 디지털 포렌식의 원칙으로 가장 적절한 것은?<br>"동일한 조건과 동일한 상황이라면 분석 결과는 항상 같은 결과가 나와야 함. A분석관이 EnCase로 얻은 분석 결과는 B분석관이 FTK로 얻은 분석 결과와 같아야 함. 현장에서는 이를 위해 다른 분석관이 다른 도구로 교차분석(Cross-Analysis)을 수행하기도 함."</div>
+    <div class="eo">
+      <div class="op ow">① 무결성의 원칙</div>
+      <div class="op ow">② 연계보관성의 원칙</div>
+      <div class="op ow">③ 신속성의 원칙</div>
+      <div class="op or">④ 재현의 원칙</div>
+    </div>
+    <div class="ex"><strong>정답 ④</strong> — 키워드: "동일한 조건·동일한 결과" + "다른 도구로도 같은 결과" + "교차 분석(Cross-Analysis)" = <strong>재현의 원칙</strong>. EnCase(FTK도 동일 결과여야 함 = 재현 가능성.</div>
+  </div>
+</div>
+
+<div class="dv"></div>
+<div class="mem">
+  <div class="mt">🔍 포렌식·DRM 전체 핵심 암기</div>
+  <div class="mi">
+    <div class="mr2"><span class="mk">침해사고 5단계</span><span class="mv">사전대응 → 사고탐지 → <strong>초기대응</strong> → 제거복구 → 후속조치·보고</span></div>
+    <div class="mr2"><span class="mk">포렌식 5원칙</span><span class="mv"><strong>정당성·재현·신속성·연계보관성·무결성</strong> (무죄추정·지속성·보전 = 없음)</span></div>
+    <div class="mr2"><span class="mk">정당성</span><span class="mv">적법한 절차 위반 = 증거 능력 없음.</span></div>
+    <div class="mr2"><span class="mk">재현</span><span class="mv"><strong>동일 조건 → 동일 결과</strong>. EnCase = FTK 결과. 교차분석.</span></div>
+    <div class="mr2"><span class="mk">신속성</span><span class="mv">휘발성 데이터 → 신속 수집. 전원 꺼지면 소멸.</span></div>
+    <div class="mr2"><span class="mk">연계보관성</span><span class="mv"><strong>획득→이송→분석→보관→제출</strong> 과정 명확. 담당자 명시.</span></div>
+    <div class="mr2"><span class="mk">무결성</span><span class="mv">위조·변조 금지. 해시값으로 검증. <strong>"위조되지 않았다 증명"</strong></span></div>
+    <div class="mr2"><span class="mk">슬랙 공간</span><span class="mv">RAM 슬랙(마지막 섹터 남은 공간) + 파일 슬랙(남은 섹터). 삭제 데이터 흔적 존재.</span></div>
+    <div class="mr2"><span class="mk">워터마킹 vs 핑거프린팅</span><span class="mv">워터마킹=<strong>저작권자 정보</strong> 삽입 / 핑거프린팅=<strong>구매자 정보</strong> 삽입 → 배포자 추적</span></div>
+    <div class="mr2"><span class="mk">클리어링 하우스</span><span class="mv">라이센스 등록·정책·발급·요금 수취. DRM 핵심 관리 기관.</span></div>
+  </div>
+</div>
+
+<ul class="cl">
+  <li class="clw">"무죄 추정의 원칙 = 포렌식 원칙" → ✗ (형사소송법 원칙)</li>
+  <li class="clw">"지속성의 원칙 = 포렌식 원칙" → ✗ (5원칙에 없음)</li>
+  <li class="clw">"보전의 원칙 = 포렌식 원칙" → ✗ (5원칙에 없음)</li>
+  <li class="clw">"핑거프린팅 = 판매자 정보 삽입" → ✗ (구매자 정보 삽입)</li>
+  <li class="clw">"스테가노그래피 = 저작권 보호 목적" → ✗ (비밀 통신·정보 은닉 목적)</li>
+  <li class="clr">"무결성 원칙 = 위조·변조되지 않았다는 것을 증명" → ✓</li>
+  <li class="clr">"연계보관성 = 획득→이송→분석→보관→제출 과정 명확" → ✓</li>
+  <li class="clr">"재현 원칙 = 동일 조건에서 항상 동일 결과" → ✓</li>
+</ul>
+
+<div class="ft">
+  <span>정보보안 합격전략 교재 · INHYUK PI</span>
+  <span>Chapter 09 · 포렌식·DRM 완전 교재 · 2026 목표</span>
+</div>
+</div><!-- /tab-exam -->
+</div><!-- /cc -->
+</div><!-- /wrap -->
+<script>
+function sw(id){
+  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+  document.querySelectorAll(".tab-pane").forEach(p=>p.classList.remove("active"));
+  document.getElementById("tab-"+id).classList.add("active");
+  document.querySelectorAll(".tab-btn").forEach(b=>{
+    if(b.getAttribute("onclick")&&b.getAttribute("onclick").includes("\'"+id+"\'")){b.classList.add("active");}
+  });
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+</body>
+</html>

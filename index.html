@@ -22,8 +22,7 @@
 body{font-family:var(--sans);background:#e8eef8;color:var(--tx);font-size:14px;line-height:1.75;}
 .wrap{max-width:980px;margin:0 auto;padding:28px 14px 70px;}
 
-/* 헤더 */
-.hdr{background:linear-gradient(135deg,#050b1a 0%,#0d1a35 50%,#050b10 100%);border-radius:14px;padding:32px 44px 28px;margin-bottom:28px;position:relative;overflow:hidden;}
+.hdr{background:linear-gradient(135deg,#050b1a 0%,#0d1a35 50%,#050b10 100%);border-radius:14px;padding:32px 44px 28px;margin-bottom:24px;position:relative;overflow:hidden;}
 .hdr::before{content:"💻";position:absolute;right:30px;top:10px;font-size:130px;opacity:.06;}
 .ch-badge{display:inline-block;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.13);color:rgba(255,255,255,.9);letter-spacing:.06em;margin-bottom:14px;}
 .h-title{font-family:var(--serif);font-size:28px;font-weight:600;color:white;margin-bottom:6px;letter-spacing:-.02em;}
@@ -32,145 +31,217 @@ body{font-family:var(--sans);background:#e8eef8;color:var(--tx);font-size:14px;l
 .hs-n{font-size:20px;font-weight:700;color:#7dd3fc;}
 .hs-l{font-size:9.5px;color:rgba(255,255,255,.5);margin-top:1px;}
 
-/* 섹션 */
-.section{margin-bottom:32px;}
-.sec-hdr{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.prog{background:var(--bg);border-radius:12px;padding:18px 22px;border:1px solid var(--bd);margin-bottom:24px;}
+.prog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.prog-label{font-size:12px;font-weight:700;color:var(--p);}
+.prog-pct{font-size:13px;font-weight:700;color:var(--g);}
+.prog-bar{height:9px;background:var(--g1);border-radius:10px;overflow:hidden;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--g),var(--t));border-radius:10px;}
+
+.sec-hdr{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
 .sec-num{width:28px;height:28px;background:var(--p);color:white;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
 .sec-title{font-size:15px;font-weight:700;color:var(--p);}
 .sec-sub{font-size:11px;color:var(--tm);}
 
-/* 카드 그리드 */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
-.card{background:var(--bg);border-radius:12px;border:1px solid var(--bd);padding:0;text-decoration:none;color:inherit;transition:all .18s;display:flex;flex-direction:column;overflow:hidden;}
-.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,37,64,.12);border-color:#bfdbfe;}
-.card-top{padding:16px 18px;flex:1;}
-.card-num{font-size:10px;font-weight:700;letter-spacing:.05em;margin-bottom:6px;}
-.card-title{font-size:14px;font-weight:700;color:var(--p);margin-bottom:6px;line-height:1.4;}
-.card-desc{font-size:12px;color:var(--tm);line-height:1.65;}
-.card-bottom{padding:10px 18px;background:var(--g0);border-top:1px solid var(--g1);display:flex;align-items:center;justify-content:space-between;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;margin-bottom:28px;}
+.card{background:var(--bg);border-radius:12px;border:1px solid var(--bd);text-decoration:none;color:inherit;transition:all .18s;display:flex;flex-direction:column;overflow:hidden;}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(26,37,64,.13);border-color:#bfdbfe;}
+.card-top{padding:17px 19px;flex:1;}
+.card-num{font-size:10px;font-weight:700;letter-spacing:.05em;margin-bottom:7px;}
+.card-title{font-size:13.5px;font-weight:700;color:var(--p);margin-bottom:7px;line-height:1.4;}
+.card-desc{font-size:12px;color:var(--tm);line-height:1.7;}
+.card-bottom{padding:10px 19px;background:var(--g0);border-top:1px solid var(--g1);display:flex;align-items:center;justify-content:space-between;}
 .card-tags{display:flex;gap:5px;flex-wrap:wrap;}
 .tag{font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;}
-.t-b{background:var(--al);color:var(--a);}
 .t-r{background:var(--rl);color:var(--r);}
+.t-b{background:#e8eeff;color:var(--a);}
 .t-g{background:var(--gl);color:var(--g);}
 .t-v{background:var(--vl);color:var(--v);}
 .t-t{background:var(--tl);color:var(--t);}
 .t-w{background:var(--wl);color:var(--w);}
-.t-ch{background:var(--chl);color:var(--ch);}
 .card-arrow{font-size:14px;color:var(--tm);}
-
-/* 색상 변형 */
 .c1{border-top:3px solid var(--a);}
 .c2{border-top:3px solid var(--g);}
 .c3{border-top:3px solid var(--v);}
 .c4{border-top:3px solid var(--r);}
 .c5{border-top:3px solid var(--w);}
 .c6{border-top:3px solid var(--t);}
-.c7{border-top:3px solid var(--ch);}
 
-/* 빠른 참고 */
-.ref-box{background:var(--p);border-radius:12px;padding:22px 28px;margin-top:8px;}
+.ref-box{background:var(--p);border-radius:12px;padding:22px 28px;}
 .ref-title{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7dd3fc;margin-bottom:14px;}
 .ref-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;}
-.ref-item{display:flex;gap:10px;align-items:flex-start;}
+.ref-item{display:flex;gap:9px;align-items:flex-start;}
 .ref-k{font-family:monospace;font-size:10.5px;font-weight:700;background:rgba(125,211,252,.15);color:#7dd3fc;padding:2px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;}
 .ref-v{font-size:12.5px;color:rgba(255,255,255,.8);line-height:1.65;}
 .ref-v strong{color:#7dd3fc;}
 
-/* 진행률 */
-.prog{background:var(--bg);border-radius:12px;padding:18px 22px;border:1px solid var(--bd);margin-bottom:28px;}
-.prog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
-.prog-label{font-size:12px;font-weight:700;color:var(--p);}
-.prog-pct{font-size:12px;font-weight:700;color:var(--a);}
-.prog-bar{height:8px;background:var(--g1);border-radius:10px;overflow:hidden;}
-.prog-fill{height:100%;background:linear-gradient(90deg,var(--a),var(--v));border-radius:10px;transition:width .4s;}
-
-/* footer */
 .footer{text-align:center;padding:20px 0 8px;font-size:11px;color:var(--tm);}
-
 @media(max-width:640px){.hdr{padding:22px 18px;}.grid{grid-template-columns:1fr;}.ref-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
+<!-- 헤더 -->
 <div class="hdr">
   <div class="ch-badge">Chapter 09 · 운영체제보안과 데이터베이스보안</div>
   <div class="h-title">9단원 학습 교재 목록</div>
-  <div class="h-sub">운영체제 보안 · 유닉스/리눅스 · 윈도우 · 데이터베이스 보안 · 시스템 보안 평가기준</div>
+  <div class="h-sub">운영체제 보안 · 데이터베이스 보안 · 재난복구(DRS·BCP) · 디지털 포렌식 · DRM</div>
   <div class="h-stats">
-    <div><div class="hs-n" id="cnt">1</div><div class="hs-l">교재 수</div></div>
+    <div><div class="hs-n">4</div><div class="hs-l">완성 교재 수</div></div>
+    <div><div class="hs-n">36</div><div class="hs-l">기출문제 수록</div></div>
     <div><div class="hs-n">9단원</div><div class="hs-l">운영체제·DB 보안</div></div>
-    <div><div class="hs-n">국가직</div><div class="hs-l">최빈출 단원</div></div>
+    <div><div class="hs-n">PDF 전체</div><div class="hs-l">직접 반영 완료</div></div>
   </div>
 </div>
 
+<!-- 진행률 -->
 <div class="prog">
   <div class="prog-top">
     <span class="prog-label">📚 9단원 학습 진행률</span>
-    <span class="prog-pct" id="pct">14%</span>
+    <span class="prog-pct">✅ 완성 (4/4)</span>
   </div>
-  <div class="prog-bar"><div class="prog-fill" id="fill" style="width:14%"></div></div>
+  <div class="prog-bar"><div class="prog-fill" style="width:100%"></div></div>
 </div>
 
-<div class="section">
-  <div class="sec-hdr">
-    <div class="sec-num">A</div>
-    <div>
-      <div class="sec-title">운영체제 보안</div>
-      <div class="sec-sub">보안 OS · 참조 모니터 · TCB · 윈도우 · 유닉스/리눅스</div>
+<!-- 섹션 헤더 -->
+<div class="sec-hdr">
+  <div class="sec-num">A</div>
+  <div>
+    <div class="sec-title">9단원 전체 교재 (4개)</div>
+    <div class="sec-sub">클릭하면 해당 교재로 이동합니다</div>
+  </div>
+</div>
+
+<!-- 카드 4개 -->
+<div class="grid">
+
+  <!-- 01 -->
+  <a class="card c1" href="09_os_security.html">
+    <div class="card-top">
+      <div class="card-num" style="color:var(--a);">01 · 운영체제 보안</div>
+      <div class="card-title">OS 개요·접근통제 3종 · 보안OS·참조모니터·TCB · 윈도우(LSA·SAM·SRM) · 유닉스(셸·디렉터리·파일구조) · 계정·특수권한·로그</div>
+      <div class="card-desc">DAC·MAC·RBAC / 참조모니터 3특성 / LSA·SAM·SRM·SID / 윈도우 부팅 6단계·이벤트로그·백업 3종 / 유닉스 셸 4종·디렉터리 8종 / SetUID(4)·SetGID(2)·Sticky(1) / umask / 로그파일 13종 / iptables·TCP Wrapper</div>
     </div>
-  </div>
-
-  <div class="grid">
-
-    <!-- 01 -->
-    <a class="card c1" href="09_os_security.html">
-      <div class="card-top">
-        <div class="card-num" style="color:var(--a);">01 · 운영체제 보안</div>
-        <div class="card-title">보안 OS · 참조 모니터 · TCB · 윈도우 LSA/SAM/SRM · 유닉스/리눅스 파일권한</div>
-        <div class="card-desc">보안 운영체제 개요·설계원리 / 참조 모니터·보안 커널 / LSA·SAM·SRM·SID / /etc/passwd·shadow / SetUID·SetGID·Sticky bit / umask / 로그파일</div>
+    <div class="card-bottom">
+      <div class="card-tags">
+        <span class="tag t-r">LSA·SAM·SRM ★★★</span>
+        <span class="tag t-b">SetUID·umask ★★★</span>
+        <span class="tag t-v">참조모니터 ★★★</span>
       </div>
-      <div class="card-bottom">
-        <div class="card-tags">
-          <span class="tag t-r">LSA·SAM·SRM ★★★</span>
-          <span class="tag t-b">SetUID·umask ★★★</span>
-          <span class="tag t-v">참조모니터·TCB ★★</span>
-        </div>
-        <div class="card-arrow">→</div>
-      </div>
-    </a>
+      <div class="card-arrow">→</div>
+    </div>
+  </a>
 
-  </div>
+  <!-- 02 -->
+  <a class="card c3" href="09_db_security.html">
+    <div class="card-top">
+      <div class="card-num" style="color:var(--v);">02 · 데이터베이스 보안</div>
+      <div class="card-title">DB 개요·위협 3종·요구사항 8종 · 보안 통제 3종 · 2PL 잠금 규약 · SQL 보안모델(GRANT·REVOKE·VIEW) · DB 암호화 4방식</div>
+      <div class="card-desc">DB CIA / 부적절한 노출·변경·서비스거부 / 접근·흐름·추론 통제 / 추론 채널 3종 / 2단계 잠금 규약(직렬화 보장·Deadlock 미보장) / GRANT·REVOKE·DROP 구분 / Plugin·API·Hybrid·TDE</div>
+    </div>
+    <div class="card-bottom">
+      <div class="card-tags">
+        <span class="tag t-r">흐름통제 방향 함정 ★★★</span>
+        <span class="tag t-v">Hybrid=Plugin+API ★★★</span>
+        <span class="tag t-g">2PL·직렬화 ★★</span>
+      </div>
+      <div class="card-arrow">→</div>
+    </div>
+  </a>
+
+  <!-- 03 -->
+  <a class="card c5" href="09_drs_bcp.html">
+    <div class="card-top">
+      <div class="card-num" style="color:var(--w);">03 · 재난복구시스템(DRS)·BCP</div>
+      <div class="card-title">DRS 4종(Mirror·Hot·Warm·Cold) · MTD·RTO·RPO·RLO·RIO · BCP·BIA</div>
+      <div class="card-desc">Mirror(Active-Active·즉시) / Hot(Active-Standby·수시간) / Warm(수일) / Cold(수주·최저비용) / MTD≥RTO 관계 / RPO=데이터유실범위 / BCP vs DRS vs BRS / BIA 영향 평가</div>
+    </div>
+    <div class="card-bottom">
+      <div class="card-tags">
+        <span class="tag t-r">RTO 순서 함정 ★★★</span>
+        <span class="tag t-w">Mirror=Active-Active ★★★</span>
+        <span class="tag t-g">MTD·RTO·RPO ★★★</span>
+      </div>
+      <div class="card-arrow">→</div>
+    </div>
+  </a>
+
+  <!-- 04 -->
+  <a class="card c6" href="09_forensic.html">
+    <div class="card-top">
+      <div class="card-num" style="color:var(--t);">04 · 디지털 포렌식·DRM</div>
+      <div class="card-title">침해사고 대응 5단계 · 포렌식 원칙 5종 · 슬랙공간·이미징 · DRM 구조·보호기술 3종</div>
+      <div class="card-desc">사전대응→탐지→초기대응→제거복구→후속조치 / 정당성·재현·신속성·연계보관성·무결성 / RAM슬랙·파일슬랙 계산 / 이미징(비트단위복사) / 클리어링하우스 / 워터마킹(저작권자) vs 핑거프린팅(구매자)</div>
+    </div>
+    <div class="card-bottom">
+      <div class="card-tags">
+        <span class="tag t-t">연계보관성 ★★★</span>
+        <span class="tag t-r">무죄추정≠포렌식원칙 ★★★</span>
+        <span class="tag t-v">핑거프린팅=구매자 ★★</span>
+      </div>
+      <div class="card-arrow">→</div>
+    </div>
+  </a>
+
 </div>
 
 <!-- 빠른 참고 -->
 <div class="ref-box">
-  <div class="ref-title">⚡ 9단원 빠른 참고</div>
+  <div class="ref-title">⚡ 9단원 빠른 참고 — 핵심 암기</div>
   <div class="ref-grid">
     <div class="ref-item">
-      <span class="ref-k">LSA·SAM·SRM</span>
-      <span class="ref-v">LSA=로그인 검증·SID 매칭 / SAM=계정DB·인증 / <strong>SRM=SID 부여·감사 메시지</strong></span>
+      <span class="ref-k">SRM</span>
+      <span class="ref-v"><strong>SID 부여 + 감사메시지 + 커널모드</strong> (LSA=사용자모드·로그인검증 / SAM=계정DB)</span>
     </div>
     <div class="ref-item">
-      <span class="ref-k">SetUID·SetGID</span>
-      <span class="ref-v">SetUID=<strong>4xxx</strong>(소유자 권한으로 실행) / SetGID=<strong>2xxx</strong> / Sticky=<strong>1xxx</strong></span>
+      <span class="ref-k">특수권한</span>
+      <span class="ref-v"><strong>SetUID=4xxx / SetGID=2xxx / Sticky=1xxx</strong></span>
     </div>
     <div class="ref-item">
-      <span class="ref-k">umask 계산</span>
-      <span class="ref-v">파일 기본=666 / 디렉터리 기본=777 / umask 022 → 파일=<strong>644</strong></span>
+      <span class="ref-k">umask</span>
+      <span class="ref-v">파일=666−umask / 디렉터리=777−umask / umask 022 → 파일 <strong>644</strong></span>
     </div>
     <div class="ref-item">
-      <span class="ref-k">참조 모니터</span>
-      <span class="ref-v">주체→객체 접근 통제 추상 기계 / <strong>격리·완전성·검증 가능</strong> 3특성</span>
+      <span class="ref-k">로그 바이너리</span>
+      <span class="ref-v"><strong>wtmp·btmp·utmp·pacct</strong> | xferlog=FTP / loginlog=5회이상실패</span>
+    </div>
+    <div class="ref-item">
+      <span class="ref-k">흐름 통제</span>
+      <span class="ref-v"><strong>높은→낮은</strong> 등급 흐름 차단 (낮은→높은 아님!)</span>
+    </div>
+    <div class="ref-item">
+      <span class="ref-k">DB 암호화</span>
+      <span class="ref-v">Hybrid=<strong>Plugin+API</strong> / TDE=DBMS내장·수정불필요 / API=응용서버·<strong>수정필요</strong></span>
+    </div>
+    <div class="ref-item">
+      <span class="ref-k">2PL</span>
+      <span class="ref-v">1단계=Lock만 / 2단계=Unlock만 | <strong>직렬화 보장 O / Deadlock 방지 X</strong></span>
+    </div>
+    <div class="ref-item">
+      <span class="ref-k">DRS RTO 순서</span>
+      <span class="ref-v"><strong>Mirror(즉시) > Hot(수시간) > Warm(수일) > Cold(수주)</strong></span>
+    </div>
+    <div class="ref-item">
+      <span class="ref-k">Mirror vs Hot</span>
+      <span class="ref-v">Mirror=<strong>Active-Active</strong> / Hot=<strong>Active-Standby</strong></span>
+    </div>
+    <div class="ref-item">
+      <span class="ref-k">포렌식 5원칙</span>
+      <span class="ref-v"><strong>정당성·재현·신속성·연계보관성·무결성</strong> (무죄추정·지속성·보전 = ✗)</span>
+    </div>
+    <div class="ref-item">
+      <span class="ref-k">연계 보관성</span>
+      <span class="ref-v"><strong>획득→이송→분석→보관→제출</strong> 과정 명확·담당자 명시</span>
+    </div>
+    <div class="ref-item">
+      <span class="ref-k">워터마킹·핑거프린팅</span>
+      <span class="ref-v">워터마킹=저작권자정보 / <strong>핑거프린팅=구매자정보</strong>(배포자 추적)</span>
     </div>
   </div>
 </div>
 
-</div>
-
-<div class="footer">정보보안 합격전략 교재 · INHYUK PI · Chapter 09</div>
-
-</div>
+</div><!-- /wrap -->
+<div class="footer">정보보안 합격전략 교재 · INHYUK PI · Chapter 09 · 2026 목표</div>
 </body>
 </html>
